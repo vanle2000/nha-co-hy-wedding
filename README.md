@@ -5,7 +5,9 @@ thiết kế riêng cho Phát & Thảo: bạn học cấp ba, yêu nhau 6 năm, 
 vào **Thứ Hai 15/02/2027 (mùng 10 tháng Giêng, năm Đinh Mùi)** — tiệc trưa tại GOLDLAND PLAZA, Huế, 700–800 khách.
 
 ## Cách mở trang
-Chỉ cần **nhấp đúp vào `index.html`** để mở trong trình duyệt. Không cần cài đặt gì cả.
+🌐 **Trang web đang chạy tại: https://vanle2000.github.io/nha-co-hy-wedding/**
+
+Hoặc **nhấp đúp vào `index.html`** để mở trong trình duyệt. Không cần cài đặt gì cả.
 
 Hoặc chạy một server tĩnh (tùy chọn):
 ```bash
