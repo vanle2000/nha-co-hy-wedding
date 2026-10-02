@@ -6,7 +6,7 @@
 <title>Nhà Có Hỷ — Wedding Planner for Phát & Thảo</title>
 <meta name="description" content="Nhà Có Hỷ — Wedding Planner for Phát & Thảo. Đám cưới truyền thống Việt Nam tại Huế, phong vị Regency/Bridgerton — timeline, nghi lễ, phong thủy, checklist, ngân sách." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ballet&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
   :root{
     /* ===== BẢNG MÀU PHONG THỦY — Cô dâu & chú rể cùng mệnh KIM (Tân Tỵ 2001, Bạch Lạp Kim)
@@ -39,6 +39,7 @@
        (Bodoni Moda đã bỏ: KHÔNG có ký tự tiếng Việt -> dấu bị lệch font) */
     --serif:'Playfair Display','Prata','Noto Serif Display',Georgia,'Times New Roman',serif;
     --script:'Pinyon Script','Great Vibes','Dancing Script',cursive;
+    --display:'Ballet','Great Vibes','Pinyon Script',cursive;  /* tên cô dâu chú rể */
     --sans:'Cormorant Garamond','EB Garamond',Georgia,'Times New Roman',serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -96,11 +97,14 @@
   header.hero::before{top:-20px;left:-10px}
   header.hero::after{bottom:-50px;right:-10px}
   .eyebrow{font-family:var(--serif);letter-spacing:5px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
-  .names{font-size:clamp(2.4rem,6.5vw,4.6rem);color:var(--royal);margin:4px 0;font-weight:500;letter-spacing:2px;text-transform:uppercase;line-height:1.25;white-space:nowrap}
-  .amp{color:var(--fire);display:inline;margin:0 .15em;font-family:var(--script);font-size:.9em;letter-spacing:0;text-transform:none;font-weight:400;vertical-align:-.05em}
-  .tagline{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1.3rem;margin-top:18px;font-weight:400}
-  .hero-meta{margin-top:26px;font-size:1rem;color:var(--royal-deep);letter-spacing:1px}
-  .hero-meta strong{color:var(--gold)}
+  .names{font-family:var(--display);font-size:clamp(3.4rem,9vw,7rem);color:var(--royal);margin:10px 0 0;font-weight:400;letter-spacing:0;text-transform:none;line-height:1.1;white-space:nowrap}
+  .amp{color:var(--gold);display:inline;margin:0 .1em;font-family:var(--display);font-size:.7em;letter-spacing:0;text-transform:none;font-weight:400;vertical-align:.08em}
+  .tagline{font-family:var(--script);color:var(--fire);font-size:clamp(1.5rem,3vw,2.1rem);margin:18px auto 0;max-width:720px;line-height:1.35;font-weight:400}
+  .hero-meta{margin:30px auto 0;display:flex;flex-direction:column;gap:6px;align-items:center}
+  .hero-meta .date{font-family:var(--serif);font-size:clamp(1.05rem,2vw,1.35rem);letter-spacing:3px;text-transform:uppercase;color:var(--royal)}
+  .hero-meta .line{width:60px;height:1px;background:var(--gold);margin:6px 0}
+  .hero-meta .det{font-family:var(--sans);font-size:1.05rem;color:var(--muted);letter-spacing:.5px}
+  .hero-meta .det b{color:var(--royal);font-weight:600}
 
   /* ====== COUNTDOWN ====== */
   .countdown{display:flex;justify-content:center;gap:14px;margin:34px 0 6px;flex-wrap:wrap}
@@ -390,8 +394,12 @@
 <header class="hero">
   <div class="wrap">
     <h1 class="names">Phát <span class="amp">&amp;</span> Thảo</h1>
-    <p class="tagline">"Sáu năm thương, ba năm xa cách Đà Nẵng – Huế… và rồi mình về chung một nhà."</p>
-    <div class="hero-meta">Thứ Hai, <strong id="wedding-date-label">15 tháng 2, 2027</strong> · Lễ gia tiên <strong>9:00 sáng</strong> · Tiệc cưới trưa tại <strong>GOLDLAND PLAZA, Huế</strong></div>
+    <p class="tagline">Sáu năm thương, ba năm xa cách Đà Nẵng – Huế…<br>và rồi mình về chung một nhà.</p>
+    <div class="hero-meta">
+      <div class="date" id="wedding-date-label">Thứ Hai · 15 · 02 · 2027</div>
+      <div class="line"></div>
+      <div class="det">Lễ gia tiên <b>9:00 sáng</b> &nbsp;·&nbsp; Tiệc cưới trưa tại <b>GOLDLAND PLAZA</b>, Huế</div>
+    </div>
 
     <div class="countdown" id="countdown">
       <div class="cd-box"><span class="cd-num" id="cd-days">—</span><span class="cd-label">Ngày</span></div>
@@ -980,14 +988,6 @@
      Ngày cưới: Thứ Hai, 15 tháng 2, 2027 — bắt đầu từ 9:00 sáng (giờ Việt Nam).
      Định dạng: 'YYYY-MM-DDTHH:MM:SS'. */
   const WEDDING_DATE = new Date('2027-02-15T09:00:00');
-
-  // Update hero label to match
-  (function(){
-    const d = WEDDING_DATE;
-    const label = d.toLocaleDateString('vi-VN', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
-    const el = document.getElementById('wedding-date-label');
-    if(el) el.textContent = label;
-  })();
 
   function tick(){
     const now = new Date();
