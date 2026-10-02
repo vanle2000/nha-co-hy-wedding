@@ -6,7 +6,7 @@
 <title>Nhà Có Hỷ — Wedding Planner for Phát & Thảo</title>
 <meta name="description" content="Nhà Có Hỷ — Wedding Planner for Phát & Thảo. Đám cưới truyền thống Việt Nam tại Huế, phong vị Regency/Bridgerton — timeline, nghi lễ, phong thủy, checklist, ngân sách." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
   :root{
     /* ===== BẢNG MÀU PHONG THỦY — Cô dâu & chú rể cùng mệnh KIM (Tân Tỵ 2001, Bạch Lạp Kim)
@@ -32,20 +32,29 @@
     --muted:#7a6f5c;
     --line:rgba(122,90,30,.18);
     --shadow:0 18px 50px -24px rgba(74,54,18,.45);
-    --serif:'Cormorant Garamond','Playfair Display',Georgia,'Times New Roman',serif;
-    --script:'Great Vibes','Brush Script MT',cursive;
-    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    /* ===== BRIDGERTON TYPOGRAPHY =====
+       Display: Bodoni Moda — Didone cao tương phản, đúng kiểu chữ tiêu đề Bridgerton
+       Script : Pinyon Script — chữ copperplate như thư tay Lady Whistledown
+       Body   : Cormorant Garamond — serif sách thời Regency */
+    --serif:'Bodoni Moda','Playfair Display','Didot','Bodoni 72',Georgia,serif;
+    --script:'Pinyon Script','Great Vibes','Brush Script MT',cursive;
+    --sans:'Cormorant Garamond','EB Garamond',Georgia,'Times New Roman',serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
     font-family:var(--sans);
+    font-size:1.08rem;            /* Cormorant chạy nhỏ -> tăng nhẹ cho dễ đọc */
+    font-weight:500;
     color:var(--ink);
     background:var(--ivory);
     line-height:1.7;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:.5px}
+  h2{letter-spacing:1px}
+  b,strong{font-weight:700}
+  button,input{font-family:inherit}
   a{color:inherit}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
   .accent{color:var(--gold)}
@@ -64,7 +73,7 @@
   .brand{font-family:var(--serif);font-size:1.15rem;color:var(--royal);letter-spacing:.5px;font-weight:700}
   .brand span{color:var(--gold)}
   .nav-links{display:flex;gap:20px;flex-wrap:wrap}
-  .nav-links a{font-size:.82rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);text-decoration:none;transition:color .2s}
+  .nav-links a{font-family:var(--serif);font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);text-decoration:none;transition:color .2s}
   .nav-links a:hover{color:var(--royal)}
   .nav-toggle{display:none;background:none;border:0;font-size:1.5rem;color:var(--royal);cursor:pointer}
 
@@ -84,10 +93,10 @@
   }
   header.hero::before{top:-20px;left:-10px}
   header.hero::after{bottom:-50px;right:-10px}
-  .eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
-  .names{font-size:clamp(2.4rem,7vw,4.6rem);color:var(--royal);margin:4px 0}
-  .amp{color:var(--fire);font-style:italic;display:block;font-size:.5em;margin:6px 0;font-family:var(--script);font-size:.62em}
-  .tagline{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1.2rem;margin-top:14px}
+  .eyebrow{font-family:var(--serif);letter-spacing:5px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
+  .names{font-size:clamp(2.6rem,7.5vw,5.2rem);color:var(--royal);margin:4px 0;font-weight:400;letter-spacing:3px;text-transform:uppercase}
+  .amp{color:var(--fire);display:block;margin:10px 0;font-family:var(--script);font-size:.55em;letter-spacing:0;text-transform:none;font-weight:400}
+  .tagline{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1.3rem;margin-top:18px;font-weight:400}
   .hero-meta{margin-top:26px;font-size:1rem;color:var(--royal-deep);letter-spacing:1px}
   .hero-meta strong{color:var(--gold)}
 
@@ -101,7 +110,7 @@
     box-shadow:var(--shadow);
   }
   .cd-num{font-family:var(--serif);font-size:2rem;color:var(--royal);font-weight:700;display:block}
-  .cd-label{font-size:.68rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted)}
+  .cd-label{font-family:var(--serif);font-size:.68rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted)}
   .date-note{font-size:.84rem;color:var(--muted);margin-top:8px}
 
   .btn{
@@ -117,9 +126,11 @@
   /* ====== SECTION ====== */
   section{padding:70px 0;border-top:1px solid var(--line)}
   .sec-head{text-align:center;margin-bottom:44px}
-  .sec-head .kicker{letter-spacing:3px;text-transform:uppercase;font-size:.72rem;color:var(--gold);display:block;margin-bottom:10px}
-  .sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--royal)}
+  .sec-head .kicker{font-family:var(--script);letter-spacing:0;text-transform:none;font-size:1.55rem;color:var(--fire);display:block;margin-bottom:4px;line-height:1.2}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--royal);font-weight:400}
   .sec-head p{color:var(--muted);max-width:640px;margin:14px auto 0}
+  /* Nhãn chữ in hoa nhỏ -> Bodoni, tracking rộng kiểu Regency */
+  .btn,.cer-top .step,.vstat span,.spec span,.ribbon,.check-col h3 .tag,.legend,.aisle{font-family:var(--serif);letter-spacing:2px}
 
   /* ====== STORY ====== */
   .story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
@@ -140,7 +151,7 @@
   .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--champagne))}
   .tl-item{position:relative;padding:0 0 30px 26px}
   .tl-item::before{content:"";position:absolute;left:-27px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--ivory);box-shadow:0 0 0 2px var(--gold)}
-  .tl-when{font-size:.74rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:700}
+  .tl-when{font-family:var(--serif);font-size:.74rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:700}
   .tl-item h3{color:var(--royal);font-size:1.15rem;margin:4px 0 6px}
   .tl-item p{color:var(--muted);font-size:.94rem}
 
@@ -256,8 +267,7 @@
   .measure-list .mi span{font-size:.92rem}
 
   /* ====== BRIDGERTON / REGENCY ORNAMENTS ====== */
-  h1,h2,h3{letter-spacing:.3px}
-  .sec-head h2{font-weight:600;font-style:italic}
+  .sec-head h2 em,.sec-head h2 i{font-style:italic;font-weight:400}
   .regency-frame{
     position:relative;border:1.5px solid var(--gold);outline:1px solid var(--gold);outline-offset:5px;
     border-radius:4px;padding:30px 30px 26px;background:linear-gradient(180deg,#fffdf8,var(--champagne-soft));
@@ -268,10 +278,10 @@
   }
   .regency-frame::before{top:-14px;left:50%;transform:translateX(-50%)}
   .regency-frame::after{bottom:-14px;left:50%;transform:translateX(-50%) rotate(180deg)}
-  .salutation{font-family:var(--script);font-size:2.1rem;color:var(--fire);line-height:1.1;margin-bottom:10px}
-  .letter{font-family:var(--serif);font-size:1.12rem;color:var(--ink);line-height:1.75}
-  .letter em{color:var(--royal)}
-  .signature{font-family:var(--script);font-size:1.7rem;color:var(--royal);text-align:right;margin-top:14px}
+  .salutation{font-family:var(--script);font-size:2.6rem;color:var(--fire);line-height:1.1;margin-bottom:12px}
+  .letter{font-family:var(--sans);font-style:italic;font-size:1.22rem;color:var(--ink);line-height:1.8}
+  .letter em{color:var(--royal);font-style:normal;font-family:var(--serif);font-size:.95em;letter-spacing:.5px}
+  .signature{font-family:var(--script);font-size:2.1rem;color:var(--royal);text-align:right;margin-top:14px}
   .wax-seal{
     display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%,#d2574a,var(--fire) 60%,#7f2419);
