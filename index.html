@@ -9,28 +9,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
   :root{
-    /* ===== THE FLORAL LAYER — Regency Bridgerton pastel =====
-       Nền kem phớt hồng · hồng phấn & hoa hồng Anh · lavender & tử đằng · khung mạ vàng giữ nét Regency */
-    --royal:#5e4466;          /* Mận tím đậm — tiêu đề */
-    --royal-deep:#3f2d45;
-    --royal-soft:#8a6f93;
-    --gold:#c9a24b;           /* Vàng kim — khung, viền */
+    /* ===== BẢNG MÀU PHONG THỦY — Cô dâu & chú rể cùng mệnh KIM (Tân Tỵ 2001, Bạch Lạp Kim)
+       Thổ sinh Kim  -> vàng hoàng kim / nâu đất / champagne (nuôi dưỡng, che chở)
+       Kim bản mệnh  -> trắng ngà / bạc / ánh kim (vững mạnh)
+       Hỏa (theo Bát Tự hai bạn THIẾU Hỏa) -> bổ bằng đỏ son/san hô/hồng phấn/tử đằng làm ĐIỂM NHẤN ~25%, không làm nền ===== */
+    --royal:#7a5a1e;          /* Hoàng kim đậm (Thổ) — màu chủ đạo */
+    --royal-deep:#4a3612;     /* Nâu đồng sâu */
+    --royal-soft:#a8843a;     /* Vàng hoàng gia dịu */
+    --gold:#c9a24b;           /* Vàng kim ánh (Kim) */
     --gold-light:#e4cd8f;
-    --champagne:#e9d9ef;      /* Lavender rất nhạt (nền thẻ phụ) */
-    --champagne-soft:#f6eef7; /* Nền lilac nhạt */
-    --ivory:#fdf8f7;          /* Kem phớt hồng — nền trang */
-    --fire:#c76b86;           /* Hồng hoa hồng Anh đậm — chữ script, nhấn */
-    --coral:#e8a3b5;          /* Hồng hoa hồng */
-    --blush:#f3c6d0;          /* Hồng phấn */
-    --wisteria:#9b89b3;       /* Tử đằng */
-    --lavender:#c9b6e4;       /* Lavender */
-    --lilac:#e3d6f0;          /* Lilac nhạt */
-    --leaf:#a7bfa3;           /* Xanh lá sage */
-    --powder:#aac4d8;
-    --ink:#2f2633;
-    --muted:#7a6a7e;
-    --line:rgba(94,68,102,.16);
-    --shadow:0 18px 50px -24px rgba(94,68,102,.35);
+    --champagne:#d9c08c;      /* Champagne (Thổ dịu) */
+    --champagne-soft:#f5edda; /* Nền champagne nhạt */
+    --ivory:#fbf7f0;          /* Trắng ngà (Kim bản mệnh) */
+    /* ----- BỔ HỎA theo Bát Tự (hai bạn thiếu Hỏa) — điểm nhấn ~20–30%, không làm nền lớn -----
+       Hỏa sinh Thổ, Thổ sinh Kim: chuỗi tương sinh trọn vẹn khi Hỏa đi cùng vàng/ngà. */
+    --fire:#b23a2e;           /* Đỏ son (sơn son thiếp vàng Huế) */
+    --coral:#e07a5f;          /* Cam san hô */
+    --blush:#e8b4b8;          /* Hồng phấn Regency (Hỏa dịu) */
+    --wisteria:#9b89b3;       /* Tím hoa tử đằng — màu Bridgerton (Hỏa dịu) */
+    --powder:#aac4d8;         /* Xanh bột Bridgerton (Thủy) — dùng rất ít */
+    --ink:#2e2618;
+    --muted:#7a6f5c;
+    --line:rgba(122,90,30,.18);
+    --shadow:0 18px 50px -24px rgba(74,54,18,.45);
     /* ===== BRIDGERTON TYPOGRAPHY — có hỗ trợ TIẾNG VIỆT đầy đủ =====
        Display: Playfair Display — Didone tương phản cao kiểu Bridgerton, có bộ dấu tiếng Việt
        Script : Pinyon Script — chữ copperplate như thư tay Lady Whistledown (có tiếng Việt)
@@ -84,11 +85,16 @@
     text-align:center;
     padding:92px 20px 76px;
     background:
-      radial-gradient(circle at 18% 20%,rgba(243,198,208,.45),transparent 45%),
-      radial-gradient(circle at 84% 22%,rgba(201,182,228,.40),transparent 42%),
-      linear-gradient(160deg,#fdf8f7 0%,#f9eef3 55%,#f3ecf7 100%);
+      radial-gradient(circle at 20% 18%,rgba(217,192,140,.30),transparent 42%),
+      radial-gradient(circle at 82% 24%,rgba(201,162,75,.22),transparent 40%),
+      linear-gradient(160deg,#fbf7f0 0%,#f6efe0 55%,#f1e6cf 100%);
     overflow:hidden;
   }
+  header.hero::before,header.hero::after{
+    content:"❀";position:absolute;font-size:150px;color:rgba(122,90,30,.07);
+  }
+  header.hero::before{top:-20px;left:-10px}
+  header.hero::after{bottom:-50px;right:-10px}
   .eyebrow{font-family:var(--serif);letter-spacing:5px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
   .names{font-size:clamp(2.4rem,6.5vw,4.6rem);color:var(--royal);margin:4px 0;font-weight:500;letter-spacing:2px;text-transform:uppercase;line-height:1.25;white-space:nowrap}
   .amp{color:var(--fire);display:inline;margin:0 .15em;font-family:var(--script);font-size:.9em;letter-spacing:0;text-transform:none;font-weight:400;vertical-align:-.05em}
@@ -254,7 +260,7 @@
   .mini li::before{content:"–";position:absolute;left:0;color:var(--gold)}
 
   /* ====== CALLOUT ====== */
-  .callout{background:linear-gradient(135deg,rgba(243,198,208,.22),rgba(201,182,228,.22));border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;margin-top:26px;font-size:.92rem;color:var(--royal-deep)}
+  .callout{background:linear-gradient(135deg,rgba(122,90,30,.06),rgba(201,162,75,.10));border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;margin-top:26px;font-size:.92rem;color:var(--royal-deep)}
 
   /* ====== VENUE ====== */
   .venue-card{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
@@ -339,29 +345,6 @@
   .fire-accent{border-left-color:var(--fire)!important}
   .sw-row{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:120px;margin-top:12px}
 
-  /* ====== FLORAL LAYER ====== */
-  .floral-layer{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-  .fl{position:absolute;overflow:visible;opacity:.92}
-  .fl-tl{top:-30px;left:-30px;width:300px;height:300px}
-  .fl-tr{top:-30px;right:-30px;width:300px;height:300px;transform:scaleX(-1)}
-  .fl-bl{bottom:-40px;left:-30px;width:280px;height:280px;transform:scaleY(-1)}
-  .fl-br{bottom:-40px;right:-30px;width:280px;height:280px;transform:scale(-1,-1)}
-  .fl-wl{top:300px;left:18px;width:64px;height:220px;opacity:.75}
-  .fl-wr{top:260px;right:22px;width:58px;height:200px;opacity:.75;transform:scaleX(-1)}
-  .fl-vl{left:-140px;top:50%;width:420px;height:60px;transform:rotate(90deg);opacity:.6}
-  .fl-vr{right:-140px;top:50%;width:420px;height:60px;transform:rotate(-90deg);opacity:.6}
-  nav,header.hero,section,footer,.edit-bar{position:relative;z-index:1}
-  nav{z-index:50}
-  section{background:transparent}
-  /* vine divider at the top of each section */
-  section{border-top:0;padding-top:86px}
-  section::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:min(420px,80vw);height:48px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -30 400 60'%3E%3Cpath d='M0,0 C50,-28 90,28 140,0 S230,-28 280,0 S370,28 400,0' fill='none' stroke='%237e9c7a' stroke-width='1.6'/%3E%3Cg fill='%23a7bfa3'%3E%3Cpath d='M30,-18 C38,-28 56,-28 64,-18 C56,-8 38,-8 30,-18Z' transform='rotate(-30 47 -18)'/%3E%3Cpath d='M160,-20 C168,-30 186,-30 194,-20 C186,-10 168,-10 160,-20Z' transform='rotate(-30 177 -20)'/%3E%3Cpath d='M300,-20 C308,-30 326,-30 334,-20 C326,-10 308,-10 300,-20Z' transform='rotate(-30 317 -20)'/%3E%3Cpath d='M64,12 C72,2 90,2 98,12 C90,22 72,22 64,12Z' transform='rotate(30 81 12)'/%3E%3Cpath d='M205,12 C213,2 231,2 239,12 C231,22 213,22 205,12Z' transform='rotate(30 222 12)'/%3E%3Cpath d='M345,12 C353,2 371,2 379,12 C371,22 353,22 345,12Z' transform='rotate(30 362 12)'/%3E%3C/g%3E%3Ccircle cx='118' cy='-4' r='5' fill='%23f3c6d0'/%3E%3Ccircle cx='258' cy='-4' r='5' fill='%23c9b6e4'/%3E%3Ccircle cx='200' cy='0' r='9' fill='%23f3c6d0' stroke='%23e8a3b5' stroke-width='1'/%3E%3Ccircle cx='200' cy='0' r='4' fill='%23e8a3b5'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.9}
-  /* wisteria cascading from the top of the hero */
-  header.hero::before,header.hero::after{content:"";position:absolute;top:-10px;width:70px;height:240px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-30 0 60 200'%3E%3Cpath d='M0,0 C4,40 -6,90 2,140 C5,160 0,180 -2,198' fill='none' stroke='%237e9c7a' stroke-width='1.6'/%3E%3Cg fill='%23b8a6d6'%3E%3Cellipse cx='-9' cy='22' rx='9' ry='6.5'/%3E%3Cellipse cx='10' cy='30' rx='9' ry='6.5'/%3E%3Cellipse cx='-11' cy='42' rx='9' ry='6.5'/%3E%3Cellipse cx='9' cy='52' rx='8.5' ry='6'/%3E%3Cellipse cx='-9' cy='64' rx='8.5' ry='6'/%3E%3Cellipse cx='10' cy='75' rx='8' ry='5.7'/%3E%3Cellipse cx='-8' cy='87' rx='8' ry='5.7'/%3E%3Cellipse cx='9' cy='98' rx='7.5' ry='5.3'/%3E%3Cellipse cx='-8' cy='110' rx='7' ry='5'/%3E%3Cellipse cx='8' cy='121' rx='6.5' ry='4.7'/%3E%3Cellipse cx='-6' cy='132' rx='6' ry='4.3'/%3E%3Cellipse cx='7' cy='143' rx='5.5' ry='4'/%3E%3Cellipse cx='-5' cy='154' rx='5' ry='3.6'/%3E%3Cellipse cx='5' cy='164' rx='4.3' ry='3.1'/%3E%3Cellipse cx='-3' cy='174' rx='3.6' ry='2.6'/%3E%3Cellipse cx='2' cy='184' rx='3' ry='2.2'/%3E%3C/g%3E%3C/svg%3E") center top/contain no-repeat;opacity:.85;font-size:0}
-  header.hero::before{left:22%}
-  header.hero::after{right:24%;transform:scaleX(-1)}
-  @media(max-width:900px){.fl-tl,.fl-tr{width:170px;height:170px}.fl-bl,.fl-br{width:150px;height:150px}.fl-wl,.fl-wr,.fl-vl,.fl-vr{display:none}header.hero::before{left:6%}header.hero::after{right:6%}}
-
   /* ====== FOOTER ====== */
   footer{background:var(--royal-deep);color:var(--champagne-soft);text-align:center;padding:50px 20px}
   footer .names-foot{font-family:var(--serif);font-size:1.8rem;color:#fff}
@@ -380,93 +363,6 @@
 </style>
 </head>
 <body>
-
-<!-- ===== THE FLORAL LAYER — SVG symbols: wisteria · English rose · botanical vine ===== -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="gWis" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9b6e4"/><stop offset="1" stop-color="#9b89b3"/></linearGradient>
-    <radialGradient id="gRose" cx="40%" cy="38%" r="65%"><stop offset="0" stop-color="#fbe3ea"/><stop offset=".6" stop-color="#f3c6d0"/><stop offset="1" stop-color="#e8a3b5"/></radialGradient>
-    <radialGradient id="gRoseL" cx="40%" cy="38%" r="65%"><stop offset="0" stop-color="#f1e8f8"/><stop offset=".6" stop-color="#e3d6f0"/><stop offset="1" stop-color="#c9b6e4"/></radialGradient>
-
-    <!-- English rose: layered petals -->
-    <symbol id="rose" viewBox="-50 -50 100 100">
-      <g fill="url(#gRose)" stroke="#e8a3b5" stroke-width=".8" stroke-opacity=".6">
-        <ellipse rx="44" ry="30" transform="rotate(0)"/><ellipse rx="44" ry="30" transform="rotate(60)"/><ellipse rx="44" ry="30" transform="rotate(120)"/>
-        <ellipse rx="34" ry="23" transform="rotate(30)"/><ellipse rx="34" ry="23" transform="rotate(90)"/><ellipse rx="34" ry="23" transform="rotate(150)"/>
-        <ellipse rx="24" ry="16" transform="rotate(15)"/><ellipse rx="24" ry="16" transform="rotate(75)"/><ellipse rx="24" ry="16" transform="rotate(135)"/>
-      </g>
-      <path d="M-10,-4 C-6,-14 6,-14 10,-4 C6,2 -6,2 -10,-4Z M-7,3 C-2,-4 4,-4 8,3 C4,8 -3,8 -7,3Z" fill="#c76b86" opacity=".55"/>
-      <circle r="3.2" fill="#c76b86" opacity=".8"/>
-    </symbol>
-    <symbol id="roseL" viewBox="-50 -50 100 100">
-      <g fill="url(#gRoseL)" stroke="#c9b6e4" stroke-width=".8" stroke-opacity=".6">
-        <ellipse rx="44" ry="30"/><ellipse rx="44" ry="30" transform="rotate(60)"/><ellipse rx="44" ry="30" transform="rotate(120)"/>
-        <ellipse rx="34" ry="23" transform="rotate(30)"/><ellipse rx="34" ry="23" transform="rotate(90)"/><ellipse rx="34" ry="23" transform="rotate(150)"/>
-        <ellipse rx="24" ry="16" transform="rotate(15)"/><ellipse rx="24" ry="16" transform="rotate(75)"/><ellipse rx="24" ry="16" transform="rotate(135)"/>
-      </g>
-      <circle r="3.2" fill="#9b89b3" opacity=".8"/>
-    </symbol>
-
-    <!-- Leaf -->
-    <symbol id="leaf" viewBox="-20 -10 40 20">
-      <path d="M-18,0 C-10,-11 10,-11 18,0 C10,11 -10,11 -18,0Z" fill="#a7bfa3"/>
-      <path d="M-16,0 L16,0" stroke="#7e9c7a" stroke-width=".9" opacity=".7"/>
-    </symbol>
-
-    <!-- Wisteria raceme: drooping stem with graded blossoms -->
-    <symbol id="wisteria" viewBox="-30 0 60 200">
-      <path d="M0,0 C4,40 -6,90 2,140 C5,160 0,180 -2,198" fill="none" stroke="#7e9c7a" stroke-width="1.6"/>
-      <g fill="url(#gWis)">
-        <ellipse cx="-9" cy="22" rx="9" ry="6.5"/><ellipse cx="10" cy="30" rx="9" ry="6.5"/><ellipse cx="-11" cy="42" rx="9" ry="6.5"/><ellipse cx="9" cy="52" rx="8.5" ry="6"/>
-        <ellipse cx="-9" cy="64" rx="8.5" ry="6"/><ellipse cx="10" cy="75" rx="8" ry="5.7"/><ellipse cx="-8" cy="87" rx="8" ry="5.7"/><ellipse cx="9" cy="98" rx="7.5" ry="5.3"/>
-        <ellipse cx="-8" cy="110" rx="7" ry="5"/><ellipse cx="8" cy="121" rx="6.5" ry="4.7"/><ellipse cx="-6" cy="132" rx="6" ry="4.3"/><ellipse cx="7" cy="143" rx="5.5" ry="4"/>
-        <ellipse cx="-5" cy="154" rx="5" ry="3.6"/><ellipse cx="5" cy="164" rx="4.3" ry="3.1"/><ellipse cx="-3" cy="174" rx="3.6" ry="2.6"/><ellipse cx="2" cy="184" rx="3" ry="2.2"/><ellipse cx="-1" cy="193" rx="2.3" ry="1.7"/>
-      </g>
-      <g fill="#f1e8f8" opacity=".55">
-        <ellipse cx="-11" cy="20" rx="3.5" ry="2.2"/><ellipse cx="8" cy="28" rx="3.5" ry="2.2"/><ellipse cx="-13" cy="40" rx="3.2" ry="2"/><ellipse cx="7" cy="50" rx="3" ry="2"/><ellipse cx="-11" cy="62" rx="3" ry="1.9"/><ellipse cx="8" cy="73" rx="2.8" ry="1.8"/><ellipse cx="-10" cy="85" rx="2.6" ry="1.7"/>
-      </g>
-      <use href="#leaf" x="-32" y="-6" width="26" height="13" transform="rotate(-30 -19 0)"/>
-      <use href="#leaf" x="6" y="-4" width="26" height="13" transform="rotate(25 19 2)"/>
-    </symbol>
-
-    <!-- Botanical vine: curving stem with leaves and buds -->
-    <symbol id="vine" viewBox="0 -30 400 60">
-      <path d="M0,0 C50,-28 90,28 140,0 S230,-28 280,0 S370,28 400,0" fill="none" stroke="#7e9c7a" stroke-width="1.6"/>
-      <use href="#leaf" x="28" y="-24" width="30" height="15" transform="rotate(-35 43 -16)"/>
-      <use href="#leaf" x="62" y="8" width="30" height="15" transform="rotate(30 77 16)"/>
-      <use href="#leaf" x="160" y="-26" width="30" height="15" transform="rotate(-30 175 -18)"/>
-      <use href="#leaf" x="205" y="8" width="30" height="15" transform="rotate(35 220 16)"/>
-      <use href="#leaf" x="300" y="-26" width="30" height="15" transform="rotate(-30 315 -18)"/>
-      <use href="#leaf" x="345" y="8" width="30" height="15" transform="rotate(35 360 16)"/>
-      <circle cx="118" cy="-4" r="4.5" fill="#f3c6d0"/><circle cx="258" cy="-4" r="4.5" fill="#c9b6e4"/><circle cx="20" cy="-6" r="3.5" fill="#c9b6e4"/><circle cx="385" cy="-4" r="3.5" fill="#f3c6d0"/>
-    </symbol>
-
-    <!-- Corner bouquet: roses + leaves + wisteria -->
-    <symbol id="bouquet" viewBox="0 0 260 260">
-      <use href="#vine" x="-40" y="40" width="300" height="45" transform="rotate(-38 110 62)"/>
-      <use href="#wisteria" x="150" y="40" width="54" height="180" transform="rotate(-18 177 40)"/>
-      <use href="#wisteria" x="196" y="20" width="46" height="150" transform="rotate(8 219 20)"/>
-      <use href="#leaf" x="40" y="70" width="60" height="30" transform="rotate(-50 70 85)"/>
-      <use href="#leaf" x="110" y="40" width="54" height="27" transform="rotate(20 137 53)"/>
-      <use href="#roseL" x="20" y="20" width="76" height="76"/>
-      <use href="#rose" x="70" y="62" width="100" height="100"/>
-      <use href="#roseL" x="138" y="120" width="64" height="64"/>
-      <use href="#rose" x="10" y="100" width="56" height="56"/>
-    </symbol>
-  </defs>
-</svg>
-
-<!-- Fixed border layer (behind content) -->
-<div class="floral-layer" aria-hidden="true">
-  <svg class="fl fl-tl"><use href="#bouquet" width="100%" height="100%"/></svg>
-  <svg class="fl fl-tr"><use href="#bouquet" width="100%" height="100%"/></svg>
-  <svg class="fl fl-bl"><use href="#bouquet" width="100%" height="100%"/></svg>
-  <svg class="fl fl-br"><use href="#bouquet" width="100%" height="100%"/></svg>
-  <svg class="fl fl-wl"><use href="#wisteria" width="100%" height="100%"/></svg>
-  <svg class="fl fl-wr"><use href="#wisteria" width="100%" height="100%"/></svg>
-  <svg class="fl fl-vl"><use href="#vine" width="100%" height="100%"/></svg>
-  <svg class="fl fl-vr"><use href="#vine" width="100%" height="100%"/></svg>
-</div>
 
 <!-- NAV -->
 <nav>
@@ -967,30 +863,30 @@
     <div class="theme-wrap">
       <div>
         <ul class="theme-list">
-          <li><b>Bảng màu:</b> nền kem phớt hồng · hồng phấn &amp; hoa hồng Anh · lavender &amp; tử đằng · lá sage · khung mạ vàng, chữ mận tím.</li>
-          <li><b>Hoa:</b> tử đằng rủ (wisteria), hoa hồng Anh (David Austin) hồng phấn &amp; kem, dây leo lá sage, baby, cát tường trắng.</li>
-          <li><b>Hoạ tiết (The Floral Layer):</b> viền trang &amp; thiệp là dây hoa tử đằng rủ, hoa hồng Anh và dây leo thực vật vẽ tay, tông hồng phấn – lavender; khung filigree mạ vàng; song hỷ 囍 cho lễ gia tiên.</li>
+          <li><b>Bảng màu:</b> 50% vàng hoàng kim &amp; trắng ngà · 25% champagne &amp; ánh kim · 25% điểm nhấn đỏ son, hồng phấn, tử đằng.</li>
+          <li><b>Hoa:</b> sen trắng &amp; vàng, mai vàng, mẫu đơn đỏ &amp; hồng phấn, tử đằng rủ, hồng kem, baby.</li>
+          <li><b>Hoạ tiết:</b> long – phụng, song hỷ đỏ son, hoa văn cung đình sơn son thiếp vàng, viền filigree &amp; khung mạ vàng.</li>
           <li><b>Chi tiết Regency:</b> bảng tên bàn thư pháp, đèn chùm pha lê, tứ tấu đàn dây, tháp macaron.</li>
-          <li><b>Trang phục:</b> lễ gia tiên — áo dài truyền thống (cô dâu, chú rể); tiệc — váy trắng ngà eo cao Regency, vest kem/ghi nhạt + gile thêu; phù dâu hồng phấn &amp; lavender.</li>
-          <li><b>Không gian:</b> đèn chùm pha lê, nến trên chân nến vàng, hoa tử đằng rủ từ trần &amp; cổng, hoa hồng Anh bàn tiệc, ghế Louis bọc nhung hồng phấn ở bàn VIP.</li>
+          <li><b>Trang phục:</b> lễ gia tiên — áo dài đỏ son thêu phụng vàng (cô dâu), áo dài vàng/ngà (chú rể); tiệc — váy trắng ngà eo cao Regency, vest champagne + gile thêu.</li>
+          <li><b>Không gian:</b> đèn chùm, nến thật trên chân nến vàng, lồng đèn đỏ – vàng, song hỷ 囍 đỏ son, ghế Louis nhung hồng phấn ở bàn VIP.</li>
         </ul>
       </div>
       <div>
         <div class="swatches">
-          <div class="sw" style="background:#fdf8f7;color:#5e4466;text-shadow:none">Kem phớt hồng</div>
-          <div class="sw" style="background:#f3c6d0;color:#5e4466;text-shadow:none">Hồng phấn</div>
-          <div class="sw" style="background:#e8a3b5;color:#fff">Hoa hồng Anh</div>
-          <div class="sw" style="background:#c9b6e4;color:#3f2d45;text-shadow:none">Lavender</div>
-          <div class="sw" style="background:#9b89b3">Tử đằng</div>
+          <div class="sw" style="background:#7a5a1e">Hoàng kim đậm</div>
+          <div class="sw" style="background:#c9a24b">Vàng kim</div>
+          <div class="sw" style="background:#d9c08c">Champagne</div>
+          <div class="sw" style="background:#e9e4dc;color:#7a5a1e;text-shadow:none">Bạc ngà</div>
+          <div class="sw" style="background:#fbf7f0;color:#7a5a1e;text-shadow:none">Trắng ngà</div>
         </div>
         <div class="sw-row">
-          <div class="sw" style="background:#a7bfa3;color:#2f3d2e;text-shadow:none">Lá sage</div>
-          <div class="sw" style="background:#c9a24b">Vàng kim (khung)</div>
-          <div class="sw" style="background:#5e4466">Mận tím (chữ)</div>
-          <div class="sw" style="background:#e3d6f0;color:#5e4466;text-shadow:none">Lilac nhạt</div>
-          <div class="sw" style="background:#c76b86">Hồng đậm (nhấn)</div>
+          <div class="sw" style="background:#b23a2e">Đỏ son 🔥</div>
+          <div class="sw" style="background:#e07a5f">San hô 🔥</div>
+          <div class="sw" style="background:#e8b4b8;color:#7a3a3f;text-shadow:none">Hồng phấn 🔥</div>
+          <div class="sw" style="background:#9b89b3">Tử đằng 🔥</div>
+          <div class="sw" style="background:#aac4d8;color:#2e3f4f;text-shadow:none">Xanh bột (ít)</div>
         </div>
-        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px">Hàng trên: bảng màu hoa chủ đạo · Hàng dưới: lá, khung &amp; chữ</p>
+        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px">Hàng trên: nền Thổ – Kim (75%) · Hàng dưới: điểm nhấn Hỏa & Bridgerton (25%)</p>
       </div>
     </div>
   </div>
