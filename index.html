@@ -168,10 +168,23 @@
   .cer-body li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
 
   /* ====== CHECKLIST ====== */
-  .check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-  .check-col{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
-  .check-col h3{color:var(--royal);font-size:1.1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+  .check-col{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--gold)}
+  .check-col.urgent{border-top-color:var(--fire)}
+  .check-col h3{color:var(--royal);font-size:1.1rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .check-col h3 .tag{font-size:.66rem;background:var(--champagne-soft);color:var(--royal);padding:3px 9px;border-radius:20px;letter-spacing:1px}
+  .check-col .due{font-family:var(--serif);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--fire);margin-bottom:12px}
+  .check-col .colprog{font-size:.8rem;color:var(--muted);margin-left:auto;font-family:var(--serif);letter-spacing:1px}
+  .who{display:inline-block;font-size:.62rem;letter-spacing:.5px;padding:1px 7px;border-radius:10px;margin-left:6px;vertical-align:middle;font-family:var(--sans);font-weight:700}
+  .who.t{background:#eef3fb;color:#2f4a7a}      /* Nhà trai */
+  .who.g{background:#fdeef0;color:#9c3a4a}      /* Nhà gái */
+  .who.c{background:var(--champagne-soft);color:var(--royal)} /* Cả hai nhà */
+  .who.p{background:#eef7ee;color:#2f6a3a}      /* Phát & Thảo */
+  .check-tools{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .check-tools button{font-family:var(--serif);letter-spacing:2px;text-transform:uppercase;font-size:.72rem;padding:9px 18px;border-radius:30px;border:1px solid var(--gold);background:#fff;color:var(--royal);cursor:pointer}
+  .check-tools button:hover{background:var(--champagne-soft)}
+  .tet-warn{background:linear-gradient(135deg,rgba(178,58,46,.08),rgba(201,162,75,.12));border:1px solid rgba(178,58,46,.3);border-left:5px solid var(--fire);border-radius:12px;padding:18px 22px;margin:0 0 28px;color:var(--royal-deep)}
+  @media print{nav,.btn,.check-tools,header.hero,section:not(#checklist),footer{display:none!important}.check-col{break-inside:avoid;box-shadow:none}}
   .check-item{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed var(--line);cursor:pointer}
   .check-item:last-child{border-bottom:0}
   .check-item input{margin-top:5px;accent-color:var(--royal);width:16px;height:16px;flex-shrink:0}
@@ -397,9 +410,10 @@
       <div class="tl-item"><div class="tl-when">Tháng 1 – 2</div><h3>Áo dài, váy cưới, vest & chụp ảnh cưới (pre-wedding)</h3><p>Đặt may/thuê áo dài truyền thống cho cô dâu chú rể và bố mẹ. Đặt studio chụp ảnh cưới — gợi ý bối cảnh Huế: Đại Nội, cầu Trường Tiền, sông Hương, đầm sen, lăng tẩm.</p></div>
       <div class="tl-item"><div class="tl-when">Tháng 2</div><h3>Nhà cung cấp: trang trí, chụp hình/quay phim, MC, nhạc</h3><p>Chốt đơn vị trang trí gia tiên & sân khấu, thợ ảnh/quay ngày cưới, MC, ban nhạc/âm thanh. Đặt xe hoa đón dâu & xe đưa đón khách đường xa.</p></div>
       <div class="tl-item"><div class="tl-when">Tháng 2 – 3</div><h3>Thiệp cưới & gửi thiệp</h3><p>Thiết kế & in thiệp (song ngữ nếu có khách nước ngoài). Chốt danh sách khách chính thức. Gửi thiệp trước ít nhất 3–4 tuần; khách ở xa báo sớm hơn.</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 3</div><h3>Mâm quả, lễ vật, nhẫn & trang sức</h3><p>Đặt mâm quả ăn hỏi (trầu cau, trà rượu, bánh phu thê, trái cây, heo quay/xôi gấc…). Mua nhẫn cưới, kiềng/vàng cưới. Chuẩn bị phong bì lễ nạp tài (nhà trai).</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 3.5</div><h3>Lễ ăn hỏi / đính hôn</h3><p>Nhà trai mang tráp sang nhà gái. Chọn & tập dượt đội bưng tráp (nam nhà trai, nữ nhà gái, chưa lập gia đình). Lì xì trao duyên cho đội bưng tráp.</p></div>
-      <div class="tl-item"><div class="tl-when">2 tuần cuối</div><h3>Tổng duyệt & xác nhận</h3><p>Xác nhận số khách & số mâm với nhà hàng. Duyệt kịch bản MC, thứ tự nghi lễ. Thử đồ lần cuối. Chuẩn bị bàn thờ gia tiên hai nhà. Phân công người giữ tiền mừng, đón khách, hậu cần.</p></div>
+      <div class="tl-item"><div class="tl-when">Đầu tháng 1/2027</div><h3>Mâm quả, lễ vật, nhẫn & trang sức</h3><p>Đặt mâm quả ăn hỏi (trầu cau, trà rượu, bánh phu thê, trái cây, heo quay/xôi gấc…). Mua nhẫn cưới, kiềng/vàng cưới. Chuẩn bị phong bì lễ nạp tài (nhà trai).</p></div>
+      <div class="tl-item"><div class="tl-when">10 – 20/01/2027 · trước Tết</div><h3>Lễ ăn hỏi / đính hôn</h3><p>Nhà trai mang tráp sang nhà gái. Chọn & tập dượt đội bưng tráp (nam nhà trai, nữ nhà gái, chưa lập gia đình). Lì xì trao duyên cho đội bưng tráp. <b>Phải xong trước 20/01</b> — sau đó mọi dịch vụ nghỉ Tết.</p></div>
+      <div class="tl-item"><div class="tl-when">20/01 → 10/02 · Tết Đinh Mùi</div><h3>Vùng "đóng băng" — nhà cung cấp nghỉ Tết</h3><p>Mùng 1 Tết là 06/02; nghỉ lễ 04–10/02. Không đặt gì mới trong giai đoạn này. Mọi trang phục, thiệp, in ấn, quà, Đèn Hỷ phải <b>đã nhận về nhà</b>. Chỉ còn việc gửi thiệp còn sót & xác nhận khách.</p></div>
+      <div class="tl-item"><div class="tl-when">11 – 14/02 · Tuần cuối</div><h3>Tổng duyệt & xác nhận</h3><p>Xác nhận số khách & số mâm với nhà hàng. Duyệt kịch bản MC, thứ tự nghi lễ. Thử đồ lần cuối. Chuẩn bị bàn thờ gia tiên hai nhà. Phân công người giữ tiền mừng, đón khách, hậu cần. Xem dự báo thời tiết.</p></div>
       <div class="tl-item"><div class="tl-when">Tuần cưới</div><h3>Lễ cưới 🎉</h3><p>Lễ xin dâu → rước dâu → lễ gia tiên → lễ thành hôn → tiệc cưới. Vài ngày sau: lễ lại mặt (cô dâu chú rể về thăm nhà gái).</p></div>
     </div>
   </div>
@@ -656,64 +670,174 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">Việc cần làm</span>
-      <h2>Checklist tương tác</h2>
-      <p>Tích vào ô khi hoàn thành — trạng thái được lưu lại trên trình duyệt của bạn. Thanh tiến độ cập nhật tự động.</p>
+      <h2>Checklist tổng — chuẩn bị đến ngày cưới</h2>
+      <p>Toàn bộ công việc từ hôm nay đến <b>Thứ Hai 15/02/2027</b>, xếp theo <b>hạn chót</b> tính ngược từ ngày cưới. Tích vào ô khi hoàn thành — trạng thái tự lưu trên trình duyệt này.</p>
     </div>
+
+    <div class="tet-warn">
+      <b>⚠️ Mốc quan trọng nhất — Tết Đinh Mùi rơi ngay trước đám cưới.</b> Mùng 1 Tết là <b>Thứ Bảy 06/02/2027</b>; nghỉ Tết chính thức <b>04–10/02</b>, và hầu hết nhà in, tiệm áo dài, tiệm hoa, studio, đơn vị trang trí <b>nghỉ hoặc quá tải từ ~25/01 đến ~12/02</b>. Đám cưới là <b>15/02 — chỉ 5 ngày sau Tết</b>. Vì vậy: <b>mọi thứ phải chốt & nhận hàng trước 20/01/2027</b>. Hai tuần cuối chỉ nên còn việc xác nhận, không còn việc đặt mới.
+    </div>
+
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:22px;font-size:.78rem;color:var(--muted)">
+      <span>Phụ trách:</span>
+      <span class="who t">Nhà trai</span><span class="who g">Nhà gái</span><span class="who c">Hai nhà</span><span class="who p">Phát & Thảo</span>
+    </div>
+
     <div class="check-grid" id="checkgrid">
-      <div class="check-col">
-        <h3>Chuẩn bị chung <span class="tag">Nền tảng</span></h3>
-        <label class="check-item"><input type="checkbox"><span>Chốt ngày lành ăn hỏi & ngày cưới</span></label>
-        <label class="check-item"><input type="checkbox"><span>Lập ngân sách tổng, phân chia hai nhà</span></label>
-        <label class="check-item"><input type="checkbox"><span>Lập danh sách khách mời (hai bên)</span></label>
-        <label class="check-item"><input type="checkbox"><span>Tạo nhóm chat chung hai gia đình</span></label>
-        <label class="check-item"><input type="checkbox"><span>Phân công người điều phối ngày cưới</span></label>
+
+      <div class="check-col urgent">
+        <h3>1 · Nền tảng <span class="tag">Làm ngay</span><span class="colprog"></span></h3>
+        <div class="due">Hạn: 15/10/2026</div>
+        <label class="check-item"><input type="checkbox"><span>Hai gia đình gặp mặt, thống nhất kế hoạch tổng <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt ngày cưới 15/02/2027 với thầy; xin <b>giờ hoàng đạo</b> rước dâu, nhập trạch (cần giờ sinh hai bạn) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt ngày lễ dạm ngõ & lễ ăn hỏi (xem ngày) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Xác nhận với thầy: <b>dụng thần Hỏa</b> & tỉ lệ bổ màu (mang trang Phong thủy đi hỏi) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Lập ngân sách tổng & phân chia hạng mục hai nhà (dùng bảng Ngân sách) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Tạo nhóm chat chung hai gia đình + file Google Sheet khách mời & chi phí <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Phân công <b>người điều phối ngày cưới</b> (wedding coordinator) + 1 người dự bị <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Danh sách khách mời <b>nháp</b> hai bên (ước 700–800) để chốt số bàn <i class="who c">Hai nhà</i></span></label>
       </div>
-      <div class="check-col">
-        <h3>Địa điểm & dịch vụ <span class="tag">Đặt sớm</span></h3>
-        <label class="check-item"><input type="checkbox"><span>Ký hợp đồng GOLDLAND PLAZA (sảnh 700–800 khách)</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt số bàn (~70–80) + bàn dự phòng & thực đơn/bàn</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt studio chụp ảnh cưới (pre-wedding)</span></label>
-        <label class="check-item"><input type="checkbox"><span>Thợ ảnh & quay phim ngày cưới</span></label>
-        <label class="check-item"><input type="checkbox"><span>Đơn vị trang trí gia tiên & sân khấu</span></label>
-        <label class="check-item"><input type="checkbox"><span>MC, âm thanh, ban nhạc</span></label>
-        <label class="check-item"><input type="checkbox"><span>Xe hoa & xe đưa đón khách đường xa</span></label>
+
+      <div class="check-col urgent">
+        <h3>2 · Địa điểm & nhà cung cấp lớn <span class="tag">Đặt sớm</span><span class="colprog"></span></h3>
+        <div class="due">Hạn: 31/10/2026</div>
+        <label class="check-item"><input type="checkbox"><span>Khảo sát sảnh GOLDLAND PLAZA — đo đạc theo <a href="#decor">checklist khảo sát</a>, xin bản vẽ mặt bằng <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Xác nhận toà nhà/sảnh <b>đang hoạt động bình thường</b> & pháp lý rõ ràng trước khi cọc <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Ký hợp đồng GOLDLAND PLAZA: sảnh 700–800 khách, giờ set-up, LED/âm thanh, đậu xe, điều khoản huỷ/đổi <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt thực đơn & giá/bàn; thử món (food tasting) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>thợ ảnh + quay phim</b> ngày cưới (phóng sự, flycam) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>đơn vị trang trí</b> (gia tiên hai nhà + sảnh tiệc) — gửi concept Hoàng Kim Huế × Bridgerton <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>MC</b> + âm thanh ánh sáng + <b>tứ tấu đàn dây</b> / ban nhạc <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>studio chụp ảnh cưới</b> (pre-wedding) — lịch chụp tháng 11–12 <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>make-up & làm tóc</b> cô dâu (thử trước 1 lần) <i class="who g">Nhà gái</i></span></label>
       </div>
+
       <div class="check-col">
-        <h3>Trang phục & làm đẹp <span class="tag">Cá nhân</span></h3>
-        <label class="check-item"><input type="checkbox"><span>Áo dài cô dâu & chú rể</span></label>
-        <label class="check-item"><input type="checkbox"><span>Váy cưới / vest tiệc</span></label>
-        <label class="check-item"><input type="checkbox"><span>Áo dài cho bố mẹ hai bên</span></label>
-        <label class="check-item"><input type="checkbox"><span>Trang điểm cô dâu (thử trước)</span></label>
-        <label class="check-item"><input type="checkbox"><span>Nhẫn cưới, kiềng/vàng cưới</span></label>
+        <h3>3 · Lễ dạm ngõ <span class="tag">Nghi lễ 1</span><span class="colprog"></span></h3>
+        <div class="due">Hạn: trong tháng 10–11/2026</div>
+        <label class="check-item"><input type="checkbox"><span>Chốt thành phần nhà trai sang (5–7 người: cha mẹ, trưởng họ, chú rể) <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị lễ dạm ngõ: trầu cau, trà, rượu, bánh, trái cây (khăn phủ đỏ – vàng) <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Nhà gái dọn bàn thờ gia tiên, chuẩn bị trà bánh tiếp khách <i class="who g">Nhà gái</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Trong buổi lễ: thống nhất <b>số mâm quả (5 hoặc 7)</b>, lễ vật, số người bưng tráp, lễ nạp tài <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thống nhất quy mô & phân chia khách tiệc, chỗ ở khách xa <i class="who c">Hai nhà</i></span></label>
       </div>
+
       <div class="check-col">
-        <h3>Nghi lễ & lễ vật <span class="tag">Truyền thống</span></h3>
-        <label class="check-item"><input type="checkbox"><span>Thống nhất số mâm quả với hai họ</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt sơ đồ bàn & bàn VIP/gia đình gần sân khấu</span></label>
-        <label class="check-item"><input type="checkbox"><span>Đặt mâm quả / tráp ăn hỏi</span></label>
-        <label class="check-item"><input type="checkbox"><span>Đội bưng tráp (nam & nữ) + lì xì trả duyên</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chuẩn bị bàn thờ gia tiên hai nhà</span></label>
-        <label class="check-item"><input type="checkbox"><span>Phong bì lễ nạp tài (nhà trai)</span></label>
+        <h3>4 · Trang phục & trang sức <span class="tag">May đo</span><span class="colprog"></span></h3>
+        <div class="due">Đặt may: 15/11 · Nhận đồ: 15/01/2027</div>
+        <label class="check-item"><input type="checkbox"><span>Cô dâu: <b>áo dài đỏ son thêu phụng vàng</b> (lễ gia tiên) <i class="who g">Nhà gái</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Cô dâu: <b>váy cưới trắng ngà eo cao Regency</b> (tiệc) + giày, phụ kiện, voan <i class="who g">Nhà gái</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chú rể: <b>áo dài vàng/ngà + khăn đóng</b> (lễ) & <b>vest champagne + gile thêu</b> (tiệc) <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Áo dài cho cha mẹ hai bên (vàng đất, champagne, hồng phấn) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đồng phục / áo dài đội bưng tráp nam – nữ (10–14 bộ, tông vàng – đỏ) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Mua <b>nhẫn cưới</b> (khắc tên + 15.02.2027) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Mua <b>vàng cưới / kiềng</b> trao trong lễ (Kim — hợp mệnh) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thử đồ lần 1 (tháng 12) & lần cuối (trước 20/01) <i class="who p">Phát & Thảo</i></span></label>
       </div>
+
       <div class="check-col">
-        <h3>Thiệp & khách mời <span class="tag">Truyền thông</span></h3>
-        <label class="check-item"><input type="checkbox"><span>Thiết kế & in thiệp cưới</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt danh sách khách chính thức</span></label>
-        <label class="check-item"><input type="checkbox"><span>Gửi thiệp (trước 3–4 tuần)</span></label>
-        <label class="check-item"><input type="checkbox"><span>Sắp xếp chỗ ở cho khách đường xa (Đà Nẵng…)</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chuẩn bị sơ đồ bàn tiệc</span></label>
+        <h3>5 · Ảnh cưới & câu chuyện <span class="tag">Nội dung</span><span class="colprog"></span></h3>
+        <div class="due">Hạn: 31/12/2026</div>
+        <label class="check-item"><input type="checkbox"><span>Chụp ảnh cưới tại Huế: Đại Nội, Trường Tiền, sông Hương, lăng tẩm (+1 buổi Đà Nẵng nếu muốn) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chọn ảnh làm standee cổng, album, slideshow <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Quay/ dựng <b>video phóng sự "3 năm Đà Nẵng – Huế"</b> chiếu đầu tiệc (3–4 phút) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Gom ảnh cho góc <b>"6 năm – 2 thành phố"</b>: từ lớp 10 đến cầu hôn; in & đóng khung mạ vàng <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Hai bạn viết <b>thư tay</b> cho nhau để đọc trong lễ <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Viết lời cảm ơn của chú rể & đại diện hai họ; kịch bản MC nháp <i class="who c">Hai nhà</i></span></label>
       </div>
+
       <div class="check-col">
-        <h3>Tuần cuối & ngày cưới <span class="tag">Hậu cần</span></h3>
-        <label class="check-item"><input type="checkbox"><span>Xác nhận số mâm với nhà hàng</span></label>
-        <label class="check-item"><input type="checkbox"><span>Duyệt kịch bản & thứ tự nghi lễ với MC</span></label>
-        <label class="check-item"><input type="checkbox"><span>Thử đồ lần cuối</span></label>
-        <label class="check-item"><input type="checkbox"><span>Người giữ tiền mừng & sổ ghi lễ</span></label>
-        <label class="check-item"><input type="checkbox"><span>Chuẩn bị quà cảm ơn khách</span></label>
+        <h3>6 · Thiệp & khách mời <span class="tag">In ấn</span><span class="colprog"></span></h3>
+        <div class="due">In xong: 20/12 · Gửi: 05–20/01/2027</div>
+        <label class="check-item"><input type="checkbox"><span>Chốt <b>danh sách khách chính thức</b> hai bên (tên, số người, SĐT, địa phương) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thiết kế thiệp kiểu thư tay Regency, niêm sáp đỏ son "P❦T"; ghi rõ địa chỉ + bản đồ GOLDLAND PLAZA, giờ tiệc <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>In thiệp (~800 + 10% dư) <b>trước 20/12</b> — nhà in nghỉ Tết sớm <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Gửi thiệp khách <b>đường xa trước</b> (Đà Nẵng, tỉnh khác), rồi khách Huế; hoàn tất trước 20/01 <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt phòng khách sạn gần GOLDLAND cho khách xa; thuê xe đưa đón Đà Nẵng – Huế <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Theo dõi xác nhận tham dự → cập nhật số bàn với nhà hàng <i class="who c">Hai nhà</i></span></label>
       </div>
+
+      <div class="check-col">
+        <h3>7 · Trang trí, hoa & sơ đồ <span class="tag">Thiết kế</span><span class="colprog"></span></h3>
+        <div class="due">Duyệt bản vẽ: 31/12 · Chốt hoa: 10/01/2027</div>
+        <label class="check-item"><input type="checkbox"><span>Duyệt <b>bản vẽ 3D</b> sân khấu & sảnh từ đơn vị trang trí theo bảng màu 75% vàng/ngà + 25% Hỏa <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt backdrop "Về Chung Một Nhà", cổng hoa tử đằng, 2 trụ hoa, màn LED, đèn chùm <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt hoa: sen trắng/vàng, mai vàng, mẫu đơn đỏ, hồng phấn, tử đằng — đặt trước Tết (giá hoa tăng mạnh dịp Tết) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thiết kế & in: bảng tên bàn thư pháp, menu, sơ đồ bàn khổ lớn, bảng chào mừng <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Lập <b>sơ đồ bàn</b>: VIP & gia đình gần sân khấu, cụm A/B/C theo nhóm khách <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt làm <b>"Đèn Hỷ"</b> lồng đèn ước nguyện + thẻ giấy ánh kim + bút <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Trang trí gia tiên hai nhà: khăn đỏ son viền vàng, nến đỏ, chữ song hỷ, hoa <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Xe hoa + trang trí xe; đoàn xe nhà trai <i class="who t">Nhà trai</i></span></label>
+      </div>
+
+      <div class="check-col">
+        <h3>8 · Lễ ăn hỏi <span class="tag">Nghi lễ 2</span><span class="colprog"></span></h3>
+        <div class="due">Dự kiến: 10–20/01/2027 (trước Tết)</div>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>mâm quả 5 hoặc 7 tráp</b>: trầu cau, trà – rượu, bánh phu thê, trái cây, heo quay/xôi gấc, trang sức — khăn đỏ son thêu kim tuyến <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị <b>phong bì lễ nạp tài</b> (số tiền đã thống nhất) <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chọn đội bưng tráp nam (nhà trai) & đỡ tráp nữ (nhà gái) — chưa lập gia đình; tập dượt <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị <b>lì xì trả duyên</b> cho đội bưng tráp (số tiền bằng nhau hai bên) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Nhà gái: trang trí gia tiên, cổng, bàn tiếp khách; cỗ đãi nhà trai <i class="who g">Nhà gái</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thợ ảnh/quay cho lễ ăn hỏi; make-up cô dâu <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Sau lễ: nhà gái <b>chia lại một phần lễ</b> (lại quả) cho nhà trai theo đúng tục <i class="who g">Nhà gái</i></span></label>
+      </div>
+
+      <div class="check-col urgent">
+        <h3>9 · Chốt trước Tết <span class="tag">Hạn cứng</span><span class="colprog"></span></h3>
+        <div class="due">Hạn: 20/01/2027 — sau đó nhà cung cấp nghỉ Tết</div>
+        <label class="check-item"><input type="checkbox"><span>Nhận <b>toàn bộ trang phục</b> đã may/thuê; thử lần cuối <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Nhận thiệp, bảng tên, menu, standee, khung ảnh, Đèn Hỷ — kiểm tra lỗi in <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thanh toán đợt 2 / ký phụ lục với GOLDLAND, trang trí, ảnh, MC, nhạc <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Xác nhận bằng văn bản <b>lịch làm việc sau Tết</b> của từng nhà cung cấp (họ có đi làm lại kịp 14–15/02 không?) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>quà cảm ơn khách</b> (mè xửng, trà sen, hạt sen) + thiệp cảm ơn — nhận trước Tết <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Mua sẵn: tiền mới lì xì, phong bì, sổ ghi lễ, hộp mừng cưới, pháo kim tuyến, nến <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đăng ký <b>kết hôn</b> tại UBND (giấy tờ: CCCD, xác nhận tình trạng hôn nhân) — làm trước Tết vì UBND nghỉ 04–10/02 <i class="who p">Phát & Thảo</i></span></label>
+      </div>
+
+      <div class="check-col">
+        <h3>10 · Tuần cuối <span class="tag">08–14/02</span><span class="colprog"></span></h3>
+        <div class="due">Thứ Năm 11/02 – Chủ Nhật 14/02/2027</div>
+        <label class="check-item"><input type="checkbox"><span>Xác nhận <b>số bàn cuối</b> với GOLDLAND (+5–10% dự phòng) <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Họp <b>tổng duyệt</b> với MC, coordinator, hai gia đình: kịch bản theo mốc giờ <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Phân công ngày cưới: 4–6 lễ tân, 2 người giữ hộp mừng + sổ, 2 hậu cần, 1 liên hệ nhà hàng, 1 chăm khách lớn tuổi <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>In danh sách khách theo bàn; sơ đồ bàn khổ lớn đặt lối vào <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Giao file video, slideshow, nhạc nền cho kỹ thuật LED/âm thanh; test tại sảnh <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị <b>túi khẩn cấp</b>: kim chỉ, băng keo, thuốc, nước, son, khăn giấy, sạc dự phòng <i class="who g">Nhà gái</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Xem <b>dự báo thời tiết</b> 10 ngày; chốt phương án mưa (ô vàng/ngà, bạt, lối vào có mái) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Cô dâu chú rể <b>nghỉ ngơi, chăm da, ngủ đủ</b> — không nhận việc mới <i class="who p">Phát & Thảo</i></span></label>
+      </div>
+
+      <div class="check-col urgent">
+        <h3>11 · Ngày cưới 15/02 <span class="tag">D-Day</span><span class="colprog"></span></h3>
+        <div class="due">Mùng 10 tháng Giêng — xem <a href="#dayof">Lịch ngày cưới</a></div>
+        <label class="check-item"><input type="checkbox"><span>05:30 Make-up, tóc; mặc áo dài; kiểm tra nhẫn, lễ vật, phong bì <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>07:00 Lễ xin dâu — mẹ chú rể sang nhà gái đúng giờ <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>08:00 Rước dâu & lễ gia tiên hai nhà — thắp hương, trao nhẫn, trao vàng <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>10:30 Coordinator kiểm tra sảnh: LED, âm thanh, bàn lễ tân, hộp mừng, Đèn Hỷ, sơ đồ bàn <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>11:00 Đón khách; 11:30 khai tiệc giờ Ngọ; chiếu video; đọc thư; tri ân cha mẹ <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Cô dâu chú rể đi chào từng bàn (ưu tiên người lớn, khách xa) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>13:30 Tiễn khách, tặng quà; kiểm kê hộp mừng & sổ ghi lễ; thu dọn đồ cá nhân, Đèn Hỷ, khung ảnh <i class="who c">Hai nhà</i></span></label>
+      </div>
+
+      <div class="check-col">
+        <h3>12 · Sau cưới <span class="tag">Hậu lễ</span><span class="colprog"></span></h3>
+        <div class="due">16/02 – 15/03/2027</div>
+        <label class="check-item"><input type="checkbox"><span><b>Lễ lại mặt</b>: cô dâu chú rể mang lễ về thăm nhà gái (2–4 ngày sau cưới) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Thanh toán đợt cuối cho nhà cung cấp; nhận lại tiền cọc/đồ thuê <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Gửi lời cảm ơn khách (tin nhắn/ảnh); cảm ơn đội giúp việc, lễ tân, bưng tráp <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Nhận ảnh, video phóng sự; in album <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Treo <b>Đèn Hỷ</b> trong tổ ấm — thắp lần đầu đêm nhập trạch <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Tổng kết thu – chi minh bạch giữa hai nhà <i class="who c">Hai nhà</i></span></label>
+      </div>
+
     </div>
-    <div class="progress-note">Tiến độ: <span id="prog-text">0 / 0</span></div>
+
+    <div class="progress-note">Tiến độ tổng: <span id="prog-text">0 / 0</span></div>
     <div id="prog-bar-wrap"><div id="prog-bar"></div></div>
+    <div class="check-tools">
+      <button type="button" onclick="window.print()">🖨 In checklist</button>
+      <button type="button" id="reset-check">↺ Đặt lại tất cả</button>
+    </div>
   </div>
 </section>
 
@@ -1037,7 +1161,7 @@
   tick(); setInterval(tick, 1000);
 
   /* ====== CHECKLIST: progress + localStorage persistence ====== */
-  const KEY = 'hue-wedding-checklist-v1';
+  const KEY = 'hue-wedding-checklist-v2';   // v2: master checklist (12 nhóm) — key mới để không lệch với bản cũ
   const boxes = Array.from(document.querySelectorAll('#checkgrid input[type=checkbox]'));
   const saved = JSON.parse(localStorage.getItem(KEY) || '[]');
   boxes.forEach((b,i)=>{ if(saved[i]) b.checked = true; });
@@ -1045,8 +1169,15 @@
   function updateProgress(){
     const done = boxes.filter(b=>b.checked).length;
     const total = boxes.length;
-    document.getElementById('prog-text').textContent = done + ' / ' + total;
+    document.getElementById('prog-text').textContent = done + ' / ' + total + ' việc (' + (total? Math.round(done/total*100):0) + '%)';
     document.getElementById('prog-bar').style.width = (total? (done/total*100):0) + '%';
+    // tiến độ từng nhóm
+    document.querySelectorAll('#checkgrid .check-col').forEach(col=>{
+      const cb = col.querySelectorAll('input[type=checkbox]');
+      const d = Array.from(cb).filter(x=>x.checked).length;
+      const el = col.querySelector('.colprog');
+      if(el) el.textContent = d + '/' + cb.length;
+    });
   }
   boxes.forEach((b,i)=> b.addEventListener('change', ()=>{
     const state = boxes.map(x=>x.checked);
@@ -1054,6 +1185,14 @@
     updateProgress();
   }));
   updateProgress();
+
+  const resetBtn = document.getElementById('reset-check');
+  if(resetBtn) resetBtn.addEventListener('click', ()=>{
+    if(!confirm('Bỏ tích toàn bộ checklist?')) return;
+    boxes.forEach(b=> b.checked = false);
+    localStorage.removeItem(KEY);
+    updateProgress();
+  });
 
   /* ====== SITE-VISIT MEASURE LIST: separate persistence ====== */
   (function(){
