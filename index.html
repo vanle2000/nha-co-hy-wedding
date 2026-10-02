@@ -70,10 +70,11 @@
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .brand{font-family:var(--serif);font-size:1.15rem;color:var(--royal);letter-spacing:.5px;font-weight:700}
+  nav .wrap{display:flex;align-items:center;justify-content:flex-start;gap:28px;min-height:62px;padding-top:8px;padding-bottom:8px}
+  .brand{font-family:var(--serif);font-size:1.15rem;color:var(--royal);letter-spacing:.5px;font-weight:700;white-space:nowrap}
   .brand span{color:var(--gold)}
-  .nav-links{display:flex;gap:20px;flex-wrap:wrap}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-start;text-align:left}
+  .nav-toggle{margin-left:auto}
   .nav-links a{font-family:var(--serif);font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);text-decoration:none;transition:color .2s}
   .nav-links a:hover{color:var(--royal)}
   .nav-toggle{display:none;background:none;border:0;font-size:1.5rem;color:var(--royal);cursor:pointer}
@@ -95,8 +96,8 @@
   header.hero::before{top:-20px;left:-10px}
   header.hero::after{bottom:-50px;right:-10px}
   .eyebrow{font-family:var(--serif);letter-spacing:5px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
-  .names{font-size:clamp(2.4rem,6.5vw,4.6rem);color:var(--royal);margin:4px 0;font-weight:500;letter-spacing:2px;text-transform:uppercase;line-height:1.25}
-  .amp{color:var(--fire);display:block;margin:10px 0;font-family:var(--script);font-size:.55em;letter-spacing:0;text-transform:none;font-weight:400}
+  .names{font-size:clamp(2.4rem,6.5vw,4.6rem);color:var(--royal);margin:4px 0;font-weight:500;letter-spacing:2px;text-transform:uppercase;line-height:1.25;white-space:nowrap}
+  .amp{color:var(--fire);display:inline;margin:0 .15em;font-family:var(--script);font-size:.9em;letter-spacing:0;text-transform:none;font-weight:400;vertical-align:-.05em}
   .tagline{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1.3rem;margin-top:18px;font-weight:400}
   .hero-meta{margin-top:26px;font-size:1rem;color:var(--royal-deep);letter-spacing:1px}
   .hero-meta strong{color:var(--gold)}
@@ -356,8 +357,7 @@
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">Thành phố Huế · Mùng 10 tháng Giêng · Năm Đinh Mùi 2027</div>
-    <h1 class="names">Phát <span class="amp">&amp; sánh duyên cùng</span> Thảo</h1>
+    <h1 class="names">Phát <span class="amp">&amp;</span> Thảo</h1>
     <p class="tagline">"Sáu năm thương, ba năm xa cách Đà Nẵng – Huế… và rồi mình về chung một nhà."</p>
     <div class="hero-meta">Thứ Hai, <strong id="wedding-date-label">15 tháng 2, 2027</strong> · Lễ gia tiên <strong>9:00 sáng</strong> · Tiệc cưới trưa tại <strong>GOLDLAND PLAZA, Huế</strong></div>
 
