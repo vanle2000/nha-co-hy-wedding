@@ -6,7 +6,7 @@
 <title>Nhà Có Hỷ — Wedding Planner for Phát & Thảo</title>
 <meta name="description" content="Nhà Có Hỷ — Wedding Planner for Phát & Thảo. Đám cưới truyền thống Việt Nam tại Huế, phong vị Regency/Bridgerton — timeline, nghi lễ, phong thủy, checklist, ngân sách." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
   :root{
     /* ===== BẢNG MÀU PHONG THỦY — Cô dâu & chú rể cùng mệnh KIM (Tân Tỵ 2001, Bạch Lạp Kim)
@@ -32,12 +32,13 @@
     --muted:#7a6f5c;
     --line:rgba(122,90,30,.18);
     --shadow:0 18px 50px -24px rgba(74,54,18,.45);
-    /* ===== BRIDGERTON TYPOGRAPHY =====
-       Display: Bodoni Moda — Didone cao tương phản, đúng kiểu chữ tiêu đề Bridgerton
-       Script : Pinyon Script — chữ copperplate như thư tay Lady Whistledown
-       Body   : Cormorant Garamond — serif sách thời Regency */
-    --serif:'Bodoni Moda','Playfair Display','Didot','Bodoni 72',Georgia,serif;
-    --script:'Pinyon Script','Great Vibes','Brush Script MT',cursive;
+    /* ===== BRIDGERTON TYPOGRAPHY — có hỗ trợ TIẾNG VIỆT đầy đủ =====
+       Display: Playfair Display — Didone tương phản cao kiểu Bridgerton, có bộ dấu tiếng Việt
+       Script : Pinyon Script — chữ copperplate như thư tay Lady Whistledown (có tiếng Việt)
+       Body   : Cormorant Garamond — serif sách thời Regency (có tiếng Việt)
+       (Bodoni Moda đã bỏ: KHÔNG có ký tự tiếng Việt -> dấu bị lệch font) */
+    --serif:'Playfair Display','Prata','Noto Serif Display',Georgia,'Times New Roman',serif;
+    --script:'Pinyon Script','Great Vibes','Dancing Script',cursive;
     --sans:'Cormorant Garamond','EB Garamond',Georgia,'Times New Roman',serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -51,8 +52,8 @@
     line-height:1.7;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:.5px}
-  h2{letter-spacing:1px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.3;letter-spacing:.3px} /* line-height 1.3: chừa chỗ cho dấu tiếng Việt chồng (ấ, ễ, ờ) */
+  h2{letter-spacing:.6px}
   b,strong{font-weight:700}
   button,input{font-family:inherit}
   a{color:inherit}
@@ -94,7 +95,7 @@
   header.hero::before{top:-20px;left:-10px}
   header.hero::after{bottom:-50px;right:-10px}
   .eyebrow{font-family:var(--serif);letter-spacing:5px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
-  .names{font-size:clamp(2.6rem,7.5vw,5.2rem);color:var(--royal);margin:4px 0;font-weight:400;letter-spacing:3px;text-transform:uppercase}
+  .names{font-size:clamp(2.4rem,6.5vw,4.6rem);color:var(--royal);margin:4px 0;font-weight:500;letter-spacing:2px;text-transform:uppercase;line-height:1.25}
   .amp{color:var(--fire);display:block;margin:10px 0;font-family:var(--script);font-size:.55em;letter-spacing:0;text-transform:none;font-weight:400}
   .tagline{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1.3rem;margin-top:18px;font-weight:400}
   .hero-meta{margin-top:26px;font-size:1rem;color:var(--royal-deep);letter-spacing:1px}
