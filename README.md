@@ -30,7 +30,6 @@ python3 -m http.server 8000
 11. **Chủ đề & phong cách** — "Về Chung Một Nhà · Hoàng Kim Huế" (vàng hoàng kim – trắng ngà – champagne, hợp mệnh Kim)
 12. **Ý tưởng chạm đến trái tim** — những chi tiết ấm áp
 13. **Thời tiết** — khí hậu trung bình giữa tháng 2 ở Huế + link dự báo
-14. **Thông tin cưới tại Huế** — bối cảnh chụp hình, đón khách
 
 
 ## Phong cách Bridgerton
