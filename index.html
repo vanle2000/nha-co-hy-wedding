@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nhà Có Hỷ — Wedding Planner for Phát & Thảo</title>
+<meta name="description" content="Nhà Có Hỷ — Wedding Planner for Phát & Thảo. Đám cưới truyền thống Việt Nam tại Huế, phong vị Regency/Bridgerton — timeline, nghi lễ, phong thủy, checklist, ngân sách." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ===== BẢNG MÀU PHONG THỦY — Cô dâu & chú rể cùng mệnh KIM (Tân Tỵ 2001, Bạch Lạp Kim)
+       Thổ sinh Kim  -> vàng hoàng kim / nâu đất / champagne (nuôi dưỡng, che chở)
+       Kim bản mệnh  -> trắng ngà / bạc / ánh kim (vững mạnh)
+       Hỏa (theo Bát Tự hai bạn THIẾU Hỏa) -> bổ bằng đỏ son/san hô/hồng phấn/tử đằng làm ĐIỂM NHẤN ~25%, không làm nền ===== */
+    --royal:#7a5a1e;          /* Hoàng kim đậm (Thổ) — màu chủ đạo */
+    --royal-deep:#4a3612;     /* Nâu đồng sâu */
+    --royal-soft:#a8843a;     /* Vàng hoàng gia dịu */
+    --gold:#c9a24b;           /* Vàng kim ánh (Kim) */
+    --gold-light:#e4cd8f;
+    --champagne:#d9c08c;      /* Champagne (Thổ dịu) */
+    --champagne-soft:#f5edda; /* Nền champagne nhạt */
+    --ivory:#fbf7f0;          /* Trắng ngà (Kim bản mệnh) */
+    /* ----- BỔ HỎA theo Bát Tự (hai bạn thiếu Hỏa) — điểm nhấn ~20–30%, không làm nền lớn -----
+       Hỏa sinh Thổ, Thổ sinh Kim: chuỗi tương sinh trọn vẹn khi Hỏa đi cùng vàng/ngà. */
+    --fire:#b23a2e;           /* Đỏ son (sơn son thiếp vàng Huế) */
+    --coral:#e07a5f;          /* Cam san hô */
+    --blush:#e8b4b8;          /* Hồng phấn Regency (Hỏa dịu) */
+    --wisteria:#9b89b3;       /* Tím hoa tử đằng — màu Bridgerton (Hỏa dịu) */
+    --powder:#aac4d8;         /* Xanh bột Bridgerton (Thủy) — dùng rất ít */
+    --ink:#2e2618;
+    --muted:#7a6f5c;
+    --line:rgba(122,90,30,.18);
+    --shadow:0 18px 50px -24px rgba(74,54,18,.45);
+    --serif:'Cormorant Garamond','Playfair Display',Georgia,'Times New Roman',serif;
+    --script:'Great Vibes','Brush Script MT',cursive;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .accent{color:var(--gold)}
+
+  /* ====== Decorative lotus/flourish ====== */
+  .flourish{display:block;margin:14px auto 0;width:180px;max-width:60%;opacity:.85}
+
+  /* ====== NAV ====== */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,247,240,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:var(--serif);font-size:1.15rem;color:var(--royal);letter-spacing:.5px;font-weight:700}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:20px;flex-wrap:wrap}
+  .nav-links a{font-size:.82rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);text-decoration:none;transition:color .2s}
+  .nav-links a:hover{color:var(--royal)}
+  .nav-toggle{display:none;background:none;border:0;font-size:1.5rem;color:var(--royal);cursor:pointer}
+
+  /* ====== HERO ====== */
+  header.hero{
+    position:relative;
+    text-align:center;
+    padding:92px 20px 76px;
+    background:
+      radial-gradient(circle at 20% 18%,rgba(217,192,140,.30),transparent 42%),
+      radial-gradient(circle at 82% 24%,rgba(201,162,75,.22),transparent 40%),
+      linear-gradient(160deg,#fbf7f0 0%,#f6efe0 55%,#f1e6cf 100%);
+    overflow:hidden;
+  }
+  header.hero::before,header.hero::after{
+    content:"❀";position:absolute;font-size:150px;color:rgba(122,90,30,.07);
+  }
+  header.hero::before{top:-20px;left:-10px}
+  header.hero::after{bottom:-50px;right:-10px}
+  .eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
+  .names{font-size:clamp(2.4rem,7vw,4.6rem);color:var(--royal);margin:4px 0}
+  .amp{color:var(--fire);font-style:italic;display:block;font-size:.5em;margin:6px 0;font-family:var(--script);font-size:.62em}
+  .tagline{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1.2rem;margin-top:14px}
+  .hero-meta{margin-top:26px;font-size:1rem;color:var(--royal-deep);letter-spacing:1px}
+  .hero-meta strong{color:var(--gold)}
+
+  /* ====== COUNTDOWN ====== */
+  .countdown{display:flex;justify-content:center;gap:14px;margin:34px 0 6px;flex-wrap:wrap}
+  .cd-box{
+    background:rgba(255,255,255,.7);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 20px;min-width:84px;
+    box-shadow:var(--shadow);
+  }
+  .cd-num{font-family:var(--serif);font-size:2rem;color:var(--royal);font-weight:700;display:block}
+  .cd-label{font-size:.68rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted)}
+  .date-note{font-size:.84rem;color:var(--muted);margin-top:8px}
+
+  .btn{
+    display:inline-block;margin-top:26px;
+    background:linear-gradient(135deg,var(--royal),var(--royal-soft));
+    color:#fff;text-decoration:none;
+    padding:13px 30px;border-radius:40px;
+    font-size:.84rem;letter-spacing:1.5px;text-transform:uppercase;
+    box-shadow:var(--shadow);transition:transform .2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+
+  /* ====== SECTION ====== */
+  section{padding:70px 0;border-top:1px solid var(--line)}
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head .kicker{letter-spacing:3px;text-transform:uppercase;font-size:.72rem;color:var(--gold);display:block;margin-bottom:10px}
+  .sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--royal)}
+  .sec-head p{color:var(--muted);max-width:640px;margin:14px auto 0}
+
+  /* ====== STORY ====== */
+  .story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .story-card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .story-card .ico{font-size:1.8rem;margin-bottom:10px;display:block}
+  .story-card h3{color:var(--royal);font-size:1.2rem;margin-bottom:8px}
+  .story-card p{color:var(--muted);font-size:.95rem}
+  .pullquote{
+    text-align:center;font-family:var(--serif);font-style:italic;
+    font-size:1.35rem;color:var(--royal);max-width:720px;margin:40px auto 0;line-height:1.5;
+  }
+
+  /* ====== TIMELINE ====== */
+  .timeline{position:relative;max-width:820px;margin:0 auto;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--champagne))}
+  .tl-item{position:relative;padding:0 0 30px 26px}
+  .tl-item::before{content:"";position:absolute;left:-27px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--ivory);box-shadow:0 0 0 2px var(--gold)}
+  .tl-when{font-size:.74rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:700}
+  .tl-item h3{color:var(--royal);font-size:1.15rem;margin:4px 0 6px}
+  .tl-item p{color:var(--muted);font-size:.94rem}
+
+  /* ====== CEREMONY CARDS ====== */
+  .cer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .cer-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .cer-top{background:linear-gradient(135deg,var(--royal),var(--royal-deep));color:#fff;padding:20px 22px}
+  .cer-top .step{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light)}
+  .cer-top h3{font-size:1.3rem;margin-top:4px}
+  .cer-top .vi{font-style:italic;color:var(--champagne-soft);font-size:.9rem}
+  .cer-body{padding:20px 22px}
+  .cer-body ul{list-style:none}
+  .cer-body li{padding:6px 0 6px 22px;position:relative;font-size:.92rem;color:var(--muted)}
+  .cer-body li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+
+  /* ====== CHECKLIST ====== */
+  .check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .check-col{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+  .check-col h3{color:var(--royal);font-size:1.1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .check-col h3 .tag{font-size:.66rem;background:var(--champagne-soft);color:var(--royal);padding:3px 9px;border-radius:20px;letter-spacing:1px}
+  .check-item{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed var(--line);cursor:pointer}
+  .check-item:last-child{border-bottom:0}
+  .check-item input{margin-top:5px;accent-color:var(--royal);width:16px;height:16px;flex-shrink:0}
+  .check-item span{font-size:.92rem;color:var(--ink)}
+  .check-item input:checked + span{color:var(--muted);text-decoration:line-through}
+  .progress-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:28px}
+  #prog-bar-wrap{max-width:420px;height:8px;background:var(--champagne-soft);border-radius:10px;margin:10px auto 0;overflow:hidden}
+  #prog-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--royal));transition:width .3s}
+
+  /* ====== BUDGET ====== */
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  thead{background:linear-gradient(135deg,var(--royal),var(--royal-deep));color:#fff}
+  th,td{padding:13px 16px;text-align:left;font-size:.92rem}
+  tbody tr{border-top:1px solid var(--line)}
+  tbody tr:nth-child(even){background:#faf5ef}
+  td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  tfoot td{font-weight:700;color:var(--royal);background:var(--champagne-soft)}
+  .budget-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
+
+  /* ====== THEME SWATCHES ====== */
+  .theme-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+  .swatches{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:220px}
+  .sw{flex:1;display:flex;align-items:flex-end;justify-content:center;padding:12px 6px;color:#fff;font-size:.7rem;letter-spacing:.5px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+  .theme-list{list-style:none}
+  .theme-list li{padding:8px 0 8px 26px;position:relative;color:var(--muted)}
+  .theme-list li::before{content:"❖";position:absolute;left:0;color:var(--gold)}
+  .theme-list b{color:var(--royal)}
+
+  /* ====== CARDS GENERIC (ideas / vendors / guest) ====== */
+  .mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .mini{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+  .mini h3{color:var(--royal);font-size:1.08rem;margin-bottom:8px}
+  .mini p,.mini li{color:var(--muted);font-size:.92rem}
+  .mini ul{list-style:none;margin-top:6px}
+  .mini li{padding:4px 0 4px 20px;position:relative}
+  .mini li::before{content:"–";position:absolute;left:0;color:var(--gold)}
+
+  /* ====== CALLOUT ====== */
+  .callout{background:linear-gradient(135deg,rgba(122,90,30,.06),rgba(201,162,75,.10));border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;margin-top:26px;font-size:.92rem;color:var(--royal-deep)}
+
+  /* ====== VENUE ====== */
+  .venue-card{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .venue-info{padding:30px 28px}
+  .venue-info h3{color:var(--royal);font-size:1.5rem;margin-bottom:4px}
+  .venue-info .addr{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+  .venue-stats{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0}
+  .vstat{background:var(--champagne-soft);border-radius:12px;padding:12px 16px;text-align:center;min-width:92px}
+  .vstat b{display:block;font-family:var(--serif);font-size:1.4rem;color:var(--royal)}
+  .vstat span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  .venue-map{background:linear-gradient(135deg,var(--royal),var(--royal-deep));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;text-align:center}
+  .venue-map .pin{font-size:3rem;margin-bottom:10px}
+  .venue-map a{color:var(--gold-light);text-decoration:underline;font-size:.9rem;margin-top:14px;display:inline-block}
+
+  /* ====== FLOORPLAN ====== */
+  .floorplan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+  .stage-el{background:linear-gradient(135deg,var(--royal),var(--royal-soft));color:#fff;text-align:center;padding:16px;border-radius:12px;font-family:var(--serif);letter-spacing:1px;margin-bottom:8px}
+  .aisle{text-align:center;color:var(--gold);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;padding:6px 0}
+  .table-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:10px;margin:14px 0}
+  .tbl{aspect-ratio:1;background:var(--champagne-soft);border:1.5px dashed var(--royal-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--royal);font-weight:700}
+  .tbl.vip{background:var(--gold-light);border-color:var(--gold);border-style:solid}
+  .fp-zones{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .fp-zone{flex:1;min-width:120px;background:#faf5ef;border-radius:10px;padding:12px;font-size:.82rem;color:var(--muted);text-align:center}
+  .fp-zone b{color:var(--royal);display:block;margin-bottom:3px}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px;font-size:.8rem;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:14px;height:14px;border-radius:50%;display:inline-block}
+
+  /* ====== DESIGN STUDIO ====== */
+  .stage-elev{background:linear-gradient(180deg,#2b2010,#4a3612);border-radius:16px;padding:26px 22px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .stage-elev .sky{position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(201,162,75,.25),transparent 55%)}
+  .stage-elev .screen{position:relative;background:rgba(0,0,0,.45);border:2px solid var(--gold);border-radius:8px;height:120px;margin:0 auto;max-width:62%;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.8rem;letter-spacing:1px;text-align:center}
+  .stage-elev .couple{position:relative;text-align:center;color:#fff;margin-top:14px;font-family:var(--serif)}
+  .stage-elev .couple .ar{color:var(--gold-light)}
+  .stage-elev .floor{position:relative;height:16px;margin-top:14px;border-radius:6px;background:linear-gradient(90deg,var(--royal-soft),var(--gold),var(--royal-soft));opacity:.6}
+  .stage-elev .labels{position:relative;display:flex;justify-content:space-between;color:var(--champagne-soft);font-size:.68rem;margin-top:8px;opacity:.8;flex-wrap:wrap;gap:4px}
+
+  .spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:22px}
+  .spec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+  .spec b{display:block;font-family:var(--serif);font-size:1.3rem;color:var(--royal)}
+  .spec span{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .spec small{display:block;font-size:.72rem;color:var(--gold);margin-top:4px}
+
+  .light-row{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px;margin-bottom:10px;box-shadow:var(--shadow)}
+  .light-row .lc{font-size:1.6rem;flex-shrink:0}
+  .light-row h4{color:var(--royal);font-size:1rem;margin-bottom:2px;font-family:var(--serif)}
+  .light-row p{color:var(--muted);font-size:.88rem}
+
+  .measure-list{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);max-width:760px;margin:0 auto}
+  .measure-list .mi{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .measure-list .mi:last-child{border-bottom:0}
+  .measure-list .mi input{margin-top:5px;accent-color:var(--royal);width:16px;height:16px;flex-shrink:0}
+  .measure-list .mi input:checked + span{color:var(--muted);text-decoration:line-through}
+  .measure-list .mi span{font-size:.92rem}
+
+  /* ====== BRIDGERTON / REGENCY ORNAMENTS ====== */
+  h1,h2,h3{letter-spacing:.3px}
+  .sec-head h2{font-weight:600;font-style:italic}
+  .regency-frame{
+    position:relative;border:1.5px solid var(--gold);outline:1px solid var(--gold);outline-offset:5px;
+    border-radius:4px;padding:30px 30px 26px;background:linear-gradient(180deg,#fffdf8,var(--champagne-soft));
+    box-shadow:var(--shadow);max-width:780px;margin:0 auto;
+  }
+  .regency-frame::before,.regency-frame::after{
+    content:"❦";position:absolute;color:var(--gold);font-size:1.4rem;background:var(--ivory);padding:0 8px;line-height:1;
+  }
+  .regency-frame::before{top:-14px;left:50%;transform:translateX(-50%)}
+  .regency-frame::after{bottom:-14px;left:50%;transform:translateX(-50%) rotate(180deg)}
+  .salutation{font-family:var(--script);font-size:2.1rem;color:var(--fire);line-height:1.1;margin-bottom:10px}
+  .letter{font-family:var(--serif);font-size:1.12rem;color:var(--ink);line-height:1.75}
+  .letter em{color:var(--royal)}
+  .signature{font-family:var(--script);font-size:1.7rem;color:var(--royal);text-align:right;margin-top:14px}
+  .wax-seal{
+    display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#d2574a,var(--fire) 60%,#7f2419);
+    color:var(--gold-light);font-family:var(--serif);font-weight:700;font-size:1.1rem;letter-spacing:1px;
+    box-shadow:inset 0 0 0 3px rgba(255,255,255,.12),0 6px 16px -6px rgba(127,36,25,.6);
+    margin-top:14px;
+  }
+  .divider{text-align:center;color:var(--gold);letter-spacing:10px;margin:28px 0 6px;font-size:1rem}
+  .divider::before,.divider::after{content:"────";letter-spacing:0;opacity:.5;margin:0 10px}
+  .ribbon{display:inline-block;background:var(--wisteria);color:#fff;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:12px}
+  .fire-accent{border-left-color:var(--fire)!important}
+  .sw-row{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:120px;margin-top:12px}
+
+  /* ====== FOOTER ====== */
+  footer{background:var(--royal-deep);color:var(--champagne-soft);text-align:center;padding:50px 20px}
+  footer .names-foot{font-family:var(--serif);font-size:1.8rem;color:#fff}
+  footer .amp{color:var(--gold-light)}
+  footer p{font-size:.86rem;opacity:.85;margin-top:10px}
+  footer .heart{color:var(--champagne);font-size:1.1rem}
+
+  @media(max-width:720px){
+    .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--ivory);flex-direction:column;padding:14px 22px;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .nav-toggle{display:block}
+    .theme-wrap{grid-template-columns:1fr}
+    .venue-card{grid-template-columns:1fr}
+    section{padding:54px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <div class="brand">Nhà Có Hỷ <span>❀</span> <span style="color:var(--muted);font-weight:400;font-size:.85rem">Phát &amp; Thảo</span></div>
+    <button class="nav-toggle" aria-label="menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#story">Chuyện tình</a>
+      <a href="#timeline">Chuẩn bị</a>
+      <a href="#ceremonies">Nghi lễ</a>
+      <a href="#venue">Địa điểm</a>
+      <a href="#layout">Sơ đồ</a>
+      <a href="#decor">Trang trí</a>
+      <a href="#dayof">Lịch ngày cưới</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#budget">Ngân sách</a>
+      <a href="#fengshui">Phong thủy</a>
+      <a href="#theme">Chủ đề</a>
+      <a href="#ideas">Ý tưởng</a>
+      <a href="#guests">Tại Huế</a>
+      <a href="#weather">Thời tiết</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Thành phố Huế · Mùng 10 tháng Giêng · Năm Đinh Mùi 2027</div>
+    <h1 class="names">Phát <span class="amp">&amp; sánh duyên cùng</span> Thảo</h1>
+    <p class="tagline">"Sáu năm thương, ba năm xa cách Đà Nẵng – Huế… và rồi mình về chung một nhà."</p>
+    <div class="hero-meta">Thứ Hai, <strong id="wedding-date-label">15 tháng 2, 2027</strong> · Lễ gia tiên <strong>9:00 sáng</strong> · Tiệc cưới trưa tại <strong>GOLDLAND PLAZA, Huế</strong></div>
+
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><span class="cd-num" id="cd-days">—</span><span class="cd-label">Ngày</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-hours">—</span><span class="cd-label">Giờ</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-mins">—</span><span class="cd-label">Phút</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-secs">—</span><span class="cd-label">Giây</span></div>
+    </div>
+    <p class="date-note">⏱ Đồng hồ đếm ngược đến 9:00 sáng Thứ Hai, 15/02/2027 — ngày trọng đại.</p>
+    <a class="btn" href="#timeline">Bắt đầu lên kế hoạch →</a>
+
+    <div class="regency-frame" style="margin-top:46px;text-align:left">
+      <div class="salutation">Kính gửi Quý Độc Giả thân mến,</div>
+      <p class="letter">Mùa cưới năm Đinh Mùi vừa khai mở, và người viết đây có một tin không thể giữ kín lâu hơn: <em>viên kim cương của mùa này</em> đã được tìm thấy — không ở phòng khiêu vũ Mayfair, mà bên bờ sông Hương. Hai người bạn học thuở áo trắng, <em>sáu năm</em> thương nhau, <em>ba năm</em> cách trở đèo Hải Vân giữa Đà Nẵng và Huế… nay sẽ <em>về chung một nhà</em> vào mùng 10 tháng Giêng. Xin quý vị chuẩn bị áo dài đẹp nhất, bởi đây hứa hẹn là <em>sự kiện rực rỡ nhất mùa</em>.</p>
+      <div class="signature">— Nhà Có Hỷ ❦</div>
+      <div style="text-align:center"><span class="wax-seal">P❦T</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Chuyện của chúng mình</span>
+      <h2>Một tình yêu đi qua khoảng cách</h2>
+      <p>Mỗi đám cưới ấm áp đều bắt đầu từ một câu chuyện thật. Đây là sợi chỉ đỏ xuyên suốt mọi chi tiết của ngày trọng đại.</p>
+    </div>
+    <div class="story-grid">
+      <div class="story-card"><span class="ico">📚</span><h3>Bạn cùng trường</h3><p>Quen nhau từ thời áo trắng cấp ba — nơi những rung động đầu đời bắt đầu, trong sân trường và những trang vở.</p></div>
+      <div class="story-card"><span class="ico">💞</span><h3>Sáu năm bên nhau</h3><p>Sáu năm vun đắp, cùng nhau lớn lên, cùng trưởng thành — một tình yêu đủ chín để bước tới hôn nhân.</p></div>
+      <div class="story-card"><span class="ico">🚆</span><h3>Ba năm yêu xa</h3><p>Đà Nẵng – Huế, hơn 90km đèo Hải Vân ngăn cách. Ba năm của những chuyến xe cuối tuần, những cuộc gọi khuya và lời hứa chờ đợi.</p></div>
+      <div class="story-card"><span class="ico">🏡</span><h3>Về chung một nhà</h3><p>Khoảng cách khép lại. Hai gia đình thành một. Hành trình mới — hạnh phúc, bền lâu và trọn vẹn yêu thương — bắt đầu tại Huế.</p></div>
+    </div>
+    <p class="pullquote">"Khoảng cách không chia cắt được hai người thật lòng muốn về chung một nhà — nó chỉ làm ngày đoàn tụ thêm ngọt ngào."</p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Lịch trình ngược — 4 tháng rưỡi</span>
+      <h2>Chúng ta cần làm gì, và khi nào</h2>
+      <p>Tính từ hôm nay đến ngày cưới (~4 tháng 2 tuần). Làm theo thứ tự này để không việc gì bị dồn vào phút chót.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-when">Ngay bây giờ · Tháng 0</div><h3>Chốt ngày & hai gia đình gặp mặt</h3><p>Xem ngày lành (có thể nhờ thầy / người lớn trong họ), chốt ngày ăn hỏi & ngày cưới. Lập ngân sách tổng và phân chia trách nhiệm hai nhà. Mở một nhóm chat chung của hai gia đình.</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 0 – 0.5</div><h3>Lễ dạm ngõ (nếu chưa làm)</h3><p>Buổi gặp thân mật đầu tiên, nhà trai mang trầu cau – trà – trái cây sang thưa chuyện. Thống nhất số mâm quả, lễ vật, số người bưng tráp.</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 1</div><h3>Chốt địa điểm & nhà hàng tiệc cưới</h3><p>Đặt nhà hàng/khách sạn ở Huế (đặt sớm vì mùa cưới dễ hết chỗ). Chốt số mâm cỗ sơ bộ. Đặt cọc. Lên danh sách khách mời bản nháp (nhà trai + nhà gái).</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 1 – 2</div><h3>Áo dài, váy cưới, vest & chụp ảnh cưới (pre-wedding)</h3><p>Đặt may/thuê áo dài truyền thống cho cô dâu chú rể và bố mẹ. Đặt studio chụp ảnh cưới — gợi ý bối cảnh Huế: Đại Nội, cầu Trường Tiền, sông Hương, đầm sen, lăng tẩm.</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 2</div><h3>Nhà cung cấp: trang trí, chụp hình/quay phim, MC, nhạc</h3><p>Chốt đơn vị trang trí gia tiên & sân khấu, thợ ảnh/quay ngày cưới, MC, ban nhạc/âm thanh. Đặt xe hoa đón dâu & xe đưa đón khách đường xa.</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 2 – 3</div><h3>Thiệp cưới & gửi thiệp</h3><p>Thiết kế & in thiệp (song ngữ nếu có khách nước ngoài). Chốt danh sách khách chính thức. Gửi thiệp trước ít nhất 3–4 tuần; khách ở xa báo sớm hơn.</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 3</div><h3>Mâm quả, lễ vật, nhẫn & trang sức</h3><p>Đặt mâm quả ăn hỏi (trầu cau, trà rượu, bánh phu thê, trái cây, heo quay/xôi gấc…). Mua nhẫn cưới, kiềng/vàng cưới. Chuẩn bị phong bì lễ nạp tài (nhà trai).</p></div>
+      <div class="tl-item"><div class="tl-when">Tháng 3.5</div><h3>Lễ ăn hỏi / đính hôn</h3><p>Nhà trai mang tráp sang nhà gái. Chọn & tập dượt đội bưng tráp (nam nhà trai, nữ nhà gái, chưa lập gia đình). Lì xì trao duyên cho đội bưng tráp.</p></div>
+      <div class="tl-item"><div class="tl-when">2 tuần cuối</div><h3>Tổng duyệt & xác nhận</h3><p>Xác nhận số khách & số mâm với nhà hàng. Duyệt kịch bản MC, thứ tự nghi lễ. Thử đồ lần cuối. Chuẩn bị bàn thờ gia tiên hai nhà. Phân công người giữ tiền mừng, đón khách, hậu cần.</p></div>
+      <div class="tl-item"><div class="tl-when">Tuần cưới</div><h3>Lễ cưới 🎉</h3><p>Lễ xin dâu → rước dâu → lễ gia tiên → lễ thành hôn → tiệc cưới. Vài ngày sau: lễ lại mặt (cô dâu chú rể về thăm nhà gái).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONIES -->
+<section id="ceremonies">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Nghi lễ truyền thống</span>
+      <h2>Ba nghi lễ chính của đám cưới Việt</h2>
+      <p>Đám cưới hiện đại thường gồm 3 nghi lễ. Phong tục Huế / miền Trung thiên về sự chỉn chu, trang trọng và coi trọng lễ gia tiên.</p>
+    </div>
+    <div class="cer-grid">
+      <div class="cer-card">
+        <div class="cer-top"><div class="step">Bước 1</div><h3>Lễ Dạm Ngõ</h3><div class="vi">Chạm ngõ · Lễ xem mặt</div></div>
+        <div class="cer-body"><ul>
+          <li>Buổi gặp mặt thân mật, chính thức giữa hai gia đình</li>
+          <li>Nhà trai mang lễ nhỏ: trầu cau, trà, bánh, trái cây</li>
+          <li>Thưa chuyện xin cho đôi trẻ qua lại, bàn chuyện cưới xin</li>
+          <li>Thắp hương bàn thờ gia tiên nhà gái</li>
+          <li>Thống nhất ngày ăn hỏi, ngày cưới, số mâm quả</li>
+        </ul></div>
+      </div>
+      <div class="cer-card">
+        <div class="cer-top"><div class="step">Bước 2</div><h3>Lễ Ăn Hỏi</h3><div class="vi">Đính hôn · Lễ hỏi</div></div>
+        <div class="cer-body"><ul>
+          <li>Nhà trai mang <b>mâm quả (tráp)</b> sang nhà gái</li>
+          <li>Huế/miền Trung thường số tráp <b>lẻ (5 hoặc 7)</b>; lễ vật bên trong theo cặp chẵn</li>
+          <li>Lễ vật: trầu cau (~105 quả cau — trăm năm hạnh phúc), trà – rượu, bánh phu thê (su sê), trái cây, heo quay / xôi gấc, trang sức</li>
+          <li>Đội bưng tráp nam – nữ chưa lập gia đình; trao lì xì "trả duyên"</li>
+          <li>Cô dâu ra mắt, thắp hương gia tiên; hai nhà trao lễ, nhận lễ</li>
+        </ul></div>
+      </div>
+      <div class="cer-card">
+        <div class="cer-top"><div class="step">Bước 3</div><h3>Lễ Cưới</h3><div class="vi">Lễ thành hôn · Rước dâu · Tiệc cưới</div></div>
+        <div class="cer-body"><ul>
+          <li><b>Lễ xin dâu:</b> mẹ chú rể sang trao lễ, xin đón cô dâu</li>
+          <li><b>Lễ rước dâu / đón dâu:</b> đoàn nhà trai đón cô dâu về</li>
+          <li><b>Lễ gia tiên:</b> cô dâu chú rể thắp hương, bái lạy tổ tiên hai nhà</li>
+          <li><b>Lễ thành hôn:</b> trao nhẫn, nhận lời chúc & nữ trang của cha mẹ</li>
+          <li><b>Tiệc cưới:</b> đãi khách; <b>Lễ lại mặt:</b> vài ngày sau về thăm nhà gái</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="callout">
+      <b>Lưu ý văn hóa quan trọng:</b> Số mâm quả, lễ vật và nghi thức có thể khác nhau tùy <b>từng gia đình, từng vùng và dòng họ</b>. Luôn hỏi và thống nhất với <b>người lớn / trưởng họ hai bên</b> trước — đây vừa là phép lịch sự, vừa đảm bảo mọi nghi lễ đúng ý nguyện gia đình. Phần trên là khung tham khảo theo phong tục phổ biến ở Huế / miền Trung.
+    </div>
+  </div>
+</section>
+
+<!-- VENUE -->
+<section id="venue">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Địa điểm tiệc cưới</span>
+      <h2>GOLDLAND PLAZA</h2>
+      <p>Tiệc cưới sẽ diễn ra vào <b>buổi trưa Thứ Hai, 15/02/2027</b>, sau lễ gia tiên & rước dâu buổi sáng.</p>
+    </div>
+    <div class="venue-card">
+      <div class="venue-info">
+        <h3>GOLDLAND PLAZA</h3>
+        <div class="addr">14 – 16 – 18 – 20 Lý Thường Kiệt, P. Thuận Hóa, TP. Huế</div>
+        <p style="color:var(--muted);font-size:.94rem">Trung tâm tiệc cưới & hội nghị ngay trung tâm thành phố Huế — thuận tiện cho khách từ Đà Nẵng và các tỉnh về dự.</p>
+        <div class="venue-stats">
+          <div class="vstat"><b>700–800</b><span>Khách mời</span></div>
+          <div class="vstat"><b>~70–80</b><span>Bàn (10 khách)</span></div>
+          <div class="vstat"><b>Trưa</b><span>Giờ tiệc</span></div>
+        </div>
+        <div class="callout" style="margin-top:14px">
+          <b>Việc cần chốt với GOLDLAND PLAZA:</b> sức chứa sảnh cho 700–800 khách (có thể cần sảnh lớn nhất / gộp sảnh), số bàn & bàn dự phòng, thực đơn & giá/bàn, giờ set-up cho đơn vị trang trí, chỗ đậu xe, màn hình LED/âm thanh, và phương án hậu cần cho lượng khách lớn.
+        </div>
+      </div>
+      <div class="venue-map">
+        <div class="pin">📍</div>
+        <div style="font-family:var(--serif);font-size:1.3rem">Lý Thường Kiệt</div>
+        <div style="opacity:.85;font-size:.9rem;margin-top:6px">Thuận Hóa · TP. Huế</div>
+        <a href="https://www.google.com/maps/search/?api=1&query=GOLDLAND+PLAZA+Ly+Thuong+Kiet+Hue" target="_blank" rel="noopener">Mở trên Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYOUT / FLOORPLAN -->
+<section id="layout">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Sơ đồ không gian</span>
+      <h2>Bố trí sảnh tiệc cho 700–800 khách</h2>
+      <p>Sơ đồ gợi ý (minh họa) cho một sảnh lớn ~70–80 bàn. Hãy khớp với sơ đồ thực tế của GOLDLAND PLAZA khi ký hợp đồng.</p>
+    </div>
+    <div class="floorplan">
+      <div class="stage-el">🎤 SÂN KHẤU · Backdrop "Về Chung Một Nhà" · Màn hình LED</div>
+      <div class="aisle">◁ ─────── Lối đi chính (Aisle) ─────── ▷</div>
+      <div class="table-grid">
+        <div class="tbl vip">VIP</div><div class="tbl vip">VIP</div>
+        <div class="tbl vip">GĐ</div><div class="tbl vip">GĐ</div>
+        <div class="tbl">1</div><div class="tbl">2</div><div class="tbl">3</div><div class="tbl">4</div>
+        <div class="tbl">5</div><div class="tbl">6</div><div class="tbl">7</div><div class="tbl">8</div>
+        <div class="tbl">9</div><div class="tbl">10</div><div class="tbl">11</div><div class="tbl">12</div>
+        <div class="tbl">13</div><div class="tbl">14</div><div class="tbl">15</div><div class="tbl">16</div>
+        <div class="tbl">…</div><div class="tbl">…</div><div class="tbl">…</div><div class="tbl">70+</div>
+      </div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--gold-light)"></i> Bàn VIP / gia đình (gần sân khấu)</span>
+        <span><i class="dot" style="background:var(--champagne-soft);border:1.5px dashed var(--royal-soft)"></i> Bàn khách (10 người/bàn)</span>
+      </div>
+      <div class="fp-zones">
+        <div class="fp-zone"><b>🚪 Lối vào & Lễ tân</b>Bàn đón khách, sổ ký tên, hộp mừng, bảng chào mừng + ảnh cưới</div>
+        <div class="fp-zone"><b>📸 Góc check-in</b>Backdrop vàng hoàng kim – trắng ngà, sen trắng, nón lá — đặt gần sảnh chờ</div>
+        <div class="fp-zone"><b>🍰 Bàn gallery</b>Bánh cưới, tháp ly, timeline "6 năm – 2 thành phố"</div>
+        <div class="fp-zone"><b>🍽️ Khu phục vụ</b>Lối ra của bếp/phục vụ, bố trí tránh cắt ngang lối đi chính</div>
+      </div>
+    </div>
+    <div class="callout">
+      <b>Lưu ý cho quy mô lớn (700–800 khách):</b> xếp bàn theo <b>cụm có đánh số rõ</b> và in <b>sơ đồ bàn</b> ở lối vào + nhờ 4–6 lễ tân hướng dẫn, để tránh ùn tắc. Bàn gia đình & khách lớn tuổi đặt gần sân khấu và gần lối ra để tiện di chuyển.
+    </div>
+  </div>
+</section>
+
+<!-- DECOR -->
+<section id="decor">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Xưởng thiết kế — Sân khấu · Decor · Ánh sáng · Hoa</span>
+      <h2>Thiết kế không gian cưới "Về Chung Một Nhà"</h2>
+      <p>Thiết kế chi tiết cho sảnh tiệc 700–800 khách tại GOLDLAND PLAZA, theo chuẩn bố trí tiệc cưới chuyên nghiệp — và dễ dàng khớp với sơ đồ thực tế sau khi khảo sát mặt bằng.</p>
+    </div>
+
+    <div class="callout" style="margin-top:0;margin-bottom:30px">
+      <b>⚠️ Trước khi chốt thiết kế — cần khảo sát mặt bằng thực tế.</b> Hiện <b>chưa có bản vẽ / kích thước sảnh của GOLDLAND PLAZA công bố công khai</b>. Lưu ý: toà nhà có thông tin đang được rà soát pháp lý (tin đầu 2026) — hãy <b>xác nhận sảnh tiệc còn hoạt động và ký hợp đồng rõ ràng</b> trước khi đặt cọc. Dùng checklist đo đạc ở cuối mục này khi đi xem sảnh.
+    </div>
+
+    <!-- STAGE DESIGN -->
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin-bottom:6px">🎤 1. Sân khấu & Backdrop</h3>
+    <p style="color:var(--muted);margin-bottom:18px">Hình minh họa mặt đứng sân khấu (stage elevation) — tỉ lệ gợi ý để trao đổi với đơn vị trang trí.</p>
+    <div class="stage-elev">
+      <div class="sky"></div>
+      <div class="screen">▣ Màn hình LED (P3 trong nhà)<br>chiếu tên · video phóng sự yêu xa · "15.02.2027"</div>
+      <div class="couple">— Vị trí cô dâu <span class="ar">&amp;</span> chú rể —</div>
+      <div class="floor"></div>
+      <div class="labels"><span>◀ Hoa đứng + đèn uplight</span><span>Lối tiến vào (aisle)</span><span>Hoa đứng + đèn uplight ▶</span></div>
+    </div>
+    <div class="spec-grid">
+      <div class="spec"><b>8–12m</b><span>Chiều rộng backdrop</span><small>theo bề ngang sảnh</small></div>
+      <div class="spec"><b>0.4–0.6m</b><span>Độ cao bục sân khấu</span><small>để khách bàn sau nhìn rõ</small></div>
+      <div class="spec"><b>10–20m²</b><span>Màn hình LED</span><small>P3 cho sảnh lớn</small></div>
+      <div class="spec"><b>≥3.5m</b><span>Chiều cao backdrop</span><small>cần trần đủ cao</small></div>
+    </div>
+    <div class="callout" style="border-left-color:var(--champagne)">
+      <b>Ý tưởng backdrop:</b> chữ "Về Chung Một Nhà" mạ vàng trên nền <b>trắng ngà – champagne gradient</b> trong <b>khung filigree mạ vàng kiểu Regency</b>, viền hoa văn long phụng (Phụng đỏ son nổi bật — bổ Hỏa); hai bên là <b>trụ hoa đứng</b> (sen trắng + mẫu đơn đỏ + hồng phấn + tử đằng rủ + mai vàng), kết hợp <b>màn hình LED</b> ở giữa thay cho backdrop in cứng — chiếu video 3 năm yêu xa, linh hoạt. Phía sau: <b>rèm voan ngà + đèn chùm pha lê</b> treo thấp tạo chiều sâu phòng khiêu vũ. Toàn bộ tông <b>Thổ – Kim nền, Hỏa điểm</b> — đúng Bát Tự của hai bạn.
+    </div>
+
+    <!-- AISLE & SEATING -->
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">🪑 2. Lối đi & Cách xếp bàn (chuẩn kích thước)</h3>
+    <p style="color:var(--muted);margin-bottom:18px">Các con số chuẩn ngành để bàn bạc với nhà hàng — đảm bảo khách di chuyển & phục vụ thuận tiện ở quy mô lớn.</p>
+    <div class="spec-grid">
+      <div class="spec"><b>1.5–1.8m</b><span>Lối đi chính giữa</span><small>cho màn tiến vào</small></div>
+      <div class="spec"><b>≥0.6m</b><span>Khoảng cách giữa các bàn</span><small>lối phục vụ</small></div>
+      <div class="spec"><b>1.5–1.8m</b><span>Đường kính bàn tròn 10 người</span><small>bàn tiêu chuẩn</small></div>
+      <div class="spec"><b>~1.2m²</b><span>Diện tích / khách</span><small>×750 ≈ 900m² sảnh</small></div>
+      <div class="spec"><b>70–80</b><span>Số bàn (10 khách)</span><small>+ 3–5 bàn dự phòng</small></div>
+      <div class="spec"><b>4–6</b><span>Lễ tân hướng dẫn</span><small>tránh ùn tắc</small></div>
+    </div>
+    <div class="callout">
+      <b>Nguyên tắc xếp bàn:</b> bàn <b>gia đình & khách lớn tuổi</b> ở hàng đầu gần sân khấu và gần lối ra; đánh <b>số bàn to, rõ</b>; in <b>sơ đồ bàn khổ lớn</b> đặt ở lối vào; chừa <b>lối thoát hiểm</b> thông thoáng. Với 700–800 khách, chia sảnh thành các <b>cụm (block A/B/C)</b> để lễ tân dẫn khách nhanh.
+    </div>
+
+    <!-- LIGHTING -->
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">💡 3. Kế hoạch ánh sáng (3 lớp)</h3>
+    <p style="color:var(--muted);margin-bottom:18px">Ánh sáng là yếu tố "nâng tầm" rẻ nhất mà hiệu quả nhất — chia 3 lớp để không gian có chiều sâu và lên hình đẹp.</p>
+    <div class="light-row"><div class="lc">🌕</div><div><h4>Lớp nền (Ambient)</h4><p>Đèn trần tổng để nhìn rõ, chỉnh về <b>tông ấm (2700–3000K)</b>, giảm sáng (dimmer) lúc nghi thức để tạo không khí.</p></div></div>
+    <div class="light-row"><div class="lc">🎯</div><div><h4>Lớp điểm nhấn (Accent / Spotlight)</h4><p><b>Follow spot</b> theo cô dâu chú rể khi tiến vào; <b>uplight amber – đỏ ấm</b> hắt lên trụ hoa, cột, backdrop (đỏ ấm bổ Hỏa; tránh xanh dương/lạnh — Thủy khắc Hỏa); đèn rọi bàn gallery & bánh cưới.</p></div></div>
+    <div class="light-row"><div class="lc">✨</div><div><h4>Lớp trang trí (Decorative)</h4><p><b>Đèn chùm pha lê kiểu Regency, nến thật trên chân nến vàng</b> (bổ Hỏa — có kiểm soát), đèn dây warm, <b>đèn lồng đỏ – vàng cung đình</b> dọc lối đi. Tạo điểm "wow" phòng khiêu vũ và ảnh lung linh.</p></div></div>
+    <div class="callout" style="border-left-color:var(--champagne)">
+      <b>Mẹo:</b> tiệc <b>buổi trưa</b> nên ánh sáng tự nhiên nhiều — hỏi nhà hàng về <b>cửa sổ/rèm che</b> để kiểm soát sáng khi chiếu video LED (ánh sáng mạnh làm màn LED kém nổi). Nếu sảnh nhiều kính, chuẩn bị rèm tối màu cho khu sân khấu.
+    </div>
+
+    <!-- FLOWERS -->
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">🌸 4. Kế hoạch hoa</h3>
+    <p style="color:var(--muted);margin-bottom:18px">Hoa chủ đạo <b>sen trắng & sen vàng</b> (Huế) phối <b>mai vàng – mẫu đơn đỏ – hồng phấn – tử đằng rủ</b> (Hỏa & Bridgerton), điểm lá cau gợi nhắc nghi lễ truyền thống. Bảng hoa <b>Thổ – Kim nền, Hỏa điểm</b>, đúng Bát Tự của hai bạn.</p>
+    <div class="mini-grid">
+      <div class="mini"><h3>🌺 Hoa chủ đạo</h3><ul><li>Sen trắng / sen vàng (biểu tượng Huế)</li><li>Mai vàng (xuân mới, Thổ sinh Kim)</li><li><b>Mẫu đơn đỏ & hồng phấn</b> (Hỏa, rất Bridgerton)</li><li><b>Tử đằng (wisteria) rủ</b> — cổng hoa & trần</li><li>Hồng kem, cát tường, baby; lan trắng điểm nhấn</li><li>Lá cau — chỉ điểm xanh nhẹ (Mộc tiếp Hỏa)</li></ul></div>
+      <div class="mini"><h3>💐 Nơi cần hoa</h3><ul><li>Cổng hoa + lối vào</li><li>2 trụ hoa đứng hai bên sân khấu</li><li>Hoa bàn tiệc (lọ thấp)</li><li>Bàn gallery, bàn ký tên, bàn thờ gia tiên</li><li>Hoa cầm tay cô dâu + cài áo chú rể</li></ul></div>
+      <div class="mini"><h3>🪷 Mẹo & lưu ý</h3><ul><li>Hoa bàn <b>để thấp</b> (dưới tầm mắt) để khách trò chuyện</li><li>Dùng hoa <b>đúng mùa</b> tháng 2 cho tươi & tiết kiệm</li><li>Kết hợp hoa lụa cao cấp ở trụ lớn để bền cả tiệc</li><li>Thống nhất <b>bảng màu hoa</b> với trang trí & áo dài</li></ul></div>
+    </div>
+
+    <!-- EXTRAS -->
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">✨ 5. Những điểm nhấn khiến ngày cưới "stunning"</h3>
+    <div class="mini-grid">
+      <div class="mini"><h3>🎆 Hiệu ứng khai tiệc</h3><p>Pháo kim tuyến / khói lạnh / màn hình LED mở màn khi cô dâu chú rể tiến vào — khoảnh khắc "wow" đầu tiên.</p></div>
+      <div class="mini"><h3>🗺️ Lối đi kể chuyện</h3><p>Dọc aisle đặt khung ảnh theo mốc: "Lớp 10 – gặp nhau" → "Đà Nẵng–Huế" → "Cầu hôn" → "15.02.2027".</p></div>
+      <div class="mini"><h3>🍸 Welcome drink & góc trà Huế</h3><p>Trà sen, mứt gừng, bánh Huế cho khách lúc chờ — ấm áp & đậm bản sắc.</p></div>
+      <div class="mini"><h3>🎥 Màn hình LED đa năng</h3><p>Chiếu video phóng sự, lời chúc live, hashtag ảnh khách — tận dụng tối đa chi phí thuê LED.</p></div>
+      <div class="mini"><h3>🏮 Đèn lồng đỏ–vàng & đèn chùm</h3><p>Trần đèn lồng đỏ son xen vàng cung đình (bổ Hỏa) + <b>đèn chùm pha lê</b> kiểu phòng khiêu vũ Regency — "trần nghệ thuật" rất ăn ảnh, đúng tông Huế × Bridgerton.</p></div>
+      <div class="mini"><h3>🎻 Tứ tấu đàn dây</h3><p>Dấu ấn Bridgerton: <b>string quartet</b> chơi bản cover nhạc Việt & pop ballad khi đón khách và lúc cô dâu tiến vào — sang trọng, xúc động, khác biệt.</p></div>
+      <div class="mini"><h3>💌 Thiệp thư tay niêm sáp</h3><p>Thiệp mời viết giọng <b>"Kính gửi Quý Độc Giả thân mến"</b> kiểu Lady Whistledown, niêm <b>sáp đỏ son "P❦T"</b> — vừa Bridgerton vừa bổ Hỏa ngay từ cánh thư đầu tiên.</p></div>
+      <div class="mini"><h3>🧁 Trà chiều & tháp macaron</h3><p>Góc <b>trà sen Huế + mứt + bánh Huế</b> bày cùng <b>tháp macaron hồng phấn – champagne</b> trên kệ bạc kiểu Regency — ấm áp bản sắc, đẹp mắt Bridgerton.</p></div>
+      <div class="mini"><h3>🌿 Cổng hoa tử đằng</h3><p>Cổng vào <b>tử đằng rủ</b> (wisteria — biểu tượng Bridgerton) xen mẫu đơn đỏ & sen trắng, khung mạ vàng — khách bước vào như vào một mùa vũ hội.</p></div>
+      <div class="mini"><h3>💌 Góc tri ân cha mẹ</h3><p>Khu riêng với ảnh gia đình hai bên + lời cảm ơn — nơi diễn ra nghi thức rót trà/trao hoa cho cha mẹ.</p></div>
+    </div>
+
+    <!-- SITE VISIT CHECKLIST -->
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">📐 6. Checklist khảo sát mặt bằng (mang theo khi đi xem sảnh)</h3>
+    <p style="color:var(--muted);margin-bottom:18px">Đây là dữ liệu <b>duy nhất đáng tin</b> để chốt thiết kế. Chụp ảnh + đo đạc theo danh sách này rồi gửi cho đơn vị trang trí.</p>
+    <div class="measure-list" id="measurelist">
+      <label class="mi"><input type="checkbox"><span><b>Kích thước sảnh:</b> dài × rộng × cao trần (m) — quyết định số bàn & chiều cao backdrop</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Vị trí & kích thước sân khấu</b> có sẵn (nếu có): rộng, sâu, cao bục</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Cột/vách chắn tầm nhìn:</b> chụp ảnh & đo vị trí — ảnh hưởng xếp bàn</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Vị trí cửa ra vào, lối thoát hiểm, nhà vệ sinh</b></span></label>
+      <label class="mi"><input type="checkbox"><span><b>Cửa sổ/kính & rèm che:</b> ánh sáng tự nhiên buổi trưa, có che được không</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Hệ thống điện:</b> số ổ, công suất cho LED + ánh sáng + âm thanh; có máy phát dự phòng?</span></label>
+      <label class="mi"><input type="checkbox"><span><b>LED/âm thanh có sẵn</b> của nhà hàng hay phải thuê ngoài; kích thước màn hình</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Lối cho bếp/phục vụ</b> & vị trí khu chờ món — tránh cắt ngang lối đi chính</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Giờ được vào set-up</b> (tiệc trưa thường gấp) & giờ phải dọn</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Chỗ đậu xe</b> cho 700–800 khách + chỗ đậu xe hoa/xe đưa đón</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Quy định của toà nhà:</b> được dùng pháo kim tuyến/khói lạnh/nến thật không</span></label>
+      <label class="mi"><input type="checkbox"><span><b>Thang máy / lối vận chuyển</b> đồ trang trí (sảnh ở khối đế/tầng mấy)</span></label>
+    </div>
+    <div class="callout">
+      <b>Mẹo khảo sát:</b> quay một <b>video toàn cảnh</b> sảnh, đứng ở vị trí sân khấu quay ra và ngược lại; xin <b>bản vẽ mặt bằng (mặt bằng bố trí bàn)</b> từ nhà hàng — hầu hết trung tâm tiệc đều có sẵn file này dù không công bố online.
+    </div>
+  </div>
+</section>
+
+<!-- DAY-OF TIMELINE -->
+<section id="dayof">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Lịch trình ngày cưới</span>
+      <h2>Thứ Hai, 15/02/2027 — từng mốc trong ngày</h2>
+      <p>Khung giờ gợi ý: nghi lễ truyền thống buổi sáng tại gia, tiệc cưới buổi trưa tại GOLDLAND PLAZA. Điều chỉnh theo giờ hoàng đạo & khoảng cách di chuyển thực tế.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-when">05:30 – 06:30</div><h3>Chuẩn bị cô dâu & chú rể</h3><p>Trang điểm, làm tóc cô dâu; chú rể và nhà trai chuẩn bị tráp, xe hoa, trang phục áo dài.</p></div>
+      <div class="tl-item"><div class="tl-when">07:00 – 07:30</div><h3>Lễ xin dâu</h3><p>Đại diện nhà trai (thường mẹ chú rể) sang nhà gái trao lễ, xin phép đón dâu đúng giờ đẹp.</p></div>
+      <div class="tl-item"><div class="tl-when">08:00 – 09:00</div><h3>Lễ rước dâu & Lễ gia tiên</h3><p>Đoàn nhà trai đón cô dâu; cô dâu chú rể thắp hương bái lạy tổ tiên hai nhà. Đây là nghi lễ thiêng liêng nhất — nên chụp hình trọn vẹn.</p></div>
+      <div class="tl-item"><div class="tl-when">09:00 – 10:30</div><h3>Lễ thành hôn tại gia & di chuyển</h3><p>Trao nhẫn, nhận lời chúc & nữ trang của cha mẹ. Chụp ảnh gia đình. Sau đó di chuyển ra GOLDLAND PLAZA.</p></div>
+      <div class="tl-item"><div class="tl-when">10:30 – 11:00</div><h3>Set-up hoàn tất & kiểm tra sảnh</h3><p>Đơn vị trang trí hoàn thiện; kiểm tra âm thanh, màn hình LED, sơ đồ bàn, bàn lễ tân & hộp mừng. Lễ tân vào vị trí.</p></div>
+      <div class="tl-item"><div class="tl-when">11:00 – 11:30</div><h3>Đón khách</h3><p>Khách tới, check-in, chụp ảnh góc check-in. Cô dâu chú rể & gia đình đón khách tại cửa. Nhạc nền nhẹ nhàng.</p></div>
+      <div class="tl-item"><div class="tl-when">11:30 – 11:45</div><h3>Khai tiệc & nghi thức sân khấu</h3><p>MC mời hai họ lên sân khấu, cô dâu chú rể tiến vào, rót rượu/tháp ly, cắt bánh, phát biểu của đại diện gia đình & lời cảm ơn.</p></div>
+      <div class="tl-item"><div class="tl-when">11:45 – 13:30</div><h3>Tiệc trưa</h3><p>Phục vụ món; cô dâu chú rể đi chào & cảm ơn từng bàn (ưu tiên bàn người lớn, khách đường xa). Chiếu video phóng sự, văn nghệ (nếu có).</p></div>
+      <div class="tl-item"><div class="tl-when">13:30 – 14:00</div><h3>Tiễn khách & cảm ơn</h3><p>Tặng quà cảm ơn, chụp ảnh lưu niệm, tiễn khách. Gia đình kiểm kê hộp mừng & sổ ghi lễ.</p></div>
+      <div class="tl-item"><div class="tl-when">Vài ngày sau</div><h3>Lễ lại mặt</h3><p>Cô dâu chú rể mang lễ về thăm nhà gái — khép lại trọn vẹn chuỗi nghi lễ cưới truyền thống.</p></div>
+    </div>
+    <div class="callout">
+      <b>Lưu ý điều phối:</b> với 700–800 khách, nên có <b>người điều phối (wedding coordinator)</b> cầm kịch bản theo mốc giờ, phân công rõ: đội lễ tân, người giữ hộp mừng, người lo hậu cần, người liên hệ nhà hàng. Chuẩn bị dư <b>5–10% suất ăn</b> cho khách phát sinh.
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section id="checklist">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Việc cần làm</span>
+      <h2>Checklist tương tác</h2>
+      <p>Tích vào ô khi hoàn thành — trạng thái được lưu lại trên trình duyệt của bạn. Thanh tiến độ cập nhật tự động.</p>
+    </div>
+    <div class="check-grid" id="checkgrid">
+      <div class="check-col">
+        <h3>Chuẩn bị chung <span class="tag">Nền tảng</span></h3>
+        <label class="check-item"><input type="checkbox"><span>Chốt ngày lành ăn hỏi & ngày cưới</span></label>
+        <label class="check-item"><input type="checkbox"><span>Lập ngân sách tổng, phân chia hai nhà</span></label>
+        <label class="check-item"><input type="checkbox"><span>Lập danh sách khách mời (hai bên)</span></label>
+        <label class="check-item"><input type="checkbox"><span>Tạo nhóm chat chung hai gia đình</span></label>
+        <label class="check-item"><input type="checkbox"><span>Phân công người điều phối ngày cưới</span></label>
+      </div>
+      <div class="check-col">
+        <h3>Địa điểm & dịch vụ <span class="tag">Đặt sớm</span></h3>
+        <label class="check-item"><input type="checkbox"><span>Ký hợp đồng GOLDLAND PLAZA (sảnh 700–800 khách)</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt số bàn (~70–80) + bàn dự phòng & thực đơn/bàn</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt studio chụp ảnh cưới (pre-wedding)</span></label>
+        <label class="check-item"><input type="checkbox"><span>Thợ ảnh & quay phim ngày cưới</span></label>
+        <label class="check-item"><input type="checkbox"><span>Đơn vị trang trí gia tiên & sân khấu</span></label>
+        <label class="check-item"><input type="checkbox"><span>MC, âm thanh, ban nhạc</span></label>
+        <label class="check-item"><input type="checkbox"><span>Xe hoa & xe đưa đón khách đường xa</span></label>
+      </div>
+      <div class="check-col">
+        <h3>Trang phục & làm đẹp <span class="tag">Cá nhân</span></h3>
+        <label class="check-item"><input type="checkbox"><span>Áo dài cô dâu & chú rể</span></label>
+        <label class="check-item"><input type="checkbox"><span>Váy cưới / vest tiệc</span></label>
+        <label class="check-item"><input type="checkbox"><span>Áo dài cho bố mẹ hai bên</span></label>
+        <label class="check-item"><input type="checkbox"><span>Trang điểm cô dâu (thử trước)</span></label>
+        <label class="check-item"><input type="checkbox"><span>Nhẫn cưới, kiềng/vàng cưới</span></label>
+      </div>
+      <div class="check-col">
+        <h3>Nghi lễ & lễ vật <span class="tag">Truyền thống</span></h3>
+        <label class="check-item"><input type="checkbox"><span>Thống nhất số mâm quả với hai họ</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt sơ đồ bàn & bàn VIP/gia đình gần sân khấu</span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt mâm quả / tráp ăn hỏi</span></label>
+        <label class="check-item"><input type="checkbox"><span>Đội bưng tráp (nam & nữ) + lì xì trả duyên</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị bàn thờ gia tiên hai nhà</span></label>
+        <label class="check-item"><input type="checkbox"><span>Phong bì lễ nạp tài (nhà trai)</span></label>
+      </div>
+      <div class="check-col">
+        <h3>Thiệp & khách mời <span class="tag">Truyền thông</span></h3>
+        <label class="check-item"><input type="checkbox"><span>Thiết kế & in thiệp cưới</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt danh sách khách chính thức</span></label>
+        <label class="check-item"><input type="checkbox"><span>Gửi thiệp (trước 3–4 tuần)</span></label>
+        <label class="check-item"><input type="checkbox"><span>Sắp xếp chỗ ở cho khách đường xa (Đà Nẵng…)</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị sơ đồ bàn tiệc</span></label>
+      </div>
+      <div class="check-col">
+        <h3>Tuần cuối & ngày cưới <span class="tag">Hậu cần</span></h3>
+        <label class="check-item"><input type="checkbox"><span>Xác nhận số mâm với nhà hàng</span></label>
+        <label class="check-item"><input type="checkbox"><span>Duyệt kịch bản & thứ tự nghi lễ với MC</span></label>
+        <label class="check-item"><input type="checkbox"><span>Thử đồ lần cuối</span></label>
+        <label class="check-item"><input type="checkbox"><span>Người giữ tiền mừng & sổ ghi lễ</span></label>
+        <label class="check-item"><input type="checkbox"><span>Chuẩn bị quà cảm ơn khách</span></label>
+      </div>
+    </div>
+    <div class="progress-note">Tiến độ: <span id="prog-text">0 / 0</span></div>
+    <div id="prog-bar-wrap"><div id="prog-bar"></div></div>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section id="budget">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Ngân sách tham khảo</span>
+      <h2>Khung chi phí (VND)</h2>
+      <p>Đây là khung tham khảo để lên kế hoạch — con số thực tế thay đổi theo quy mô khách, nhà hàng và lựa chọn của gia đình. Hãy điền số thật của mình vào.</p>
+    </div>
+    <table>
+      <thead><tr><th>Hạng mục</th><th class="num">Ước tính thấp</th><th class="num">Ước tính cao</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Tiệc cưới (GOLDLAND PLAZA, ~70–80 bàn)</td><td class="num">350.000.000</td><td class="num">640.000.000</td><td>Khoản lớn nhất; ~5–8 triệu/bàn × 70–80 bàn</td></tr>
+        <tr><td>Chụp ảnh cưới (pre-wedding)</td><td class="num">8.000.000</td><td class="num">25.000.000</td><td>Gói studio + bối cảnh Huế</td></tr>
+        <tr><td>Ảnh & quay phim ngày cưới</td><td class="num">10.000.000</td><td class="num">30.000.000</td><td>Phóng sự cưới, flycam</td></tr>
+        <tr><td>Trang trí (cổng, sân khấu, bàn tiệc)</td><td class="num">15.000.000</td><td class="num">50.000.000</td><td>Hoa tươi, backdrop, cổng hoa — quy mô sảnh lớn</td></tr>
+        <tr><td>Áo dài, váy cưới, vest, trang điểm</td><td class="num">10.000.000</td><td class="num">40.000.000</td><td>May/thuê + makeup cô dâu</td></tr>
+        <tr><td>Mâm quả & lễ vật ăn hỏi</td><td class="num">5.000.000</td><td class="num">15.000.000</td><td>Trầu cau, trà rượu, bánh, heo quay…</td></tr>
+        <tr><td>Nhẫn cưới & vàng cưới</td><td class="num">15.000.000</td><td class="num">60.000.000</td><td>Tùy giá vàng & lựa chọn</td></tr>
+        <tr><td>Thiệp, xe hoa, âm thanh, MC</td><td class="num">8.000.000</td><td class="num">25.000.000</td><td>In thiệp (700–800), xe đón dâu, ban nhạc</td></tr>
+        <tr><td>Dự phòng (~10%)</td><td class="num">42.000.000</td><td class="num">110.000.000</td><td>Luôn chừa khoản phát sinh</td></tr>
+      </tbody>
+      <tfoot><tr><td>Tổng tham khảo</td><td class="num">~455.000.000</td><td class="num">~990.000.000</td><td>Chủ yếu do quy mô 700–800 khách</td></tr></tfoot>
+    </table>
+    <p class="budget-note">💡 Mẹo: ở Việt Nam, tiền mừng cưới của khách thường bù lại một phần đáng kể chi phí tiệc. Hãy ghi chép thu – chi rõ ràng để hai gia đình minh bạch.</p>
+  </div>
+</section>
+
+<!-- FENG SHUI -->
+<section id="fengshui">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Phong thủy cho đôi uyên ương</span>
+      <h2>Mệnh Kim · Năm Đinh Mùi 2027</h2>
+      <p>Phân tích ngũ hành của cô dâu chú rể và năm cưới, để màu sắc – biểu tượng – nghi lễ cùng <b>nuôi dưỡng, bảo hộ và nâng đỡ</b> mối duyên mới.</p>
+    </div>
+
+    <div class="spec-grid" style="margin-top:0">
+      <div class="spec"><b>Tân Tỵ</b><span>Chú rể · 9/2001</span><small>Mệnh Bạch Lạp Kim (Kim)</small></div>
+      <div class="spec"><b>Tân Tỵ</b><span>Cô dâu · 11/2001</span><small>Mệnh Bạch Lạp Kim (Kim)</small></div>
+      <div class="spec"><b>Đinh Mùi</b><span>Năm cưới 2027</span><small>Mệnh Thiên Hà Thủy (Thủy)</small></div>
+      <div class="spec"><b>Mùng 10</b><span>Tháng Giêng âm lịch</span><small>Ngày vía Thần Tài</small></div>
+    </div>
+
+    <div class="mini-grid" style="margin-top:26px">
+      <div class="mini"><h3>☯️ Hai bạn cùng mệnh Kim</h3><p>Cả hai sinh năm Tân Tỵ 2001 — <b>cùng tuổi, cùng mệnh Bạch Lạp Kim</b>. Kim gặp Kim là <b>tương hòa</b>: đồng điệu, vững chãi, hiểu nhau — rất phù hợp với câu chuyện 6 năm bền bỉ của hai bạn.</p></div>
+      <div class="mini"><h3>🌊 Kim sinh Thủy — năm 2027</h3><p>Năm Đinh Mùi mệnh Thủy; <b>Kim sinh Thủy</b> là quan hệ <b>tương sinh</b>: hai bạn "nuôi" năm mới, năm mới mở đường chảy — biểu tượng cho sự <b>khởi đầu trôi chảy, hanh thông</b>.</p></div>
+      <div class="mini"><h3>🐍 Tuổi Tỵ trong năm Mùi</h3><p>Tỵ (Rắn) và Mùi (Dê) <b>không xung khắc</b>. Tỵ thuộc tam hợp Tỵ – Dậu – Sửu; năm 2027 <b>không phải năm Tam Tai</b> của tuổi Tỵ (Tam Tai rơi vào các năm Hợi – Tý – Sửu).</p></div>
+      <div class="mini"><h3>🔢 Không phạm Kim Lâu</h3><p>Tuổi mụ của cô dâu năm 2027 là 27; 27 chia 9 dư 0 → <b>không phạm Kim Lâu</b> (Kim Lâu khi dư 1, 3, 6, 8). Năm cưới <b>thuận</b> theo cách tính dân gian.</p></div>
+      <div class="mini"><h3>🧧 Mùng 10 tháng Giêng</h3><p>15/02/2027 là <b>mùng 10 tháng Giêng</b> — ngày <b>vía Thần Tài</b> trong văn hóa Việt. Cưới đúng ngày cầu tài lộc: lời chúc <b>phú quý, sung túc</b> cho tổ ấm mới.</p></div>
+      <div class="mini"><h3>🧭 Tây Tứ Mệnh</h3><p>Người mệnh Kim thuộc <b>Tây Tứ Mệnh</b>: hướng tốt Tây, Tây Bắc, Tây Nam, Đông Bắc. Có thể cân nhắc <b>hướng sân khấu/bàn gia tiên</b> & hướng xe hoa xuất phát theo gợi ý thầy.</p></div>
+    </div>
+
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.4rem;margin:36px 0 8px">🎨 Bảng màu theo ngũ hành cho mệnh Kim</h3>
+    <div class="mini-grid">
+      <div class="mini" style="border-top:4px solid var(--gold)"><h3>✅ Nuôi dưỡng — Thổ sinh Kim</h3><p><b>Vàng hoàng kim, vàng đất, nâu nhạt, champagne, be.</b> Đất sinh ra kim — nhóm màu <b>nuôi dưỡng, che chở, tích phúc</b>. Nên là <b>màu chủ đạo</b>.</p></div>
+      <div class="mini" style="border-top:4px solid #cfcfcf"><h3>✅ Bản mệnh — Kim</h3><p><b>Trắng, trắng ngà, bạc, ánh kim, ghi nhạt.</b> Màu của chính mệnh — <b>vững mạnh, thanh khiết, bền chắc</b>. Dùng làm nền & điểm nhấn ánh kim.</p></div>
+      <div class="mini" style="border-top:4px solid var(--fire)"><h3>🔥 Bổ Hỏa — theo Bát Tự</h3><p>Bát Tự của hai bạn <b>thiếu Hỏa</b> → Hỏa là <b>dụng thần</b> cần bổ. <b>Đỏ son, san hô, hồng phấn, tím tử đằng</b> dùng làm <b>điểm nhấn ~20–30%</b> để cân bằng ngũ hành — không làm nền lớn (Hỏa quá nhiều vẫn khắc Kim).</p></div>
+      <div class="mini" style="border-top:4px solid #27ae60"><h3>➖ Trung tính — Mộc & Thủy</h3><p>Xanh lá (Mộc) bị Kim khắc nhưng <b>Mộc sinh Hỏa</b> — dùng vừa phải để "tiếp lửa". Xanh bột/xanh dương (Thủy) được Kim sinh nhưng <b>Thủy khắc Hỏa</b> — chỉ dùng rất ít.</p></div>
+    </div>
+
+    <div class="callout fire-accent">
+      <b>🔥 Vì sao thêm Hỏa dù "Hỏa khắc Kim":</b> quy tắc <i>"mệnh Kim kỵ đỏ"</i> là cách tính <b>đơn giản theo năm sinh</b> (nạp âm). <b>Bát Tự</b> xem <b>cả bốn trụ</b> (năm – tháng – ngày – giờ) và chính xác hơn: khi lá số <b>thiếu Hỏa</b>, Hỏa trở thành <b>dụng thần</b> cần được bổ để cân bằng — thiếu Hỏa là thiếu <b>nhiệt huyết, danh tiếng, sự ấm áp của tổ ấm</b>. Thêm nữa, <b>Hỏa sinh Thổ, Thổ sinh Kim</b>: khi đỏ son đi cùng vàng hoàng kim và trắng ngà, ta có <b>chuỗi tương sinh trọn vẹn Hỏa → Thổ → Kim</b> — lửa <b>nuôi</b> đất, đất <b>nuôi</b> kim, thay vì lửa đốt kim trực tiếp. Và theo nghĩa đẹp nhất: <b>Hỏa luyện Kim</b> — lửa rèn kim thành vàng ròng, như ba năm yêu xa đã rèn tình yêu của hai bạn.
+    </div>
+
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.4rem;margin:36px 0 8px">🔥 Ngày cưới tự mang Hỏa đến — Bát Tự của ngày 15/02/2027</h3>
+    <p style="color:var(--muted);margin-bottom:16px">Điều rất may: chính thời điểm cưới đã <b>giàu Hỏa</b> ở nhiều tầng — bổ đúng cái hai bạn thiếu.</p>
+    <div class="spec-grid" style="margin-top:0">
+      <div class="spec" style="border-top:3px solid var(--fire)"><b>Đinh 丁</b><span>Thiên can năm 2027</span><small>Đinh = Âm Hỏa (ngọn lửa ấm)</small></div>
+      <div class="spec" style="border-top:3px solid var(--fire)"><b>Mùi 未</b><span>Địa chi năm</span><small>tàng can: Kỷ – <b>Đinh (Hỏa)</b> – Ất</small></div>
+      <div class="spec" style="border-top:3px solid var(--fire)"><b>Dần 寅</b><span>Tháng Giêng âm lịch</span><small>tàng can: Giáp – <b>Bính (Hỏa)</b> – Mậu; Mộc sinh Hỏa</small></div>
+      <div class="spec" style="border-top:3px solid var(--fire)"><b>Ngọ 午</b><span>Giờ tiệc trưa 11h–13h</span><small>Ngọ = <b>Hỏa thuần</b>, đỉnh dương khí</small></div>
+      <div class="spec" style="border-top:3px solid var(--fire)"><b>Tỵ 巳</b><span>Năm sinh hai bạn</span><small>tàng can: <b>Bính (Hỏa)</b> – Mậu – Canh</small></div>
+    </div>
+    <div class="callout fire-accent">
+      <b>Đọc nhanh:</b> năm <b>Đinh Hỏa</b>, chi năm Mùi <b>chứa Đinh Hỏa</b>, tháng Dần <b>chứa Bính Hỏa</b> và là Mộc sinh Hỏa, <b>tiệc trưa giờ Ngọ là Hỏa thuần</b> — bốn tầng Hỏa cùng lúc bổ cho lá số thiếu Hỏa của Phát & Thảo. Thời điểm cưới này <b>tự nó đã là một "liều thuốc bổ Hỏa"</b>. Vì vậy, phần màu sắc chỉ cần bổ Hỏa ở mức <b>điểm nhấn hài hòa</b>, không cần quá đậm. <i>(Thầy có thể tinh chỉnh thêm theo trụ ngày & giờ sinh của hai bạn.)</i>
+    </div>
+
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.4rem;margin:36px 0 8px">🎨 Cách bổ Hỏa trong đám cưới (vừa đủ, hài hòa)</h3>
+    <div class="mini-grid">
+      <div class="mini"><h3>🎨 Màu điểm nhấn Hỏa</h3><ul>
+        <li><b>Đỏ son</b> — "sơn son thiếp vàng" chính là nghệ thuật cung đình Huế: đỏ son + vàng lá. Hỏa + Thổ/Kim hoàn hảo</li>
+        <li><b>Cam san hô</b> & <b>hồng phấn Regency</b> — Hỏa dịu, rất Bridgerton</li>
+        <li><b>Tím tử đằng (wisteria)</b> — màu đặc trưng Bridgerton, Hỏa nhẹ</li>
+        <li>Tỉ lệ gợi ý: <b>50% vàng/ngà – 25% ánh kim/champagne – 25% Hỏa</b></li>
+      </ul></div>
+      <div class="mini"><h3>🕯️ Lửa thật & ánh sáng</h3><ul>
+        <li><b>Nến thật</b> giờ đây được <b>khuyến khích</b> (có kiểm soát): nến đỏ bàn gia tiên, chân nến vàng</li>
+        <li><b>Pháo kim tuyến / cold sparks</b> lúc tiến vào — Hỏa khai tiệc</li>
+        <li>Uplight <b>amber – đỏ ấm</b> trên trụ hoa; đèn chùm pha lê ấm</li>
+        <li><b>Đèn lồng đỏ</b> kiểu cung đình xen đèn lồng vàng</li>
+      </ul></div>
+      <div class="mini"><h3>🔺 Hình & chất liệu Hỏa</h3><ul>
+        <li>Hoạ tiết <b>hình tam giác, tia sáng, ngọn lửa</b> cách điệu trên thiệp/menu</li>
+        <li><b>Phượng hoàng</b> (Phụng = chim lửa) nổi bật hơn trong bộ Long – Phụng</li>
+        <li>Hoa đỏ/cam: <b>mẫu đơn đỏ, hồng đỏ, cẩm chướng san hô</b> xen sen & mai</li>
+        <li>Vải <b>lụa đỏ son, gấm thêu kim tuyến</b></li>
+      </ul></div>
+    </div>
+
+    <div class="callout">
+      <b>Hành trình của bảng màu — và vì sao bản này là bản tốt nhất:</b> ① Bản đầu dùng <b>tím & hồng</b> làm nền — Hỏa làm chủ đạo cho mệnh Kim, chưa cân. ② Bản hai đổi sang <b>Hoàng Kim Huế</b> — đúng Thổ sinh Kim nhưng <b>loại bỏ Hỏa</b>, vô tình bỏ đi đúng yếu tố mà Bát Tự hai bạn đang thiếu. ③ Bản này: <b>nền vàng hoàng cung – trắng ngà</b> (nuôi Kim), <b>điểm nhấn đỏ son – san hô – hồng phấn – tử đằng</b> (bổ Hỏa, chuỗi Hỏa→Thổ→Kim), và trả lại cho đám cưới <b>sắc đỏ hỷ truyền thống</b> mà người Việt luôn trân trọng — lần này <b>có lý do phong thủy vững chắc</b>.
+    </div>
+
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.4rem;margin:36px 0 8px">🔮 Biểu tượng nên dùng & nên tránh</h3>
+    <div class="mini-grid">
+      <div class="mini"><h3>✅ Biểu tượng cát lành</h3><ul>
+        <li><b>Long – Phụng</b> (rồng phượng): hòa hợp phu thê; <b>Phụng (chim lửa)</b> là biểu tượng Hỏa đẹp nhất để bổ</li>
+        <li><b>Song hỷ 囍 đỏ son</b> trên nền vàng/trắng ngà — truyền thống & bổ Hỏa</li>
+        <li><b>Hoa mai vàng</b>: xuân mới, Thổ sinh Kim, hậu Tết</li>
+        <li><b>Sen trắng / sen vàng</b>: thanh khiết, biểu tượng Huế; <b>mẫu đơn đỏ</b> điểm Hỏa</li>
+        <li><b>Hình tròn, oval</b> (Kim) + <b>tia sáng, tam giác cách điệu</b> (Hỏa)</li>
+        <li><b>Kim loại ánh vàng/bạc, gốm sứ, đá</b> (Kim & Thổ) + <b>lụa đỏ son, nến</b> (Hỏa)</li>
+        <li><b>Chữ Phúc – Lộc – Thọ</b>, hạt sen, đậu (sinh sôi); <b>sơn son thiếp vàng</b> (Huế)</li>
+      </ul></div>
+      <div class="mini"><h3>⚠️ Nên hạn chế</h3><ul>
+        <li>Hỏa <b>quá nhiều</b> (đỏ tràn nền, tường đỏ) — vượt ~30% sẽ quay lại khắc Kim</li>
+        <li>Màu <b>xanh dương / đen</b> làm nền (Thủy khắc Hỏa, hao Kim)</li>
+        <li>Quá nhiều <b>cây xanh lớn / gỗ thô</b> (Mộc) — chỉ dùng để "tiếp lửa" vừa phải</li>
+        <li>Hình <b>lượn sóng, chảy</b> (hình của Thủy) làm họa tiết chính</li>
+        <li>Lửa thật <b>không kiểm soát</b> — nến phải có chân nến vững, xa vải voan</li>
+      </ul></div>
+    </div>
+
+    <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.4rem;margin:36px 0 8px">🙏 Nghi lễ truyền thống "thuận phong thủy"</h3>
+    <div class="mini-grid">
+      <div class="mini"><h3>Lễ gia tiên</h3><p>Bàn thờ phủ <b>khăn đỏ son viền vàng</b> (sơn son thiếp vàng), hoa <b>sen trắng + mai vàng + mẫu đơn đỏ</b>, mâm ngũ quả; <b>nến đỏ thật</b> trên chân nến vàng, <b>song hỷ đỏ</b> — truyền thống trọn vẹn & bổ Hỏa đúng chỗ thiêng nhất.</p></div>
+      <div class="mini"><h3>Mâm quả (tráp)</h3><p>Phủ <b>khăn đỏ son thêu kim tuyến vàng</b> — đúng truyền thống, đúng Hỏa+Kim. Số tráp <b>lẻ 5 hoặc 7</b> theo nếp Huế; trầu cau xếp đủ, trang sức vàng là <b>Kim</b> — rất hợp mệnh.</p></div>
+      <div class="mini"><h3>Áo dài nghi lễ</h3><p>Cô dâu: <b>áo dài đỏ son thêu phụng vàng</b> (Hỏa+Kim, cổ điển Việt) hoặc vàng hoàng kim thêu long phụng. Chú rể: <b>áo dài vàng / trắng ngà</b>, khăn đóng đỏ-vàng. Bố mẹ: vàng đất, champagne, điểm đỏ.</p></div>
+      <div class="mini"><h3>Giờ & hướng</h3><p>Nhờ thầy xem <b>giờ hoàng đạo</b> trong ngày mùng 10 cho lễ rước dâu; hướng xe hoa xuất phát ưu tiên <b>Tây / Tây Bắc / Tây Nam / Đông Bắc</b> (Tây Tứ Mệnh) nếu địa lý cho phép.</p></div>
+      <div class="mini"><h3>Trang sức & vàng cưới</h3><p>Vàng, bạc, bạch kim đều là <b>Kim</b> — mệnh của cả hai. Kiềng vàng trao trong lễ không chỉ là của hồi môn mà còn <b>tăng vượng khí bản mệnh</b>.</p></div>
+      <div class="mini"><h3>Lời chúc chủ đề</h3><p>Chọn chữ chủ đạo: <b>"Kim Ngọc Mãn Đường"</b> (vàng ngọc đầy nhà) hoặc <b>"Bách Niên Hảo Hợp"</b> — vừa đẹp vừa đúng mệnh Kim & ngày Thần Tài.</p></div>
+    </div>
+
+    <div class="callout" style="border-left-color:#c0392b">
+      <b>Lưu ý trung thực:</b> Đây là phân tích theo <b>ngũ hành & phong tục dân gian phổ biến</b> (nạp âm, Bát Tự cơ bản, tương sinh – tương khắc, Kim Lâu, Tam Tai) kết hợp với <b>kết quả đọc Bát Tự của gia đình (thiếu Hỏa)</b>, <b>không thay thế</b> ý kiến của <b>thầy phong thủy / người lớn trong gia đình</b>. Hãy mang bản này đi hỏi thầy để chốt <b>giờ hoàng đạo</b>, xác nhận <b>dụng thần Hỏa</b> và tỉ lệ bổ phù hợp theo trụ ngày & giờ sinh của hai bạn. Nguồn tham khảo: lịch Tết Đinh Mùi 2027 (mùng 1 = 06/02/2027), mệnh Tân Tỵ = Bạch Lạp Kim, Tây Tứ Mệnh, tàng can địa chi.
+    </div>
+  </div>
+</section>
+
+<!-- THEME -->
+<section id="theme">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Chủ đề & phong cách</span>
+      <h2>"Về Chung Một Nhà" — Hoàng Kim Huế <span style="color:var(--wisteria)">×</span> Regency Bridgerton</h2>
+      <p>Hai triều đình cùng một thập niên: <b>London thời Regency (Bridgerton, 1813–1815)</b> và <b>Kinh thành Huế thời Gia Long (1802–1820)</b>. Chủ đề hòa quyện <b>vàng hoàng cung Huế</b> (nuôi mệnh Kim), <b>điểm nhấn đỏ son – hồng phấn – tử đằng</b> (bổ Hỏa theo Bát Tự) và <b>nét lãng mạn cổ điển kiểu Bridgerton</b>: phòng khiêu vũ, đèn chùm pha lê, hoa tử đằng, thư tay niêm sáp.</p>
+    </div>
+    <div class="theme-wrap">
+      <div>
+        <ul class="theme-list">
+          <li><b>Bảng màu (Kim + bổ Hỏa):</b> <b>50%</b> vàng hoàng kim & trắng ngà (Thổ sinh Kim, Kim bản mệnh) · <b>25%</b> champagne & ánh kim · <b>25%</b> điểm nhấn Hỏa: <b>đỏ son, cam san hô, hồng phấn Regency, tím tử đằng</b>. Xanh bột Bridgerton chỉ dùng rất ít (Thủy).</li>
+          <li><b>Hoa chủ đạo:</b> <b>Sen trắng & vàng</b> (Huế), <b>hoa mai vàng</b> (xuân hậu Tết), <b>mẫu đơn đỏ & hồng phấn</b> (Hỏa, rất Bridgerton), <b>tử đằng rủ</b> (wisteria — biểu tượng Bridgerton), hồng kem, baby; lá cau điểm xanh.</li>
+          <li><b>Hoạ tiết:</b> Long – Phụng (Phụng nổi bật), song hỷ đỏ son, hoa văn cung đình <b>sơn son thiếp vàng</b> hòa với <b>đường viền filigree, khung mạ vàng, hoa văn Regency</b> trên thiệp, menu, backdrop.</li>
+          <li><b>Chất Bridgerton:</b> thiệp mời như <b>thư tay Lady Whistledown</b> niêm <b>sáp đỏ son "P❦T"</b>; bảng tên bàn viết <b>thư pháp</b>; <b>đèn chùm pha lê</b>; <b>tứ tấu đàn dây</b> chơi nhạc Việt & pop ballad (đúng dấu ấn Bridgerton); <b>tháp bánh macaron pastel</b> & trà chiều; <b>cổng hoa tử đằng</b> rủ.</li>
+          <li><b>Câu chuyện xuyên suốt:</b> "Viên kim cương của mùa" — hành trình thu hẹp khoảng cách Đà Nẵng → Huế, cột mốc 6 năm, tấm vé tàu kỷ niệm trong khung mạ vàng kiểu Regency.</li>
+          <li><b>Trang phục:</b> Lễ gia tiên: cô dâu <b>áo dài đỏ son thêu phụng vàng</b>, chú rể áo dài vàng/ngà. Tiệc: váy cưới trắng ngà <b>eo cao kiểu Empire/Regency</b>, chú rể vest champagne + gile thêu; mẹ hai bên tông vàng đất, hồng phấn.</li>
+          <li><b>Không gian:</b> Đèn chùm & nến thật trên chân nến vàng, lồng đèn đỏ – vàng cung đình, chữ song hỷ 囍 đỏ son, khung cửa cung đình sơn son thiếp vàng, ghế Louis bọc nhung hồng phấn ở bàn VIP.</li>
+        </ul>
+        <div class="callout fire-accent" style="margin-top:22px">
+          <b>Vì sao chủ đề này "chạm" tới cảm xúc & đúng phong thủy:</b> nó <b>kể đúng câu chuyện</b> của Phát & Thảo — tình yêu học trò bền bỉ vượt qua đèo Hải Vân — bằng ngôn ngữ của <b>một mùa vũ hội Regency diễn ra ở Kinh thành Huế</b>. Vàng nuôi Kim, đỏ son bổ Hỏa, và sự lãng mạn cổ điển làm mọi vị khách cảm thấy mình đang bước vào <b>một chương truyện tình đẹp nhất mùa</b>.
+        </div>
+      </div>
+      <div>
+        <div class="swatches">
+          <div class="sw" style="background:#7a5a1e">Hoàng kim đậm</div>
+          <div class="sw" style="background:#c9a24b">Vàng kim</div>
+          <div class="sw" style="background:#d9c08c">Champagne</div>
+          <div class="sw" style="background:#e9e4dc;color:#7a5a1e;text-shadow:none">Bạc ngà</div>
+          <div class="sw" style="background:#fbf7f0;color:#7a5a1e;text-shadow:none">Trắng ngà</div>
+        </div>
+        <div class="sw-row">
+          <div class="sw" style="background:#b23a2e">Đỏ son 🔥</div>
+          <div class="sw" style="background:#e07a5f">San hô 🔥</div>
+          <div class="sw" style="background:#e8b4b8;color:#7a3a3f;text-shadow:none">Hồng phấn 🔥</div>
+          <div class="sw" style="background:#9b89b3">Tử đằng 🔥</div>
+          <div class="sw" style="background:#aac4d8;color:#2e3f4f;text-shadow:none">Xanh bột (ít)</div>
+        </div>
+        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px">Hàng trên: nền Thổ – Kim (75%) · Hàng dưới: điểm nhấn Hỏa & Bridgerton (25%)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEAS -->
+<section id="ideas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Chạm đến trái tim</span>
+      <h2>Những điều nhỏ làm ngày cưới thật ấm áp</h2>
+      <p>Sự chân thành nằm ở các chi tiết. Đây là những ý tưởng khiến khách mời xúc động và đôi uyên ương nhớ mãi.</p>
+    </div>
+    <div class="mini-grid">
+      <div class="mini"><h3>🗺️ Góc "6 năm – 2 thành phố"</h3><p>Một timeline ảnh từ thời cấp ba đến hiện tại, kèm bản đồ Đà Nẵng–Huế và một tấm vé tàu/xe kỷ niệm những lần về thăm nhau.</p></div>
+      <div class="mini"><h3>💌 Thư tay đọc trong lễ</h3><p>Hai bạn viết thư tay cho nhau, đọc trong lễ thành hôn hoặc trao nhau trước giờ cưới — khoảnh khắc lắng đọng nhất ngày trọng đại.</p></div>
+      <div class="mini"><h3>🙏 Lời tri ân cha mẹ</h3><p>Dành một phút cúi đầu cảm ơn cha mẹ hai bên — rót trà/trao hoa. Người Việt coi hôn nhân là chữ hiếu; khoảnh khắc này luôn khiến mọi người rơi nước mắt.</p></div>
+      <div class="mini"><h3>🏮 Góc check-in sắc Huế</h3><p>Backdrop nón lá, lồng đèn, hoa sen, chữ song hỷ — vừa đẹp ảnh vừa đậm bản sắc quê hương.</p></div>
+      <div class="mini"><h3>🎁 Quà cảm ơn khách</h3><p>Món quà nhỏ đậm chất Huế: mè xửng, trà sen, hạt sen sấy — kèm thiệp cảm ơn có tên hai bạn.</p></div>
+      <div class="mini"><h3>📖 Sổ lưu bút & cây điều ước</h3><p>Khách viết lời chúc vào sổ hoặc treo thẻ điều ước lên "cây hạnh phúc" — kỷ vật giữ lại sau ngày cưới.</p></div>
+      <div class="mini"><h3>🎬 Video phóng sự yêu xa</h3><p>Clip ngắn kể chuyện 3 năm Đà Nẵng–Huế, chiếu đầu tiệc — khách sẽ hiểu vì sao ngày hôm nay đặc biệt đến thế.</p></div>
+      <div class="mini"><h3>🌸 Lễ gia tiên chỉn chu</h3><p>Chăm chút bàn thờ gia tiên hai nhà: hoa tươi, mâm ngũ quả, nến đỏ — thể hiện lòng thành kính, cốt lõi của đám cưới Việt.</p></div>
+      <div class="mini"><h3>🎤 Lời cảm ơn của chú rể</h3><p>Chú rể (anh/em của bạn) nói lời cảm ơn hai họ & khách mời — ngắn gọn, chân thành, từ trái tim.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUESTS / HUE INFO -->
+<section id="guests">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Thông tin cho khách & tổ chức tại Huế</span>
+      <h2>Cưới ở Huế — những điều nên biết</h2>
+      <p>Gợi ý thực tế cho địa điểm, bối cảnh chụp hình và việc đón khách phương xa (đặc biệt từ Đà Nẵng).</p>
+    </div>
+    <div class="mini-grid">
+      <div class="mini"><h3>📸 Bối cảnh chụp ảnh cưới đẹp ở Huế</h3><ul>
+        <li>Đại Nội (Hoàng thành Huế)</li><li>Cầu Trường Tiền & sông Hương</li>
+        <li>Các lăng tẩm (Minh Mạng, Tự Đức, Khải Định)</li><li>Đầm sen (mùa hè) & đồi Vọng Cảnh</li>
+        <li>Chùa Thiên Mụ</li>
+      </ul></div>
+      <div class="mini"><h3>🏨 Đón khách đường xa</h3><ul>
+        <li>Gợi ý khách sạn gần nhà hàng tiệc cho khách Đà Nẵng</li>
+        <li>Thuê xe đưa đón chặng Đà Nẵng – Huế (qua hầm/đèo Hải Vân)</li>
+        <li>Ghi rõ địa chỉ + bản đồ trong thiệp</li>
+        <li>Có người đón tiếp & chỉ dẫn tại sảnh</li>
+      </ul></div>
+      <div class="mini"><h3>🍲 Đãi khách đậm vị Huế</h3><ul>
+        <li>Cân nhắc vài món đặc trưng: nem lụi, bánh, chè Huế</li>
+        <li>Quà bàn: mè xửng, trà sen</li>
+        <li>Lưu ý khẩu vị Huế đậm đà, cay nhẹ</li>
+      </ul></div>
+      <div class="mini"><h3>🗓️ Thời tiết & chọn mùa</h3><ul>
+        <li>Huế mưa nhiều khoảng tháng 9–12 — chuẩn bị phương án trong nhà/dự phòng</li>
+        <li>Xuân (sau Tết) & hè khô ráo, đẹp cho ngoại cảnh</li>
+        <li>Luôn có kế hoạch B cho thời tiết</li>
+      </ul></div>
+    </div>
+    <div class="callout">
+      <b>Hướng dẫn tùy chỉnh trang này:</b> Mở file <code>index.html</code> để chỉnh sửa nội dung. Ngày cưới nằm ở dòng <code>WEDDING_DATE</code> (gần cuối file) — đồng hồ đếm ngược đã được đặt đúng 9:00 sáng 15/02/2027. Điền số liệu ngân sách & danh sách khách mời thật của gia đình khi có.
+    </div>
+  </div>
+</section>
+
+<!-- WEATHER -->
+<section id="weather">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Thời tiết ngày cưới</span>
+      <h2>Huế · Thứ Hai, 15/02/2027</h2>
+      <p>Dự báo thời tiết chính xác chỉ có trước ngày cưới khoảng 10–14 ngày. Dưới đây là <b>thời tiết trung bình nhiều năm của Huế vào giữa tháng 2</b> để lên kế hoạch, kèm nút xem dự báo trực tiếp khi đến gần ngày.</p>
+    </div>
+
+    <div class="mini-grid">
+      <div class="mini" style="text-align:center">
+        <div style="font-size:2.6rem">⛅️</div>
+        <h3>Trời ngày lễ</h3>
+        <p>Thường <b>khô ráo, mát mẻ, nhiều mây nhẹ</b> — tháng 2 là một trong những tháng ít mưa nhất ở Huế (mùa khô vừa bắt đầu).</p>
+      </div>
+      <div class="mini" style="text-align:center">
+        <div style="font-size:2.6rem">🌡️</div>
+        <h3>Nhiệt độ</h3>
+        <p>Khoảng <b>20–25°C</b> (68–77°F). Buổi sáng 9h mát dịu ~<b>19–21°C</b>, dễ chịu cho áo dài & nghi lễ ngoài trời.</p>
+      </div>
+      <div class="mini" style="text-align:center">
+        <div style="font-size:2.6rem">🌧️</div>
+        <h3>Mưa</h3>
+        <p>Lượng mưa <b>thấp</b> trong tháng 2. Khả năng mưa nhỏ vẫn có thể xảy ra — <b>nên có phương án dự phòng</b> (ô, bạt, không gian trong nhà).</p>
+      </div>
+      <div class="mini" style="text-align:center">
+        <div style="font-size:2.6rem">💧</div>
+        <h3>Độ ẩm & gió</h3>
+        <p>Độ ẩm <b>khá cao</b> (đặc trưng Huế), gió nhẹ. Trang điểm nên chọn loại <b>lâu trôi</b>; chuẩn bị quạt/khăn giấy cho khách.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="text-align:center">
+      <b>⚠️ Lưu ý:</b> Đây là số liệu <b>trung bình khí hậu</b>, không phải dự báo cho đúng ngày 15/02/2027 (còn quá xa để dự báo đáng tin). Hãy kiểm tra dự báo thực tế trong <b>~10 ngày trước lễ</b>.
+      <div style="margin-top:16px">
+        <a class="btn" href="https://www.accuweather.com/en/vn/hue/352629/february-weather/352629" target="_blank" rel="noopener">Xem dự báo Huế trực tiếp →</a>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:14px">Nguồn tham khảo khí hậu: WeatherSpark, Weather-Atlas, Time and Date (số liệu trung bình giữa tháng 2 cho Huế). Nội dung được diễn giải lại để tuân thủ bản quyền.</p>
+    </div>
+
+    <div class="callout" style="border-left-color:var(--champagne)">
+      <b>Gợi ý từ wedding planner:</b> Vì lễ bắt đầu <b>9h sáng</b> — thời điểm đẹp, mát và ánh sáng dịu — rất lý tưởng cho lễ gia tiên và chụp ảnh ngoại cảnh (Đại Nội, sông Hương). Dù tháng 2 ít mưa, Huế vẫn có thể có cơn mưa phùn bất chợt, nên <b>luôn chuẩn bị kế hoạch B trong nhà</b> và vài chiếc ô đồng màu chủ đề (vàng hoàng kim / trắng ngà) — vừa an toàn vừa đẹp ảnh.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="names-foot">Phát <span class="amp">&amp;</span> Thảo</div>
+  <p>Về chung một nhà · Thành phố Huế · 2026 – 2027</p>
+  <p>Chúc hai bạn một hành trình mới <span class="heart">♥</span> hạnh phúc, bền lâu và trọn vẹn yêu thương.</p>
+  <p style="margin-top:16px;font-size:.76rem;opacity:.6">Trang kế hoạch cưới · tùy chỉnh tự do cho gia đình bạn</p>
+</footer>
+
+<script>
+  /* ====== WEDDING DATE ======
+     Ngày cưới: Thứ Hai, 15 tháng 2, 2027 — bắt đầu từ 9:00 sáng (giờ Việt Nam).
+     Định dạng: 'YYYY-MM-DDTHH:MM:SS'. */
+  const WEDDING_DATE = new Date('2027-02-15T09:00:00');
+
+  // Update hero label to match
+  (function(){
+    const d = WEDDING_DATE;
+    const label = d.toLocaleDateString('vi-VN', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+    const el = document.getElementById('wedding-date-label');
+    if(el) el.textContent = label;
+  })();
+
+  function tick(){
+    const now = new Date();
+    let diff = Math.max(0, WEDDING_DATE - now);
+    const days = Math.floor(diff/86400000); diff -= days*86400000;
+    const hrs  = Math.floor(diff/3600000);  diff -= hrs*3600000;
+    const mins = Math.floor(diff/60000);     diff -= mins*60000;
+    const secs = Math.floor(diff/1000);
+    document.getElementById('cd-days').textContent  = days;
+    document.getElementById('cd-hours').textContent = String(hrs).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ====== CHECKLIST: progress + localStorage persistence ====== */
+  const KEY = 'hue-wedding-checklist-v1';
+  const boxes = Array.from(document.querySelectorAll('#checkgrid input[type=checkbox]'));
+  const saved = JSON.parse(localStorage.getItem(KEY) || '[]');
+  boxes.forEach((b,i)=>{ if(saved[i]) b.checked = true; });
+
+  function updateProgress(){
+    const done = boxes.filter(b=>b.checked).length;
+    const total = boxes.length;
+    document.getElementById('prog-text').textContent = done + ' / ' + total;
+    document.getElementById('prog-bar').style.width = (total? (done/total*100):0) + '%';
+  }
+  boxes.forEach((b,i)=> b.addEventListener('change', ()=>{
+    const state = boxes.map(x=>x.checked);
+    localStorage.setItem(KEY, JSON.stringify(state));
+    updateProgress();
+  }));
+  updateProgress();
+
+  /* ====== SITE-VISIT MEASURE LIST: separate persistence ====== */
+  (function(){
+    const MKEY = 'hue-wedding-measure-v1';
+    const mboxes = Array.from(document.querySelectorAll('#measurelist input[type=checkbox]'));
+    const msaved = JSON.parse(localStorage.getItem(MKEY) || '[]');
+    mboxes.forEach((b,i)=>{ if(msaved[i]) b.checked = true; });
+    mboxes.forEach((b)=> b.addEventListener('change', ()=>{
+      localStorage.setItem(MKEY, JSON.stringify(mboxes.map(x=>x.checked)));
+    }));
+  })();
+
+  // Close mobile menu on link click
+  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
