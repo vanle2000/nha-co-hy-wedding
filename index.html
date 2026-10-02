@@ -131,6 +131,13 @@
   .sec-head .kicker{font-family:var(--script);letter-spacing:0;text-transform:none;font-size:1.55rem;color:var(--fire);display:block;margin-bottom:4px;line-height:1.2}
   .sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--royal);font-weight:400}
   .sec-head p{color:var(--muted);max-width:640px;margin:14px auto 0}
+  /* ===== THANG CHỮ THỐNG NHẤT — dễ đọc =====
+     Nội dung trong thẻ: 1rem (≈17px với Cormorant). Nhãn nhỏ: .78rem. Không dùng cỡ lẻ. */
+  .story-card p,.tl-item p,.cer-body li,.mini p,.mini li,.check-item span,.measure-list .mi span,
+  .light-row p,.theme-list li,.venue-info p,.fp-zone,.spec small,.callout,.tet-warn,.letter,td,th{font-size:1rem!important;line-height:1.65}
+  .budget-note,.date-note,.progress-note,.legend,.vstat span,.spec span{font-size:.85rem!important}
+  .mini h3,.story-card h3,.tl-item h3,.check-col h3,.light-row h4{font-size:1.2rem!important}
+  table{font-size:1rem}
   /* Nhãn chữ in hoa nhỏ -> Bodoni, tracking rộng kiểu Regency */
   .btn,.cer-top .step,.vstat span,.spec span,.ribbon,.check-col h3 .tag,.legend,.aisle{font-family:var(--serif);letter-spacing:2px}
 
@@ -383,9 +390,7 @@
 <section id="story">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Chuyện của chúng mình</span>
-      <h2>Một tình yêu đi qua khoảng cách</h2>
-      <p>Mỗi đám cưới ấm áp đều bắt đầu từ một câu chuyện thật. Đây là sợi chỉ đỏ xuyên suốt mọi chi tiết của ngày trọng đại.</p>
+      <h2>Chuyện của Phát & Thảo</h2>
     </div>
     <div class="story-grid">
       <div class="story-card"><span class="ico">📚</span><h3>Bạn cùng trường</h3><p>Quen nhau từ thời áo trắng cấp ba — nơi những rung động đầu đời bắt đầu, trong sân trường và những trang vở.</p></div>
@@ -393,7 +398,6 @@
       <div class="story-card"><span class="ico">🚆</span><h3>Ba năm yêu xa</h3><p>Đà Nẵng – Huế, hơn 90km đèo Hải Vân ngăn cách. Ba năm của những chuyến xe cuối tuần, những cuộc gọi khuya và lời hứa chờ đợi.</p></div>
       <div class="story-card"><span class="ico">🏡</span><h3>Về chung một nhà</h3><p>Khoảng cách khép lại. Hai gia đình thành một. Hành trình mới — hạnh phúc, bền lâu và trọn vẹn yêu thương — bắt đầu tại Huế.</p></div>
     </div>
-    <p class="pullquote">"Khoảng cách không chia cắt được hai người thật lòng muốn về chung một nhà — nó chỉ làm ngày đoàn tụ thêm ngọt ngào."</p>
   </div>
 </section>
 
@@ -448,45 +452,22 @@
 <section id="ceremonies">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Nghi lễ truyền thống</span>
-      <h2>Ba nghi lễ chính của đám cưới Việt</h2>
-      <p>Đám cưới hiện đại thường gồm 3 nghi lễ. Phong tục Huế / miền Trung thiên về sự chỉn chu, trang trọng và coi trọng lễ gia tiên.</p>
+      <h2>Nghi lễ ngày cưới</h2>
     </div>
-    <div class="cer-grid">
+    <div class="cer-grid" style="grid-template-columns:1fr;max-width:720px;margin:0 auto">
       <div class="cer-card">
-        <div class="cer-top"><div class="step">Bước 1</div><h3>Lễ Dạm Ngõ</h3><div class="vi">Chạm ngõ · Lễ xem mặt</div></div>
-        <div class="cer-body"><ul>
-          <li>Buổi gặp mặt thân mật, chính thức giữa hai gia đình</li>
-          <li>Nhà trai mang lễ nhỏ: trầu cau, trà, bánh, trái cây</li>
-          <li>Thưa chuyện xin cho đôi trẻ qua lại, bàn chuyện cưới xin</li>
-          <li>Thắp hương bàn thờ gia tiên nhà gái</li>
-          <li>Thống nhất ngày ăn hỏi, ngày cưới, số mâm quả</li>
-        </ul></div>
-      </div>
-      <div class="cer-card">
-        <div class="cer-top"><div class="step">Bước 2</div><h3>Lễ Ăn Hỏi</h3><div class="vi">Đính hôn · Lễ hỏi</div></div>
-        <div class="cer-body"><ul>
-          <li>Nhà trai mang <b>mâm quả (tráp)</b> sang nhà gái</li>
-          <li>Huế/miền Trung thường số tráp <b>lẻ (5 hoặc 7)</b>; lễ vật bên trong theo cặp chẵn</li>
-          <li>Lễ vật: trầu cau (~105 quả cau — trăm năm hạnh phúc), trà – rượu, bánh phu thê (su sê), trái cây, heo quay / xôi gấc, trang sức</li>
-          <li>Đội bưng tráp nam – nữ chưa lập gia đình; trao lì xì "trả duyên"</li>
-          <li>Cô dâu ra mắt, thắp hương gia tiên; hai nhà trao lễ, nhận lễ</li>
-        </ul></div>
-      </div>
-      <div class="cer-card">
-        <div class="cer-top"><div class="step">Bước 3</div><h3>Lễ Cưới</h3><div class="vi">Lễ thành hôn · Rước dâu · Tiệc cưới</div></div>
+        <div class="cer-top"><h3>Lễ Cưới — 15/02/2027</h3><div class="vi">Lễ xin dâu · Rước dâu · Lễ gia tiên · Lễ thành hôn · Tiệc cưới</div></div>
         <div class="cer-body"><ul>
           <li><b>Lễ xin dâu:</b> mẹ chú rể sang trao lễ, xin đón cô dâu</li>
-          <li><b>Lễ rước dâu / đón dâu:</b> đoàn nhà trai đón cô dâu về</li>
+          <li><b>Lễ rước dâu:</b> đoàn nhà trai đón cô dâu về</li>
           <li><b>Lễ gia tiên:</b> cô dâu chú rể thắp hương, bái lạy tổ tiên hai nhà</li>
           <li><b>Lễ thành hôn:</b> trao nhẫn, nhận lời chúc & nữ trang của cha mẹ</li>
-          <li><b>Tiệc cưới:</b> đãi khách; <b>Lễ lại mặt:</b> vài ngày sau về thăm nhà gái</li>
+          <li><b>Tiệc cưới:</b> trưa tại GOLDLAND PLAZA</li>
+          <li><b>Lễ lại mặt:</b> vài ngày sau, về thăm nhà gái</li>
         </ul></div>
       </div>
     </div>
-    <div class="callout">
-      <b>Lưu ý văn hóa quan trọng:</b> Số mâm quả, lễ vật và nghi thức có thể khác nhau tùy <b>từng gia đình, từng vùng và dòng họ</b>. Luôn hỏi và thống nhất với <b>người lớn / trưởng họ hai bên</b> trước — đây vừa là phép lịch sự, vừa đảm bảo mọi nghi lễ đúng ý nguyện gia đình. Phần trên là khung tham khảo theo phong tục phổ biến ở Huế / miền Trung.
-    </div>
+    <p style="text-align:center;color:var(--muted);margin-top:18px">Lễ dạm ngõ và đám hỏi đã hoàn thành. Thứ tự và lễ vật theo thống nhất của hai gia đình.</p>
   </div>
 </section>
 
