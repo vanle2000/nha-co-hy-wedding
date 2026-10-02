@@ -27,20 +27,11 @@ python3 -m http.server 8000
 8. **Lịch trình ngày cưới** — từng mốc giờ, nghi lễ sáng + tiệc trưa
 9. **Checklist tương tác** — tích hoàn thành, tự lưu trên trình duyệt
 10. **Ngân sách tham khảo** (VND) — đã quy mô theo 700–800 khách
-11. **Phong thủy** — phân tích mệnh Kim (Tân Tỵ 2001) × năm Đinh Mùi 2027, bảng màu ngũ hành, biểu tượng, nghi lễ thuận phong thủy
-12. **Chủ đề & phong cách** — "Về Chung Một Nhà · Hoàng Kim Huế" (vàng hoàng kim – trắng ngà – champagne, hợp mệnh Kim)
-13. **Ý tưởng chạm đến trái tim** — những chi tiết ấm áp
-14. **Thời tiết** — khí hậu trung bình giữa tháng 2 ở Huế + link dự báo
-15. **Thông tin cưới tại Huế** — bối cảnh chụp hình, đón khách
+11. **Chủ đề & phong cách** — "Về Chung Một Nhà · Hoàng Kim Huế" (vàng hoàng kim – trắng ngà – champagne, hợp mệnh Kim)
+12. **Ý tưởng chạm đến trái tim** — những chi tiết ấm áp
+13. **Thời tiết** — khí hậu trung bình giữa tháng 2 ở Huế + link dự báo
+14. **Thông tin cưới tại Huế** — bối cảnh chụp hình, đón khách
 
-## Lưu ý phong thủy (quan trọng)
-Cô dâu & chú rể **cùng sinh năm Tân Tỵ 2001 → mệnh Bạch Lạp Kim (Kim)**. Theo Bát Tự của gia đình, hai bạn **thiếu Hỏa** → Hỏa là **dụng thần** cần bổ.
-- **Nền (≈75%):** vàng hoàng kim, champagne, be (Thổ sinh Kim) + trắng ngà, bạc, ánh kim (Kim bản mệnh).
-- **Điểm nhấn Hỏa (≈25%):** đỏ son, cam san hô, hồng phấn, tím tử đằng — bổ Hỏa; chuỗi tương sinh **Hỏa → Thổ → Kim**. Không để Hỏa vượt ~30% (sẽ quay lại khắc Kim).
-- **Hạn chế:** xanh dương/đen làm nền (Thủy khắc Hỏa), quá nhiều Mộc/gỗ thô.
-- Ngày cưới tự giàu Hỏa: năm **Đinh** (Âm Hỏa), chi Mùi tàng Đinh Hỏa, tháng Dần tàng Bính Hỏa, **tiệc trưa giờ Ngọ = Hỏa thuần**.
-- Năm 2027 Đinh Mùi (Thủy): Kim sinh Thủy — tương sinh. Tuổi Tỵ không xung Mùi, không Tam Tai, cô dâu không phạm Kim Lâu. 15/02/2027 = **mùng 10 tháng Giêng** — ngày vía Thần Tài.
-**Vẫn nên hỏi thầy phong thủy / người lớn trong gia đình** để chốt giờ hoàng đạo, xác nhận dụng thần Hỏa & tỉ lệ bổ theo trụ ngày/giờ sinh.
 
 ## Phong cách Bridgerton
 Hai triều đình cùng một thập niên — London Regency (1813–1815) & Kinh thành Huế thời Gia Long (1802–1820). Trang web dùng
