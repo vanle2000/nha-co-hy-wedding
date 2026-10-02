@@ -171,6 +171,7 @@
   .check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
   .check-col{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--gold)}
   .check-col.urgent{border-top-color:var(--fire)}
+  .check-col.done{border-top-color:#2f6a3a;opacity:.72;background:#fbfdf9}
   .check-col h3{color:var(--royal);font-size:1.1rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .check-col h3 .tag{font-size:.66rem;background:var(--champagne-soft);color:var(--royal);padding:3px 9px;border-radius:20px;letter-spacing:1px}
   .check-col .due{font-family:var(--serif);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--fire);margin-bottom:12px}
@@ -399,22 +400,45 @@
 <section id="timeline">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Lịch trình ngược — 4 tháng rưỡi</span>
-      <h2>Chúng ta cần làm gì, và khi nào</h2>
-      <p>Tính từ hôm nay đến ngày cưới (~4 tháng 2 tuần). Làm theo thứ tự này để không việc gì bị dồn vào phút chót.</p>
+      <span class="kicker">Lịch trình ngược — việc còn lại</span>
+      <h2>12 hạng mục từ nay đến 15/02/2027</h2>
+      <p>✅ <b>Đã xong: Lễ dạm ngõ & Đám hỏi.</b> Dưới đây là các việc còn lại, xếp theo hạn chót tính ngược từ ngày cưới — và luôn <b>trước mốc nghỉ Tết 20/01/2027</b>.</p>
     </div>
+
+    <div class="tet-warn" style="max-width:820px;margin:0 auto 34px">
+      <b>Mốc sống còn:</b> Tết Đinh Mùi mùng 1 = <b>06/02/2027</b>, nghỉ lễ 04–10/02 — đám cưới chỉ <b>5 ngày sau Tết</b>. Nhà cung cấp nghỉ/quá tải từ ~25/01. <b>Mọi đơn đặt phải nhận hàng xong trước 20/01/2027.</b>
+    </div>
+
     <div class="timeline">
-      <div class="tl-item"><div class="tl-when">Ngay bây giờ · Tháng 0</div><h3>Chốt ngày & hai gia đình gặp mặt</h3><p>Xem ngày lành (có thể nhờ thầy / người lớn trong họ), chốt ngày ăn hỏi & ngày cưới. Lập ngân sách tổng và phân chia trách nhiệm hai nhà. Mở một nhóm chat chung của hai gia đình.</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 0 – 0.5</div><h3>Lễ dạm ngõ (nếu chưa làm)</h3><p>Buổi gặp thân mật đầu tiên, nhà trai mang trầu cau – trà – trái cây sang thưa chuyện. Thống nhất số mâm quả, lễ vật, số người bưng tráp.</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 1</div><h3>Chốt địa điểm & nhà hàng tiệc cưới</h3><p>Đặt nhà hàng/khách sạn ở Huế (đặt sớm vì mùa cưới dễ hết chỗ). Chốt số mâm cỗ sơ bộ. Đặt cọc. Lên danh sách khách mời bản nháp (nhà trai + nhà gái).</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 1 – 2</div><h3>Áo dài, váy cưới, vest & chụp ảnh cưới (pre-wedding)</h3><p>Đặt may/thuê áo dài truyền thống cho cô dâu chú rể và bố mẹ. Đặt studio chụp ảnh cưới — gợi ý bối cảnh Huế: Đại Nội, cầu Trường Tiền, sông Hương, đầm sen, lăng tẩm.</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 2</div><h3>Nhà cung cấp: trang trí, chụp hình/quay phim, MC, nhạc</h3><p>Chốt đơn vị trang trí gia tiên & sân khấu, thợ ảnh/quay ngày cưới, MC, ban nhạc/âm thanh. Đặt xe hoa đón dâu & xe đưa đón khách đường xa.</p></div>
-      <div class="tl-item"><div class="tl-when">Tháng 2 – 3</div><h3>Thiệp cưới & gửi thiệp</h3><p>Thiết kế & in thiệp (song ngữ nếu có khách nước ngoài). Chốt danh sách khách chính thức. Gửi thiệp trước ít nhất 3–4 tuần; khách ở xa báo sớm hơn.</p></div>
-      <div class="tl-item"><div class="tl-when">Đầu tháng 1/2027</div><h3>Mâm quả, lễ vật, nhẫn & trang sức</h3><p>Đặt mâm quả ăn hỏi (trầu cau, trà rượu, bánh phu thê, trái cây, heo quay/xôi gấc…). Mua nhẫn cưới, kiềng/vàng cưới. Chuẩn bị phong bì lễ nạp tài (nhà trai).</p></div>
-      <div class="tl-item"><div class="tl-when">10 – 20/01/2027 · trước Tết</div><h3>Lễ ăn hỏi / đính hôn</h3><p>Nhà trai mang tráp sang nhà gái. Chọn & tập dượt đội bưng tráp (nam nhà trai, nữ nhà gái, chưa lập gia đình). Lì xì trao duyên cho đội bưng tráp. <b>Phải xong trước 20/01</b> — sau đó mọi dịch vụ nghỉ Tết.</p></div>
-      <div class="tl-item"><div class="tl-when">20/01 → 10/02 · Tết Đinh Mùi</div><h3>Vùng "đóng băng" — nhà cung cấp nghỉ Tết</h3><p>Mùng 1 Tết là 06/02; nghỉ lễ 04–10/02. Không đặt gì mới trong giai đoạn này. Mọi trang phục, thiệp, in ấn, quà, Đèn Hỷ phải <b>đã nhận về nhà</b>. Chỉ còn việc gửi thiệp còn sót & xác nhận khách.</p></div>
-      <div class="tl-item"><div class="tl-when">11 – 14/02 · Tuần cuối</div><h3>Tổng duyệt & xác nhận</h3><p>Xác nhận số khách & số mâm với nhà hàng. Duyệt kịch bản MC, thứ tự nghi lễ. Thử đồ lần cuối. Chuẩn bị bàn thờ gia tiên hai nhà. Phân công người giữ tiền mừng, đón khách, hậu cần. Xem dự báo thời tiết.</p></div>
-      <div class="tl-item"><div class="tl-when">Tuần cưới</div><h3>Lễ cưới 🎉</h3><p>Lễ xin dâu → rước dâu → lễ gia tiên → lễ thành hôn → tiệc cưới. Vài ngày sau: lễ lại mặt (cô dâu chú rể về thăm nhà gái).</p></div>
+      <div class="tl-item" style="opacity:.55"><div class="tl-when">✅ Đã hoàn thành</div><h3>Lễ dạm ngõ · Đám hỏi</h3><p>Hai gia đình đã gặp mặt, nhà trai đã mang tráp sang nhà gái. Ngày cưới đã chốt: <b>Thứ Hai 15/02/2027</b> (mùng 10 tháng Giêng).</p></div>
+
+      <div class="tl-item"><div class="tl-when">① Ngay bây giờ → 20/10/2026</div><h3>Venue đám cưới — GOLDLAND PLAZA</h3><p>Khảo sát & đo sảnh (xem <a href="#decor">checklist khảo sát</a>), xác nhận sảnh hoạt động bình thường, <b>ký hợp đồng</b> 700–800 khách: giờ set-up, LED/âm thanh, đậu xe, điều khoản huỷ/đổi. Đặt cọc. Nhà trai chủ trì.</p></div>
+
+      <div class="tl-item"><div class="tl-when">② → 25/10/2026</div><h3>Photographer & Film</h3><p>Chốt một đơn vị cho cả hai việc: <b>chụp pre-wedding</b> + <b>phóng sự ngày cưới</b> (ảnh, quay, flycam). Đặt sớm vì thợ ảnh giỏi ở Huế hết lịch mùa cưới & sau Tết. Gửi concept Hoàng Kim Huế × Bridgerton.</p></div>
+
+      <div class="tl-item"><div class="tl-when">③ → 31/10/2026</div><h3>Decoration — nhà gái · nhà trai · venue</h3><p>Chốt <b>một đơn vị trang trí</b> làm cả 3 điểm để đồng nhất bảng màu <b>75% vàng/ngà – 25% Hỏa</b>: (1) gia tiên nhà gái, (2) gia tiên nhà trai + cổng, (3) sảnh GOLDLAND: backdrop "Về Chung Một Nhà", cổng tử đằng, 2 trụ hoa, đèn chùm, LED, Đèn Hỷ. Duyệt bản vẽ 3D trước 30/11.</p></div>
+
+      <div class="tl-item"><div class="tl-when">④ → 15/11/2026</div><h3>Menu tiệc cưới</h3><p>Thử món (food tasting) tại GOLDLAND; chốt thực đơn & giá/bàn cho ~70–80 bàn; thêm 1–2 món Huế (nem lụi, bánh Huế, chè); món chay cho bàn người lớn tuổi; nước uống & rượu khai tiệc. Chốt số bàn sơ bộ + 5–10% dự phòng.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑤ Đặt may → 15/11 · Nhận → 15/01</div><h3>Trang phục — áo dài truyền thống · váy cưới · suits</h3><p><b>Lễ gia tiên:</b> cô dâu áo dài <b>đỏ son thêu phụng vàng</b>; chú rể áo dài vàng/ngà + khăn đóng. <b>Tiệc:</b> váy cưới trắng ngà eo cao Regency; chú rể vest champagne + gile thêu. Áo dài cha mẹ hai bên (vàng đất, champagne, hồng phấn). Thử lần 1 giữa tháng 12, thử cuối trước 15/01.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑥ → 15/11/2026</div><h3>Phù dâu & phù rể</h3><p>Chốt danh sách phù dâu – phù rể (và đội bưng/đỡ tráp ngày cưới nếu nhà trai mang tráp khi rước dâu — nam nữ chưa lập gia đình). Chốt <b>đồng phục</b>: phù dâu áo dài/đầm hồng phấn – champagne, phù rể vest kem + nơ đỏ son. Đặt may cùng đợt với cô dâu chú rể. Phân vai ngày cưới: giữ nhẫn, giữ hoa, đỡ váy, lì xì trả duyên.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑦ Chụp 15/11 → 15/12/2026</div><h3>Pre-wedding photos</h3><p>Chụp tại Huế: Đại Nội, cầu Trường Tiền, sông Hương, lăng Minh Mạng/Khải Định, chùa Thiên Mụ (+ 1 buổi Đà Nẵng – đèo Hải Vân kể chuyện yêu xa). 2 set: áo dài truyền thống & Regency. Nhận ảnh trước 31/12 để kịp in standee, album, slideshow, khung ảnh "6 năm – 2 thành phố".</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑧ → 30/11/2026</div><h3>Nhẫn cưới</h3><p>Chọn & đặt nhẫn (vàng/bạch kim — Kim hợp mệnh), khắc tên + <b>15.02.2027</b>; đặt sớm vì cần 3–4 tuần gia công & chỉnh size. Mua thêm kiềng/vàng cưới trao trong lễ nếu hai nhà đã thống nhất. Nhận hàng trước 10/01.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑨ Thiết kế → 30/11 · In → 20/12 · Gửi 05–20/01</div><h3>Thiệp cưới</h3><p>Chốt danh sách khách chính thức hai bên. Thiệp kiểu thư tay Regency, niêm sáp đỏ son "P❦T", kèm địa chỉ + bản đồ GOLDLAND, giờ tiệc trưa. In ~800 + 10% dư <b>trước 20/12</b> (nhà in nghỉ Tết sớm). Gửi khách xa (Đà Nẵng, tỉnh) trước, khách Huế sau; hoàn tất 20/01.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑩ Đặt → 10/01 · Nhận → 14/02</div><h3>Lễ vật & mâm quả (ngày cưới)</h3><p>Nhà trai đặt tráp cho <b>lễ xin dâu / rước dâu</b>: trầu cau, trà – rượu, bánh phu thê, trái cây, heo quay/xôi gấc, khăn đỏ son thêu kim tuyến — số tráp theo nếp Huế đã thống nhất với nhà gái. Đặt trước Tết, hẹn nhận sáng 14/02 (hoa quả tươi). Chuẩn bị phong bì lễ, lì xì trả duyên, tiền mới.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑪ Ngày do gia đình chốt</div><h3>Lễ Nhuận Hang</h3><p>Nghi lễ theo tục của gia đình — <b>cần gia đình xác nhận nội dung, thành phần & ngày</b> để lên lễ vật và trang phục cho đúng. Nếu diễn ra trước Tết: đặt lễ vật cùng đợt với mâm quả; nếu sau Tết: chuẩn bị sẵn từ trước 20/01.</p></div>
+
+      <div class="tl-item" style="opacity:.8"><div class="tl-when">20/01 → 10/02 · Tết Đinh Mùi</div><h3>Vùng "đóng băng"</h3><p>Không đặt mới. Mọi trang phục, nhẫn, thiệp, in ấn, quà cảm ơn, Đèn Hỷ <b>đã về nhà</b>. Chỉ còn xác nhận khách và xác nhận bằng văn bản lịch đi làm lại sau Tết của từng nhà cung cấp.</p></div>
+
+      <div class="tl-item"><div class="tl-when">⑫ 11 – 14/02/2027</div><h3>Tổng duyệt & xác nhận</h3><p>Chốt số bàn cuối với GOLDLAND. Tổng duyệt kịch bản với MC & coordinator. Test video/LED/âm thanh tại sảnh. Phân công lễ tân, hộp mừng, hậu cần. Xem dự báo thời tiết 10 ngày. Cô dâu chú rể nghỉ ngơi.</p></div>
+
+      <div class="tl-item"><div class="tl-when">Thứ Hai 15/02/2027</div><h3>Lễ cưới 🎉</h3><p>Lễ xin dâu → rước dâu → lễ gia tiên → lễ thành hôn → tiệc trưa giờ Ngọ tại GOLDLAND PLAZA. Vài ngày sau: lễ lại mặt. Xem <a href="#dayof">lịch chi tiết từng giờ</a>.</p></div>
     </div>
   </div>
 </section>
@@ -690,7 +714,6 @@
         <div class="due">Hạn: 15/10/2026</div>
         <label class="check-item"><input type="checkbox"><span>Hai gia đình gặp mặt, thống nhất kế hoạch tổng <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chốt ngày cưới 15/02/2027 với thầy; xin <b>giờ hoàng đạo</b> rước dâu, nhập trạch (cần giờ sinh hai bạn) <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt ngày lễ dạm ngõ & lễ ăn hỏi (xem ngày) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Xác nhận với thầy: <b>dụng thần Hỏa</b> & tỉ lệ bổ màu (mang trang Phong thủy đi hỏi) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Lập ngân sách tổng & phân chia hạng mục hai nhà (dùng bảng Ngân sách) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Tạo nhóm chat chung hai gia đình + file Google Sheet khách mời & chi phí <i class="who p">Phát & Thảo</i></span></label>
@@ -712,9 +735,9 @@
         <label class="check-item"><input type="checkbox"><span>Đặt <b>make-up & làm tóc</b> cô dâu (thử trước 1 lần) <i class="who g">Nhà gái</i></span></label>
       </div>
 
-      <div class="check-col">
-        <h3>3 · Lễ dạm ngõ <span class="tag">Nghi lễ 1</span><span class="colprog"></span></h3>
-        <div class="due">Hạn: trong tháng 10–11/2026</div>
+      <div class="check-col done">
+        <h3>3 · Lễ dạm ngõ <span class="tag" style="background:#eef7ee;color:#2f6a3a">✅ Đã xong</span><span class="colprog"></span></h3>
+        <div class="due" style="color:#2f6a3a">Hoàn thành — tích để ghi nhận</div>
         <label class="check-item"><input type="checkbox"><span>Chốt thành phần nhà trai sang (5–7 người: cha mẹ, trưởng họ, chú rể) <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chuẩn bị lễ dạm ngõ: trầu cau, trà, rượu, bánh, trái cây (khăn phủ đỏ – vàng) <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Nhà gái dọn bàn thờ gia tiên, chuẩn bị trà bánh tiếp khách <i class="who g">Nhà gái</i></span></label>
@@ -730,6 +753,8 @@
         <label class="check-item"><input type="checkbox"><span>Chú rể: <b>áo dài vàng/ngà + khăn đóng</b> (lễ) & <b>vest champagne + gile thêu</b> (tiệc) <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Áo dài cho cha mẹ hai bên (vàng đất, champagne, hồng phấn) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đồng phục / áo dài đội bưng tráp nam – nữ (10–14 bộ, tông vàng – đỏ) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt danh sách <b>phù dâu & phù rể</b>; phân vai (giữ nhẫn, giữ hoa, đỡ váy) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đồng phục phù dâu (hồng phấn – champagne) & phù rể (vest kem, nơ đỏ son) — may cùng đợt <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Mua <b>nhẫn cưới</b> (khắc tên + 15.02.2027) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Mua <b>vàng cưới / kiềng</b> trao trong lễ (Kim — hợp mệnh) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Thử đồ lần 1 (tháng 12) & lần cuối (trước 20/01) <i class="who p">Phát & Thảo</i></span></label>
@@ -770,9 +795,9 @@
         <label class="check-item"><input type="checkbox"><span>Xe hoa + trang trí xe; đoàn xe nhà trai <i class="who t">Nhà trai</i></span></label>
       </div>
 
-      <div class="check-col">
-        <h3>8 · Lễ ăn hỏi <span class="tag">Nghi lễ 2</span><span class="colprog"></span></h3>
-        <div class="due">Dự kiến: 10–20/01/2027 (trước Tết)</div>
+      <div class="check-col done">
+        <h3>8 · Đám hỏi <span class="tag" style="background:#eef7ee;color:#2f6a3a">✅ Đã xong</span><span class="colprog"></span></h3>
+        <div class="due" style="color:#2f6a3a">Hoàn thành — tích để ghi nhận</div>
         <label class="check-item"><input type="checkbox"><span>Đặt <b>mâm quả 5 hoặc 7 tráp</b>: trầu cau, trà – rượu, bánh phu thê, trái cây, heo quay/xôi gấc, trang sức — khăn đỏ son thêu kim tuyến <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chuẩn bị <b>phong bì lễ nạp tài</b> (số tiền đã thống nhất) <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chọn đội bưng tráp nam (nhà trai) & đỡ tráp nữ (nhà gái) — chưa lập gia đình; tập dượt <i class="who c">Hai nhà</i></span></label>
@@ -791,6 +816,8 @@
         <label class="check-item"><input type="checkbox"><span>Xác nhận bằng văn bản <b>lịch làm việc sau Tết</b> của từng nhà cung cấp (họ có đi làm lại kịp 14–15/02 không?) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đặt <b>quà cảm ơn khách</b> (mè xửng, trà sen, hạt sen) + thiệp cảm ơn — nhận trước Tết <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Mua sẵn: tiền mới lì xì, phong bì, sổ ghi lễ, hộp mừng cưới, pháo kim tuyến, nến <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>mâm quả ngày cưới</b> (lễ xin dâu/rước dâu) — hẹn nhận sáng 14/02 <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span><b>Lễ Nhuận Hang</b>: gia đình xác nhận nội dung, thành phần, ngày → chuẩn bị lễ vật & trang phục <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đăng ký <b>kết hôn</b> tại UBND (giấy tờ: CCCD, xác nhận tình trạng hôn nhân) — làm trước Tết vì UBND nghỉ 04–10/02 <i class="who p">Phát & Thảo</i></span></label>
       </div>
 
