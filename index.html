@@ -9,25 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
   :root{
-    /* ===== BẢNG MÀU PHONG THỦY — Cô dâu & chú rể cùng mệnh KIM (Tân Tỵ 2001, Bạch Lạp Kim)
-       Thổ sinh Kim  -> vàng hoàng kim / nâu đất / champagne (nuôi dưỡng, che chở)
-       Kim bản mệnh  -> trắng ngà / bạc / ánh kim (vững mạnh)
-       Hỏa (theo Bát Tự hai bạn THIẾU Hỏa) -> bổ bằng đỏ son/san hô/hồng phấn/tử đằng làm ĐIỂM NHẤN ~25%, không làm nền ===== */
-    --royal:#7a5a1e;          /* Hoàng kim đậm (Thổ) — màu chủ đạo */
-    --royal-deep:#4a3612;     /* Nâu đồng sâu */
-    --royal-soft:#a8843a;     /* Vàng hoàng gia dịu */
-    --gold:#c9a24b;           /* Vàng kim ánh (Kim) */
+    /* ===== BẢNG MÀU CƯỚI =====
+       Đỏ rượu vang đậm · đỏ hoa hồng · trắng ngà · vàng kim */
+    --royal:#7a5a1e;
+    --royal-deep:#4a3612;
+    --royal-soft:#a8843a;
+    --gold:#c9a24b;
     --gold-light:#e4cd8f;
-    --champagne:#d9c08c;      /* Champagne (Thổ dịu) */
-    --champagne-soft:#f5edda; /* Nền champagne nhạt */
-    --ivory:#fbf7f0;          /* Trắng ngà (Kim bản mệnh) */
-    /* ----- BỔ HỎA theo Bát Tự (hai bạn thiếu Hỏa) — điểm nhấn ~20–30%, không làm nền lớn -----
-       Hỏa sinh Thổ, Thổ sinh Kim: chuỗi tương sinh trọn vẹn khi Hỏa đi cùng vàng/ngà. */
-    --fire:#b23a2e;           /* Đỏ son (sơn son thiếp vàng Huế) */
-    --coral:#e07a5f;          /* Cam san hô */
-    --blush:#e8b4b8;          /* Hồng phấn Regency (Hỏa dịu) */
-    --wisteria:#9b89b3;       /* Tím hoa tử đằng — màu Bridgerton (Hỏa dịu) */
-    --powder:#aac4d8;         /* Xanh bột Bridgerton (Thủy) — dùng rất ít */
+    --champagne:#d9c08c;
+    --champagne-soft:#f5edda;
+    --ivory:#fbf7f0;
+    --fire:#b23a2e;
+    --deep-red:#5b0f1b;       /* nền sân khấu chủ đạo */
     --ink:#2e2618;
     --muted:#7a6f5c;
     --line:rgba(122,90,30,.18);
@@ -294,7 +287,7 @@
   .dot{width:14px;height:14px;border-radius:50%;display:inline-block}
 
   /* ====== DESIGN STUDIO ====== */
-  .stage-elev{background:linear-gradient(180deg,#2b2010,#4a3612);border-radius:16px;padding:26px 22px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .stage-elev{background:linear-gradient(180deg,#72182a,var(--deep-red));border-radius:16px;padding:26px 22px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
   .stage-elev .sky{position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(201,162,75,.25),transparent 55%)}
   .stage-elev .screen{position:relative;background:rgba(0,0,0,.45);border:2px solid var(--gold);border-radius:8px;height:120px;margin:0 auto;max-width:62%;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.8rem;letter-spacing:1px;text-align:center}
   .stage-elev .couple{position:relative;text-align:center;color:#fff;margin-top:14px;font-family:var(--serif)}
@@ -345,7 +338,7 @@
   }
   .divider{text-align:center;color:var(--gold);letter-spacing:10px;margin:28px 0 6px;font-size:1rem}
   .divider::before,.divider::after{content:"────";letter-spacing:0;opacity:.5;margin:0 10px}
-  .ribbon{display:inline-block;background:var(--wisteria);color:#fff;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:12px}
+  .ribbon{display:inline-block;background:var(--deep-red);color:#fff;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:12px}
   .fire-accent{border-left-color:var(--fire)!important}
   .sw-row{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:120px;margin-top:12px}
 
@@ -528,7 +521,7 @@
       </div>
       <div class="fp-zones">
         <div class="fp-zone"><b>🚪 Lối vào & Lễ tân</b>Bàn đón khách, sổ ký tên, hộp mừng, bảng chào mừng + ảnh cưới</div>
-        <div class="fp-zone"><b>📸 Góc check-in</b>Backdrop vàng hoàng kim – trắng ngà, sen trắng, nón lá — đặt gần sảnh chờ</div>
+        <div class="fp-zone"><b>📸 Góc check-in</b>Nền đỏ rượu vang, hoa hồng trắng &amp; đỏ, khung vàng — đặt gần sảnh chờ</div>
         <div class="fp-zone"><b>🍰 Bàn gallery</b>Bánh cưới, tháp ly, timeline "6 năm – 2 thành phố"</div>
         <div class="fp-zone"><b>🍽️ Khu phục vụ</b>Lối ra của bếp/phục vụ, bố trí tránh cắt ngang lối đi chính</div>
       </div>
@@ -569,7 +562,7 @@
       <div class="spec"><b>≥3.5m</b><span>Chiều cao backdrop</span><small>cần trần đủ cao</small></div>
     </div>
     <div class="callout" style="border-left-color:var(--champagne)">
-      <b>Ý tưởng backdrop:</b> chữ "Về Chung Một Nhà" mạ vàng trên nền <b>trắng ngà – champagne gradient</b> trong <b>khung filigree mạ vàng kiểu Regency</b>, viền hoa văn long phụng (Phụng đỏ son nổi bật — bổ Hỏa); hai bên là <b>trụ hoa đứng</b> (sen trắng + mẫu đơn đỏ + hồng phấn + tử đằng rủ + mai vàng), kết hợp <b>màn hình LED</b> ở giữa thay cho backdrop in cứng — chiếu video 3 năm yêu xa, linh hoạt. Phía sau: <b>rèm voan ngà + đèn chùm pha lê</b> treo thấp tạo chiều sâu phòng khiêu vũ. Toàn bộ tông <b>Thổ – Kim nền, Hỏa điểm</b> — đúng Bát Tự của hai bạn.
+      <b>Backdrop:</b> nền <b>đỏ rượu vang đậm</b>, chữ "Về Chung Một Nhà" và khung filigree <b>mạ vàng</b>. Hai bên đặt trụ hoa <b>hồng trắng &amp; hồng đỏ</b>; màn hình LED ở giữa. Rèm đỏ đậm và đèn chùm pha lê tạo chiều sâu.
     </div>
 
     <!-- AISLE & SEATING -->
@@ -599,11 +592,11 @@
 
     <!-- FLOWERS -->
     <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">🌸 4. Kế hoạch hoa</h3>
-    <p style="color:var(--muted);margin-bottom:18px">Hoa chủ đạo <b>sen trắng & sen vàng</b> (Huế) phối <b>mai vàng – mẫu đơn đỏ – hồng phấn – tử đằng rủ</b> (Hỏa & Bridgerton), điểm lá cau gợi nhắc nghi lễ truyền thống. Bảng hoa <b>Thổ – Kim nền, Hỏa điểm</b>, đúng Bát Tự của hai bạn.</p>
+    <p style="color:var(--muted);margin-bottom:18px">Nền trang trí <b>đỏ rượu vang đậm</b>. Chỉ dùng <b>hoa hồng trắng và hoa hồng đỏ</b>; hạn chế lá xanh.</p>
     <div class="mini-grid">
-      <div class="mini"><h3>🌺 Hoa chủ đạo</h3><ul><li>Sen trắng / sen vàng (biểu tượng Huế)</li><li>Mai vàng (xuân mới, Thổ sinh Kim)</li><li><b>Mẫu đơn đỏ & hồng phấn</b> (Hỏa, rất Bridgerton)</li><li><b>Tử đằng (wisteria) rủ</b> — cổng hoa & trần</li><li>Hồng kem, cát tường, baby; lan trắng điểm nhấn</li><li>Lá cau — chỉ điểm xanh nhẹ (Mộc tiếp Hỏa)</li></ul></div>
-      <div class="mini"><h3>💐 Nơi cần hoa</h3><ul><li>Cổng hoa + lối vào</li><li>2 trụ hoa đứng hai bên sân khấu</li><li>Hoa bàn tiệc (lọ thấp)</li><li>Bàn gallery, bàn ký tên, bàn thờ gia tiên</li><li>Hoa cầm tay cô dâu + cài áo chú rể</li></ul></div>
-      <div class="mini"><h3>🪷 Mẹo & lưu ý</h3><ul><li>Hoa bàn <b>để thấp</b> (dưới tầm mắt) để khách trò chuyện</li><li>Dùng hoa <b>đúng mùa</b> tháng 2 cho tươi & tiết kiệm</li><li>Kết hợp hoa lụa cao cấp ở trụ lớn để bền cả tiệc</li><li>Thống nhất <b>bảng màu hoa</b> với trang trí & áo dài</li></ul></div>
+      <div class="mini"><h3>🌹 Hoa sử dụng</h3><ul><li><b>Hoa hồng trắng:</b> màu chính, tạo độ sáng trên nền đỏ</li><li><b>Hoa hồng đỏ:</b> màu điểm nhấn, dùng theo cụm</li><li><b>Lá xanh:</b> rất ít, chỉ để tạo cấu trúc</li></ul></div>
+      <div class="mini"><h3>💐 Vị trí</h3><ul><li>Cổng hoa &amp; lối vào</li><li>Hai trụ hoa hai bên sân khấu</li><li>Hoa bàn tiệc — bình thấp</li><li>Bàn gallery &amp; bàn ký tên</li><li>Hoa cầm tay cô dâu &amp; hoa cài áo chú rể</li></ul></div>
+      <div class="mini"><h3>📐 Tỉ lệ màu</h3><ul><li><b>70% hoa trắng</b></li><li><b>30% hoa đỏ</b></li><li>Không thêm hoa vàng, hồng phấn, tím hoặc nhiều loại hoa phụ</li><li>Có thể dùng hoa lụa chất lượng cao ở trụ lớn; hoa tươi tại bàn &amp; bó cô dâu</li></ul></div>
     </div>
 
     <!-- EXTRAS -->
@@ -755,9 +748,9 @@
       <div class="check-col">
         <h3>6 · Trang trí, hoa & sơ đồ <span class="tag">Thiết kế</span><span class="colprog"></span></h3>
         <div class="due">Duyệt bản vẽ: 31/12 · Chốt hoa: 10/01/2027</div>
-        <label class="check-item"><input type="checkbox"><span>Duyệt <b>bản vẽ 3D</b> sân khấu & sảnh từ đơn vị trang trí theo bảng màu 75% vàng/ngà + 25% Hỏa <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Duyệt <b>bản vẽ 3D</b> sân khấu &amp; sảnh: nền đỏ rượu vang đậm, chữ/khung vàng, hoa trắng &amp; đỏ <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chốt backdrop "Về Chung Một Nhà", cổng hoa, 2 trụ hoa, màn LED, đèn chùm <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt hoa: sen trắng/vàng, mai vàng, mẫu đơn đỏ, hồng phấn, tử đằng — đặt trước Tết (giá hoa tăng mạnh dịp Tết) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chốt <b>hoa hồng trắng &amp; hoa hồng đỏ</b> — tỉ lệ 70/30; đặt trước Tết (giá hoa tăng mạnh dịp Tết) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Thiết kế & in: bảng tên bàn thư pháp, menu, sơ đồ bàn khổ lớn, bảng chào mừng <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Lập <b>sơ đồ bàn</b>: VIP & gia đình gần sân khấu, cụm A/B/C theo nhóm khách <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đặt làm <b>"Đèn Hỷ"</b> lồng đèn ước nguyện + thẻ giấy ánh kim + bút <i class="who p">Phát & Thảo</i></span></label>
@@ -864,30 +857,23 @@
     <div class="theme-wrap">
       <div>
         <ul class="theme-list">
-          <li><b>Bảng màu:</b> 50% vàng hoàng kim &amp; trắng ngà · 25% champagne &amp; ánh kim · 25% điểm nhấn đỏ son, hồng phấn, tử đằng.</li>
-          <li><b>Hoa:</b> sen trắng &amp; vàng, mai vàng, mẫu đơn đỏ &amp; hồng phấn, tử đằng rủ, hồng kem, baby.</li>
+          <li><b>Bảng màu:</b> nền đỏ rượu vang đậm · hoa trắng &amp; đỏ · chữ và khung mạ vàng · trắng ngà cho chi tiết phụ.</li>
+          <li><b>Hoa:</b> chỉ dùng hoa hồng trắng và hoa hồng đỏ, tỉ lệ 70% trắng / 30% đỏ; lá xanh tối thiểu.</li>
           <li><b>Hoạ tiết:</b> long – phụng, song hỷ đỏ son, hoa văn cung đình sơn son thiếp vàng, viền filigree &amp; khung mạ vàng.</li>
           <li><b>Chi tiết Regency:</b> bảng tên bàn thư pháp, đèn chùm pha lê, tứ tấu đàn dây, tháp macaron.</li>
           <li><b>Trang phục:</b> lễ gia tiên — áo dài đỏ son thêu phụng vàng (cô dâu), áo dài vàng/ngà (chú rể); tiệc — váy trắng ngà eo cao Regency, vest champagne + gile thêu.</li>
-          <li><b>Không gian:</b> đèn chùm, nến thật trên chân nến vàng, lồng đèn đỏ – vàng, song hỷ 囍 đỏ son, ghế Louis nhung hồng phấn ở bàn VIP.</li>
+          <li><b>Không gian:</b> phông và rèm đỏ rượu vang đậm, đèn chùm pha lê, nến trên chân nến vàng, ghế Louis đỏ đậm/kem ở bàn VIP.</li>
         </ul>
       </div>
       <div>
         <div class="swatches">
-          <div class="sw" style="background:#7a5a1e">Hoàng kim đậm</div>
-          <div class="sw" style="background:#c9a24b">Vàng kim</div>
-          <div class="sw" style="background:#d9c08c">Champagne</div>
-          <div class="sw" style="background:#e9e4dc;color:#7a5a1e;text-shadow:none">Bạc ngà</div>
-          <div class="sw" style="background:#fbf7f0;color:#7a5a1e;text-shadow:none">Trắng ngà</div>
+          <div class="sw" style="background:#5b0f1b">Đỏ rượu vang</div>
+          <div class="sw" style="background:#8f1d32">Đỏ hoa hồng</div>
+          <div class="sw" style="background:#f8f5ef;color:#5b0f1b;text-shadow:none">Trắng hoa</div>
+          <div class="sw" style="background:#c9a24b">Vàng khung</div>
+          <div class="sw" style="background:#fbf7f0;color:#5b0f1b;text-shadow:none">Trắng ngà</div>
         </div>
-        <div class="sw-row">
-          <div class="sw" style="background:#b23a2e">Đỏ son 🔥</div>
-          <div class="sw" style="background:#e07a5f">San hô 🔥</div>
-          <div class="sw" style="background:#e8b4b8;color:#7a3a3f;text-shadow:none">Hồng phấn 🔥</div>
-          <div class="sw" style="background:#9b89b3">Tử đằng 🔥</div>
-          <div class="sw" style="background:#aac4d8;color:#2e3f4f;text-shadow:none">Xanh bột (ít)</div>
-        </div>
-        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px">Hàng trên: nền Thổ – Kim (75%) · Hàng dưới: điểm nhấn Hỏa & Bridgerton (25%)</p>
+        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px">Bảng màu: đỏ rượu vang · trắng · đỏ hoa hồng · vàng kim</p>
       </div>
     </div>
   </div>
