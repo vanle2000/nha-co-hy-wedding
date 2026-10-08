@@ -389,6 +389,8 @@
   .lantern-viewer{min-width:0}
   .lantern-scene{position:relative;height:520px;perspective:1000px;overflow:hidden;border-radius:16px;background:radial-gradient(circle at 50% 48%,#7f2434 0,#350912 46%,#16050a 100%);cursor:grab;touch-action:none;user-select:none;box-shadow:inset 0 0 55px rgba(0,0,0,.5)}
   .lantern-scene:active{cursor:grabbing}
+  .lantern-scene.with-wishes{box-shadow:inset 0 0 55px rgba(0,0,0,.5),0 0 0 3px var(--gold),0 12px 30px rgba(91,15,27,.22)}
+  .lantern-scene.with-wishes .lantern-mode-badge{background:var(--gold);color:var(--deep-red);border-color:var(--gold-light);font-weight:700}
   .lantern-scene::before{content:"";position:absolute;left:8%;right:8%;bottom:36px;height:42px;background:radial-gradient(ellipse,rgba(255,211,118,.24),transparent 70%);filter:blur(5px)}
   .lantern-rig{--zoom:1;position:absolute;left:50%;top:40px;width:260px;height:420px;transform-style:preserve-3d;transform:translateX(-50%) rotateX(-8deg) rotateY(24deg) scale(var(--zoom));transform-origin:50% 48%;will-change:transform}
   .lantern-cord{position:absolute;left:50%;top:-42px;width:3px;height:76px;transform:translateX(-50%);background:linear-gradient(90deg,#8b681f,var(--gold-light),#8b681f);box-shadow:0 0 6px rgba(201,162,75,.35)}
@@ -409,11 +411,12 @@
   .lantern-tassel{position:absolute;left:50%;top:328px;width:4px;height:72px;transform:translateX(-50%);background:var(--gold)}
   .lantern-tassel::before{content:"";position:absolute;left:50%;top:-11px;width:18px;height:18px;transform:translateX(-50%) rotate(45deg);background:var(--gold);border-radius:3px}
   .lantern-tassel::after{content:"";position:absolute;left:50%;bottom:-2px;width:34px;height:58px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,#c9a24b 0 2px,transparent 2px 5px);clip-path:polygon(22% 0,78% 0,100% 100%,0 100%)}
-  .wish-ring-3d{position:absolute;left:50%;top:294px;width:270px;height:84px;transform:translateX(-50%) rotateX(72deg);border:5px solid var(--gold);border-radius:50%;box-shadow:0 0 0 2px #765716,0 0 18px rgba(255,210,105,.35);opacity:0;transition:opacity .45s ease,transform .45s ease;pointer-events:none}
-  .hung-cards{position:absolute;left:50%;top:319px;width:0;height:0;transform-style:preserve-3d;opacity:0;transition:opacity .45s ease;pointer-events:none}
-  .hung-card{position:absolute;left:-18px;top:0;width:36px;height:52px;transform:rotateY(var(--a)) translateZ(132px) translateY(var(--drop));transform-origin:center top;background:linear-gradient(135deg,#fffdf7,#efe3c3);border:1.5px solid var(--gold);border-radius:2px;box-shadow:0 3px 9px rgba(0,0,0,.24);color:var(--deep-red);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.7rem}
-  .hung-card.red{background:linear-gradient(135deg,#8f1d32,#5b0f1b);color:var(--gold-light)}
-  .hung-card::before{content:"";position:absolute;left:50%;top:-27px;width:1px;height:27px;background:var(--gold);transform:translateX(-50%)}
+  .wish-ring-3d{position:absolute;left:50%;top:72px;width:286px;height:90px;transform:translateX(-50%) rotateX(72deg) scale(.88);border:5px solid var(--gold);border-radius:50%;box-shadow:0 0 0 2px #765716,0 0 22px rgba(255,210,105,.5);opacity:0;transition:opacity .45s ease,transform .45s ease;pointer-events:none}
+  .hung-cards{position:absolute;left:50%;top:115px;width:0;height:0;transform-style:preserve-3d;opacity:0;transition:opacity .45s ease;pointer-events:none}
+  .hung-card{position:absolute;left:-23px;top:0;width:46px;height:66px;transform:rotateY(var(--a)) translateZ(142px) translateY(var(--drop)) rotateY(var(--face));transform-origin:center top;background:linear-gradient(135deg,#fffdf7,#efe3c3);border:2px solid var(--gold);border-radius:3px;box-shadow:0 5px 13px rgba(0,0,0,.32);color:var(--deep-red);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.78rem;font-weight:600}
+  .hung-card.red{background:linear-gradient(135deg,#a42b42,#5b0f1b);color:var(--gold-light)}
+  .hung-card::before{content:"";position:absolute;left:50%;top:calc(-24px - var(--drop));width:1px;height:calc(24px + var(--drop));background:var(--gold);transform:translateX(-50%)}
+  .hung-card::after{content:"";position:absolute;top:8px;left:8px;right:8px;bottom:8px;border:1px solid currentColor;opacity:.28}
   .lantern-scene.with-wishes .wish-ring-3d{opacity:1;transform:translateX(-50%) rotateX(72deg) scale(1)}
   .lantern-scene.with-wishes .hung-cards{opacity:1}
   .wish-cloud{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s ease}
@@ -979,7 +982,7 @@
         </ul>
         <div class="lantern-view-mode" role="group" aria-label="Chọn trạng thái mô hình">
           <button type="button" id="lantern-before" aria-pressed="true">1 · Mẫu gốc</button>
-          <button type="button" id="lantern-after" aria-pressed="false">2 · Sau khi treo thẻ</button>
+          <button type="button" id="lantern-after" aria-pressed="false">2 · Sau khi treo 12 thẻ</button>
         </div>
         <div class="lantern-controls" aria-label="Điều khiển mô hình">
           <button type="button" id="lantern-spin" aria-pressed="true">⏸ Dừng xoay</button>
@@ -1011,18 +1014,18 @@
             </div>
             <div class="wish-ring-3d"></div>
             <div class="hung-cards" aria-hidden="true">
-              <span class="hung-card" style="--a:0deg;--drop:8px">♥</span>
-              <span class="hung-card red" style="--a:30deg;--drop:20px">囍</span>
-              <span class="hung-card" style="--a:60deg;--drop:11px">P&amp;T</span>
-              <span class="hung-card red" style="--a:90deg;--drop:24px">♥</span>
-              <span class="hung-card" style="--a:120deg;--drop:14px">囍</span>
-              <span class="hung-card red" style="--a:150deg;--drop:20px">P&amp;T</span>
-              <span class="hung-card" style="--a:180deg;--drop:9px">♥</span>
-              <span class="hung-card red" style="--a:210deg;--drop:23px">囍</span>
-              <span class="hung-card" style="--a:240deg;--drop:13px">P&amp;T</span>
-              <span class="hung-card red" style="--a:270deg;--drop:21px">♥</span>
-              <span class="hung-card" style="--a:300deg;--drop:10px">囍</span>
-              <span class="hung-card red" style="--a:330deg;--drop:25px">P&amp;T</span>
+              <span class="hung-card" style="--a:0deg;--face:0deg;--drop:25px">♥</span>
+              <span class="hung-card red" style="--a:30deg;--face:-30deg;--drop:70px">囍</span>
+              <span class="hung-card" style="--a:60deg;--face:-60deg;--drop:120px">P&amp;T</span>
+              <span class="hung-card red" style="--a:90deg;--face:-90deg;--drop:45px">♥</span>
+              <span class="hung-card" style="--a:120deg;--face:-120deg;--drop:100px">囍</span>
+              <span class="hung-card red" style="--a:150deg;--face:-150deg;--drop:145px">P&amp;T</span>
+              <span class="hung-card" style="--a:180deg;--face:-180deg;--drop:30px">♥</span>
+              <span class="hung-card red" style="--a:210deg;--face:-210deg;--drop:75px">囍</span>
+              <span class="hung-card" style="--a:240deg;--face:-240deg;--drop:130px">P&amp;T</span>
+              <span class="hung-card red" style="--a:270deg;--face:-270deg;--drop:50px">♥</span>
+              <span class="hung-card" style="--a:300deg;--face:-300deg;--drop:105px">囍</span>
+              <span class="hung-card red" style="--a:330deg;--face:-330deg;--drop:150px">P&amp;T</span>
             </div>
             <div class="lantern-cap bottom"></div>
             <div class="lantern-tassel"></div>
@@ -1238,7 +1241,7 @@
       scene.classList.toggle('with-wishes',after);
       beforeBtn.setAttribute('aria-pressed',String(!after));
       afterBtn.setAttribute('aria-pressed',String(after));
-      modeBadge.textContent=after?'Sau khi treo thẻ':'Mẫu gốc';
+      modeBadge.textContent=after?'Sau khi treo 12 thẻ':'Mẫu gốc';
     }
     beforeBtn.addEventListener('click',()=>setWishMode(false));
     afterBtn.addEventListener('click',()=>setWishMode(true));
