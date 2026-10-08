@@ -230,6 +230,17 @@
 
   /* ====== BUDGET ====== */
   table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .table-scroll{overflow-x:auto;border-radius:16px;box-shadow:var(--shadow)}
+  .table-scroll table{min-width:920px;box-shadow:none}
+  .budget-input{width:100%;min-width:110px;border:1px solid var(--line);border-radius:7px;padding:8px 9px;background:#fff;color:var(--ink);font-family:var(--sans);font-size:1rem}
+  .budget-input:focus{outline:2px solid var(--gold);border-color:transparent}
+  .budget-name{min-width:190px}
+  .budget-note-input{min-width:170px}
+  .budget-balance{font-weight:700;color:var(--royal);white-space:nowrap;text-align:right}
+  .budget-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .budget-actions button{font-family:var(--serif);letter-spacing:1px;padding:9px 16px;border:1px solid var(--gold);border-radius:24px;background:#fff;color:var(--royal);cursor:pointer}
+  .budget-actions button:hover{background:var(--champagne-soft)}
+  .budget-delete{border:0;background:none;color:var(--fire);font-size:1.1rem;cursor:pointer;padding:4px 8px}
   thead{background:linear-gradient(135deg,var(--royal),var(--royal-deep));color:#fff}
   th,td{padding:13px 16px;text-align:left;font-size:.92rem}
   tbody tr{border-top:1px solid var(--line)}
@@ -678,10 +689,7 @@
         <h3>1 · Nền tảng <span class="tag">Làm ngay</span><span class="colprog"></span></h3>
         <div class="due">Hạn: 15/10/2026</div>
         <label class="check-item"><input type="checkbox"><span>Hai gia đình gặp mặt, thống nhất kế hoạch tổng <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Chốt ngày cưới 15/02/2027 với thầy; xin <b>giờ hoàng đạo</b> rước dâu, nhập trạch (cần giờ sinh hai bạn) <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Xác nhận với thầy: <b>dụng thần Hỏa</b> & tỉ lệ bổ màu cho trang trí, trang phục <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Lập ngân sách tổng & phân chia hạng mục hai nhà (dùng bảng Ngân sách) <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Tạo nhóm chat chung hai gia đình + file Google Sheet khách mời & chi phí <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Tạo <b>spreadsheet theo dõi ngân sách</b>: dự toán, thực chi, tiền cọc, số dư và phân chia hạng mục hai nhà <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Phân công <b>người điều phối ngày cưới</b> (wedding coordinator) + 1 người dự bị <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Danh sách khách mời <b>nháp</b> hai bên (ước 700–800) để chốt số bàn <i class="who c">Hai nhà</i></span></label>
       </div>
@@ -690,11 +698,10 @@
         <h3>2 · Địa điểm & nhà cung cấp lớn <span class="tag">Đặt sớm</span><span class="colprog"></span></h3>
         <div class="due">Hạn: 31/10/2026</div>
         <label class="check-item"><input type="checkbox"><span>Nhận bản vẽ &amp; phương án bố trí từ đơn vị decor sau khi họ khảo sát GOLDLAND PLAZA <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Xác nhận toà nhà/sảnh <b>đang hoạt động bình thường</b> & pháp lý rõ ràng trước khi cọc <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Ký hợp đồng GOLDLAND PLAZA: sảnh 700–800 khách, giờ set-up, LED/âm thanh, đậu xe, điều khoản huỷ/đổi <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chốt thực đơn & giá/bàn; thử món (food tasting) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đặt <b>thợ ảnh + quay phim</b> ngày cưới (phóng sự, flycam) <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Đặt <b>đơn vị trang trí</b> (gia tiên hai nhà + sảnh tiệc) — gửi concept Hoàng Kim Huế × Bridgerton <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt <b>đơn vị trang trí</b> (gia tiên hai nhà + sảnh tiệc) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đặt <b>MC</b> + âm thanh ánh sáng + <b>tứ tấu đàn dây</b> / ban nhạc <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đặt <b>studio chụp ảnh cưới</b> (pre-wedding) — <b>Uji Wedding</b>, lịch chụp tháng 11–12 <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đặt <b>make-up & làm tóc</b> cô dâu (thử trước 1 lần) <i class="who g">Nhà gái</i></span></label>
@@ -706,9 +713,8 @@
         <div class="due">Đặt may: 15/11 · Nhận đồ: 15/01/2027</div>
         <label class="check-item"><input type="checkbox"><span>Cô dâu: <b>áo dài đỏ son thêu phụng vàng</b> (lễ gia tiên) <i class="who g">Nhà gái</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Cô dâu: <b>váy cưới trắng ngà eo cao Regency</b> (tiệc) + giày, phụ kiện, voan <i class="who g">Nhà gái</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Chú rể: <b>áo dài vàng/ngà + khăn đóng</b> (lễ) & <b>vest champagne + gile thêu</b> (tiệc) <i class="who t">Nhà trai</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Áo dài cho cha mẹ hai bên (vàng đất, champagne, hồng phấn) <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Đồng phục / áo dài đội bưng tráp nam – nữ (10–14 bộ, tông vàng – đỏ) <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chú rể: <b>vest champagne + gile thêu</b> (tiệc) <i class="who t">Nhà trai</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đồng phục / áo dài đội bưng tráp nam – nữ (10–14 bộ, <b>màu hồng</b>) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chốt danh sách <b>phù dâu & phù rể</b>; phân vai (giữ nhẫn, giữ hoa, đỡ váy) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Đồng phục phù dâu (hồng phấn – champagne) & phù rể (vest kem, nơ đỏ son) — may cùng đợt <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Mua <b>nhẫn cưới</b> (khắc tên + 15.02.2027) <i class="who p">Phát & Thảo</i></span></label>
@@ -817,26 +823,21 @@
 <section id="budget">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Ngân sách tham khảo</span>
-      <h2>Khung chi phí (VND)</h2>
-      <p>Đây là khung tham khảo để lên kế hoạch — con số thực tế thay đổi theo quy mô khách, nhà hàng và lựa chọn của gia đình. Hãy điền số thật của mình vào.</p>
+      <h2>Spreadsheet ngân sách</h2>
+      <p>Nhập số tiền bằng VND. Tổng dự toán, đã chi và còn lại được tính tự động; dữ liệu lưu trên trình duyệt này.</p>
     </div>
-    <table>
-      <thead><tr><th>Hạng mục</th><th class="num">Ước tính thấp</th><th class="num">Ước tính cao</th><th>Ghi chú</th></tr></thead>
-      <tbody>
-        <tr><td>Tiệc cưới (GOLDLAND PLAZA, ~70–80 bàn)</td><td class="num">350.000.000</td><td class="num">640.000.000</td><td>Khoản lớn nhất; ~5–8 triệu/bàn × 70–80 bàn</td></tr>
-        <tr><td>Chụp ảnh cưới (pre-wedding)</td><td class="num">8.000.000</td><td class="num">25.000.000</td><td>Gói studio + bối cảnh Huế</td></tr>
-        <tr><td>Ảnh & quay phim ngày cưới</td><td class="num">10.000.000</td><td class="num">30.000.000</td><td>Phóng sự cưới, flycam</td></tr>
-        <tr><td>Trang trí (cổng, sân khấu, bàn tiệc)</td><td class="num">15.000.000</td><td class="num">50.000.000</td><td>Hoa tươi, backdrop, cổng hoa — quy mô sảnh lớn</td></tr>
-        <tr><td>Áo dài, váy cưới, vest, trang điểm</td><td class="num">10.000.000</td><td class="num">40.000.000</td><td>May/thuê + makeup cô dâu</td></tr>
-        <tr><td>Mâm quả & lễ vật ngày cưới</td><td class="num">5.000.000</td><td class="num">15.000.000</td><td>Trầu cau, trà rượu, bánh, heo quay…</td></tr>
-        <tr><td>Nhẫn cưới & vàng cưới</td><td class="num">15.000.000</td><td class="num">60.000.000</td><td>Tùy giá vàng & lựa chọn</td></tr>
-        <tr><td>Thiệp, xe hoa, âm thanh, MC</td><td class="num">8.000.000</td><td class="num">25.000.000</td><td>In thiệp (700–800), xe đón dâu, ban nhạc</td></tr>
-        <tr><td>Dự phòng (~10%)</td><td class="num">42.000.000</td><td class="num">110.000.000</td><td>Luôn chừa khoản phát sinh</td></tr>
-      </tbody>
-      <tfoot><tr><td>Tổng tham khảo</td><td class="num">~455.000.000</td><td class="num">~990.000.000</td><td>Chủ yếu do quy mô 700–800 khách</td></tr></tfoot>
-    </table>
-    <p class="budget-note">💡 Mẹo: ở Việt Nam, tiền mừng cưới của khách thường bù lại một phần đáng kể chi phí tiệc. Hãy ghi chép thu – chi rõ ràng để hai gia đình minh bạch.</p>
+    <div class="table-scroll">
+      <table id="budget-table">
+        <thead><tr><th>Hạng mục</th><th class="num">Dự toán</th><th class="num">Đã cọc</th><th class="num">Đã trả thêm</th><th class="num">Còn lại</th><th>Ghi chú</th><th></th></tr></thead>
+        <tbody id="budget-body"></tbody>
+        <tfoot><tr><td><b>Tổng</b></td><td class="num" id="budget-est">0 ₫</td><td class="num" id="budget-deposit">0 ₫</td><td class="num" id="budget-paid">0 ₫</td><td class="num" id="budget-left">0 ₫</td><td colspan="2"></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="budget-actions">
+      <button type="button" id="budget-add">＋ Thêm hạng mục</button>
+      <button type="button" id="budget-csv">⬇ Xuất CSV</button>
+      <button type="button" id="budget-reset">↺ Đặt lại</button>
+    </div>
   </div>
 </section>
 
@@ -976,7 +977,7 @@
   tick(); setInterval(tick, 1000);
 
   /* ====== CHECKLIST: progress + localStorage persistence ====== */
-  const KEY = 'hue-wedding-checklist-v3';   // v3: 10 nhóm (bỏ dạm ngõ, đám hỏi)
+  const KEY = 'hue-wedding-checklist-v4';   // v4: checklist sau các mục đã xoá/chỉnh
   const boxes = Array.from(document.querySelectorAll('#checkgrid input[type=checkbox]'));
   const saved = JSON.parse(localStorage.getItem(KEY) || '[]');
   boxes.forEach((b,i)=>{ if(saved[i]) b.checked = true; });
@@ -1023,10 +1024,65 @@
   // Close mobile menu on link click
   document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
 
+  /* ====== BUDGET SPREADSHEET ====== */
+  (function(){
+    const BKEY='hue-wedding-budget-v1';
+    const defaults=[
+      'GOLDLAND PLAZA & menu tiệc','Pre-wedding — Uji Wedding','Ảnh & quay phim ngày cưới',
+      'Trang trí nhà trai, nhà gái & venue','Trang phục & trang điểm','Lễ vật & mâm quả',
+      'Nhẫn cưới & vàng cưới','Thiệp cưới','Xe hoa, MC, âm thanh & nhạc','Bàn trà & tháp macaron','Dự phòng'
+    ].map(name=>({name,estimate:'',deposit:'',paid:'',note:''}));
+    let rows=JSON.parse(localStorage.getItem(BKEY)||'null')||defaults;
+    const body=document.getElementById('budget-body');
+    const money=n=>new Intl.NumberFormat('vi-VN',{style:'currency',currency:'VND',maximumFractionDigits:0}).format(Number(n)||0);
+    const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function save(){localStorage.setItem(BKEY,JSON.stringify(rows));}
+    function totals(){
+      let est=0,dep=0,paid=0;
+      body.querySelectorAll('tr').forEach((tr,i)=>{
+        const r=rows[i]; est+=Number(r.estimate)||0; dep+=Number(r.deposit)||0; paid+=Number(r.paid)||0;
+        tr.querySelector('.budget-balance').textContent=money(Math.max(0,(Number(r.estimate)||0)-(Number(r.deposit)||0)-(Number(r.paid)||0)));
+      });
+      document.getElementById('budget-est').textContent=money(est);
+      document.getElementById('budget-deposit').textContent=money(dep);
+      document.getElementById('budget-paid').textContent=money(paid);
+      document.getElementById('budget-left').textContent=money(Math.max(0,est-dep-paid));
+    }
+    function render(){
+      body.innerHTML=rows.map((r,i)=>`<tr data-budget-row="${i}">
+        <td><input class="budget-input budget-name" data-field="name" value="${esc(r.name)}" aria-label="Hạng mục"></td>
+        <td><input class="budget-input" data-field="estimate" type="number" min="0" step="100000" value="${esc(r.estimate)}" placeholder="0" aria-label="Dự toán"></td>
+        <td><input class="budget-input" data-field="deposit" type="number" min="0" step="100000" value="${esc(r.deposit)}" placeholder="0" aria-label="Đã cọc"></td>
+        <td><input class="budget-input" data-field="paid" type="number" min="0" step="100000" value="${esc(r.paid)}" placeholder="0" aria-label="Đã trả thêm"></td>
+        <td class="budget-balance">0 ₫</td>
+        <td><input class="budget-input budget-note-input" data-field="note" value="${esc(r.note)}" placeholder="Ghi chú" aria-label="Ghi chú"></td>
+        <td><button class="budget-delete" type="button" data-delete="${i}" aria-label="Xóa hạng mục">×</button></td>
+      </tr>`).join('');
+      totals();
+    }
+    body.addEventListener('input',e=>{
+      const input=e.target.closest('[data-field]'); if(!input)return;
+      const i=Number(input.closest('tr').dataset.budgetRow); rows[i][input.dataset.field]=input.value; save(); totals();
+    });
+    body.addEventListener('click',e=>{
+      const b=e.target.closest('[data-delete]'); if(!b)return;
+      rows.splice(Number(b.dataset.delete),1); save(); render();
+    });
+    document.getElementById('budget-add').addEventListener('click',()=>{rows.push({name:'Hạng mục mới',estimate:'',deposit:'',paid:'',note:''});save();render();});
+    document.getElementById('budget-reset').addEventListener('click',()=>{if(!confirm('Đặt lại toàn bộ spreadsheet ngân sách?'))return;rows=defaults.map(r=>({...r}));save();render();});
+    document.getElementById('budget-csv').addEventListener('click',()=>{
+      const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+      const csv=['Hạng mục,Dự toán,Đã cọc,Đã trả thêm,Còn lại,Ghi chú',...rows.map(r=>[r.name,r.estimate,r.deposit,r.paid,Math.max(0,(Number(r.estimate)||0)-(Number(r.deposit)||0)-(Number(r.paid)||0)),r.note].map(q).join(','))].join('\n');
+      const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);a.download='ngan-sach-dam-cuoi-phat-thao.csv';a.click();URL.revokeObjectURL(a.href);
+    });
+    render();
+  })();
+
   /* ====== EDIT MODE: chỉnh sửa nội dung trực tiếp, tự lưu trên trình duyệt, xuất/nhập file ====== */
   (function(){
     const CKEY='hue-wedding-content-v1';
-    const ALL_KEYS=[CKEY,'hue-wedding-checklist-v3','hue-wedding-deadlines-v1'];
+    const ALL_KEYS=[CKEY,'hue-wedding-checklist-v4','hue-wedding-deadlines-v1','hue-wedding-budget-v1'];
     const SEL='.names,.tagline,.hero-meta,.salutation,.letter,.signature,'
       +'section h2,section h3,section h4,section p,section li,td,th,'
       +'.dl-task,.dl-due,.due,.fp-zone,.spec b,.spec span,.spec small,.vstat b,.vstat span,.sw,.stage-el,.aisle,.venue-info .addr,.venue-map div';
