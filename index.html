@@ -368,6 +368,56 @@
   .fire-accent{border-left-color:var(--fire)!important}
   .sw-row{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:120px;margin-top:12px}
 
+  /* ====== ĐÈN HỶ — INTERACTIVE CSS 3D ====== */
+  .lantern-studio{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(390px,1.25fr);gap:28px;align-items:stretch;margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);overflow:hidden}
+  .lantern-jump{display:inline-block;margin-top:12px;color:var(--fire);font-family:var(--serif);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
+  .lantern-jump:hover{color:var(--deep-red)}
+  .lantern-info{padding:10px 4px 10px 10px}
+  .lantern-info h3{font-size:1.65rem!important;color:var(--deep-red);margin:7px 0 12px}
+  .lantern-info p,.lantern-info li{font-size:1rem;line-height:1.65;color:var(--muted)}
+  .lantern-specs{list-style:none;margin:16px 0}
+  .lantern-specs li{padding:7px 0 7px 23px;position:relative;border-bottom:1px dashed var(--line)}
+  .lantern-specs li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+  .lantern-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+  .lantern-controls button,.wish-form button{font-family:var(--serif);font-size:.78rem;letter-spacing:1px;border:1px solid var(--gold);background:var(--ivory);color:var(--royal-deep);border-radius:22px;padding:9px 13px;cursor:pointer}
+  .lantern-controls button:hover,.wish-form button:hover{background:var(--champagne-soft)}
+  .lantern-controls button[aria-pressed="true"]{background:var(--deep-red);color:#fff;border-color:var(--deep-red)}
+  .lantern-viewer{min-width:0}
+  .lantern-scene{position:relative;height:520px;perspective:1000px;overflow:hidden;border-radius:16px;background:radial-gradient(circle at 50% 48%,#7f2434 0,#350912 46%,#16050a 100%);cursor:grab;touch-action:none;user-select:none;box-shadow:inset 0 0 55px rgba(0,0,0,.5)}
+  .lantern-scene:active{cursor:grabbing}
+  .lantern-scene::before{content:"";position:absolute;left:8%;right:8%;bottom:36px;height:42px;background:radial-gradient(ellipse,rgba(255,211,118,.24),transparent 70%);filter:blur(5px)}
+  .lantern-rig{--zoom:1;position:absolute;left:50%;top:40px;width:260px;height:420px;transform-style:preserve-3d;transform:translateX(-50%) rotateX(-8deg) rotateY(24deg) scale(var(--zoom));transform-origin:50% 48%;will-change:transform}
+  .lantern-cord{position:absolute;left:50%;top:-42px;width:3px;height:76px;transform:translateX(-50%);background:linear-gradient(90deg,#8b681f,var(--gold-light),#8b681f);box-shadow:0 0 6px rgba(201,162,75,.35)}
+  .lantern-finial{position:absolute;left:50%;top:22px;width:28px;height:28px;transform:translateX(-50%) rotate(45deg);background:linear-gradient(135deg,var(--gold-light),#8b681f);border:2px solid #f4dfa2;border-radius:5px}
+  .lantern-cap{position:absolute;left:50%;width:200px;height:48px;border:9px solid var(--gold);border-radius:50%;background:rgba(66,9,20,.92);transform:translateX(-50%) rotateX(72deg);box-shadow:0 0 0 3px #80601d,inset 0 0 18px rgba(255,215,126,.4)}
+  .lantern-cap.top{top:52px}
+  .lantern-cap.bottom{top:286px}
+  .lantern-body{position:absolute;left:50%;top:76px;width:88px;height:226px;transform:translateX(-50%);transform-style:preserve-3d}
+  .lantern-panel{position:absolute;left:5px;top:0;width:78px;height:220px;display:flex;align-items:center;justify-content:center;transform:rotateY(var(--a)) translateZ(94px);transform-origin:center;clip-path:polygon(14% 0,86% 0,100% 9%,100% 91%,86% 100%,14% 100%,0 91%,0 9%);background:linear-gradient(90deg,rgba(72,4,14,.95),rgba(143,29,50,.78) 48%,rgba(72,4,14,.95));border-top:5px solid var(--gold);border-bottom:5px solid var(--gold);box-shadow:inset 5px 0 #a87e27,inset -5px 0 #a87e27,0 0 18px rgba(255,179,73,.16);backface-visibility:visible}
+  .lantern-panel::before{content:"";position:absolute;inset:16px 11px;border:1px solid rgba(228,205,143,.55);border-radius:40% 40% 8px 8px}
+  .lantern-panel span{font-family:var(--serif);font-size:2rem;color:var(--gold-light);text-shadow:0 0 9px rgba(255,214,125,.65);opacity:.82}
+  .lantern-panel:nth-child(even) span{opacity:.35;font-size:1.4rem}
+  .lantern-glow{position:absolute;left:50%;top:112px;width:150px;height:150px;transform:translateX(-50%) translateZ(0);border-radius:50%;background:radial-gradient(circle,#fff9cf 0,#ffc85f 20%,rgba(255,116,25,.45) 52%,transparent 72%);filter:blur(8px);opacity:.8;animation:lanternPulse 2.8s ease-in-out infinite;pointer-events:none}
+  .lantern-rig.is-off .lantern-glow{opacity:0;animation:none}
+  .lantern-rig.is-off .lantern-panel{background:linear-gradient(90deg,#31060d,#64101f 48%,#31060d);box-shadow:inset 5px 0 #85631e,inset -5px 0 #85631e}
+  .lantern-rig.is-off .lantern-panel span{text-shadow:none;opacity:.5}
+  @keyframes lanternPulse{0%,100%{opacity:.68;transform:translateX(-50%) scale(.94)}50%{opacity:.92;transform:translateX(-50%) scale(1.06)}}
+  .lantern-tassel{position:absolute;left:50%;top:328px;width:4px;height:72px;transform:translateX(-50%);background:var(--gold)}
+  .lantern-tassel::before{content:"";position:absolute;left:50%;top:-11px;width:18px;height:18px;transform:translateX(-50%) rotate(45deg);background:var(--gold);border-radius:3px}
+  .lantern-tassel::after{content:"";position:absolute;left:50%;bottom:-2px;width:34px;height:58px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,#c9a24b 0 2px,transparent 2px 5px);clip-path:polygon(22% 0,78% 0,100% 100%,0 100%)}
+  .wish-cloud{position:absolute;inset:0;pointer-events:none}
+  .wish-tag{position:absolute;max-width:135px;padding:7px 9px;border:1px solid var(--gold);background:rgba(255,250,234,.92);color:var(--deep-red);font-family:var(--sans);font-size:.78rem;line-height:1.2;border-radius:3px;box-shadow:0 5px 14px rgba(0,0,0,.2);transform:rotate(var(--r));pointer-events:auto;cursor:pointer}
+  .wish-tag::before{content:"";position:absolute;top:-18px;left:50%;width:1px;height:18px;background:var(--gold)}
+  .wish-tag.locked{cursor:default}
+  .scene-help{text-align:center;color:var(--muted);font-size:.82rem;margin:9px 0 12px}
+  .wish-form{display:flex;gap:8px}
+  .wish-form input{flex:1;min-width:0;border:1px solid var(--line);border-radius:22px;padding:10px 14px;font-family:var(--sans);font-size:1rem;color:var(--ink)}
+  .wish-form input:focus{outline:2px solid var(--gold);border-color:transparent}
+  .wish-count{text-align:right;color:var(--muted);font-size:.78rem;margin-top:6px}
+  @media(max-width:850px){.lantern-studio{grid-template-columns:1fr}.lantern-scene{height:500px}}
+  @media(max-width:480px){.lantern-studio{padding:15px}.lantern-scene{height:450px}.lantern-rig{top:27px;--zoom:.86}.wish-tag{max-width:105px;font-size:.7rem}.lantern-controls button{font-size:.7rem;padding:8px 10px}}
+  @media(prefers-reduced-motion:reduce){.lantern-glow{animation:none}}
+
   /* ====== FOOTER ====== */
   footer{background:var(--royal-deep);color:var(--champagne-soft);text-align:center;padding:50px 20px}
   footer .names-foot{font-family:var(--serif);font-size:1.8rem;color:#fff}
@@ -693,7 +743,7 @@
     <div class="sec-head">
       <span class="kicker">Việc cần làm</span>
       <h2>Checklist tổng — chuẩn bị đến ngày cưới</h2>
-      <p>Hoàn thành theo thứ tự ưu tiên từ <b>1 → 10</b>. Bốn hộp đầu là việc cần xử lý sớm nhất. Tích vào ô khi hoàn thành — trạng thái tự lưu trên trình duyệt này.</p>
+      <p>Hoàn thành theo thứ tự ưu tiên từ <b>1 → 9</b>. Bốn hộp đầu là việc cần xử lý sớm nhất. Tích vào ô khi hoàn thành — trạng thái tự lưu trên trình duyệt này.</p>
     </div>
 
     <div class="tet-warn">
@@ -720,17 +770,10 @@
         <label class="check-item"><input type="checkbox"><span>Đặt <b>make-up & làm tóc</b> cô dâu (thử trước 1 lần) <i class="who g">Nhà gái</i></span></label>
       </div>
 
-      <div class="check-col urgent">
-        <h3>2 · Nền tảng <span class="tag">Ưu tiên 2 · Làm ngay</span><span class="colprog"></span></h3>
-        <div class="due">Hạn: 15/10/2026</div>
-        <label class="check-item"><input type="checkbox"><span>Hai gia đình gặp mặt, thống nhất kế hoạch tổng <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Tạo <b>spreadsheet theo dõi ngân sách</b>: dự toán, thực chi, tiền cọc, số dư và phân chia hạng mục hai nhà <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Phân công <b>người điều phối ngày cưới</b> (wedding coordinator) + 1 người dự bị <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Danh sách khách mời <b>nháp</b> hai bên (ước 700–800) để chốt số bàn <i class="who c">Hai nhà</i></span></label>
-      </div>
+
 
       <div class="check-col urgent">
-        <h3>3 · Trang phục & trang sức <span class="tag">Ưu tiên 3 · Đặt may</span><span class="colprog"></span></h3>
+        <h3>2 · Trang phục & trang sức <span class="tag">Ưu tiên 2 · Đặt may</span><span class="colprog"></span></h3>
         <div class="due">Đặt may: 15/11 · Nhận đồ: 15/01/2027</div>
         <label class="check-item"><input type="checkbox"><span>Cô dâu: <b>áo dài đỏ son thêu phụng vàng</b> (lễ gia tiên) <i class="who g">Nhà gái</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Cô dâu: <b>váy cưới trắng ngà eo cao Regency</b> (tiệc) + giày, phụ kiện, voan <i class="who g">Nhà gái</i></span></label>
@@ -744,7 +787,7 @@
       </div>
 
       <div class="check-col urgent">
-        <h3>4 · Trang trí, hoa & sơ đồ <span class="tag">Ưu tiên 4 · Duyệt sớm</span><span class="colprog"></span></h3>
+        <h3>3 · Trang trí, hoa & sơ đồ <span class="tag">Ưu tiên 3 · Duyệt sớm</span><span class="colprog"></span></h3>
         <div class="due">Duyệt bản vẽ: 31/12 · Chốt hoa: 10/01/2027</div>
         <label class="check-item"><input type="checkbox"><span>Duyệt <b>bản vẽ 3D</b> sân khấu &amp; sảnh: nền đỏ rượu vang đậm, chữ/khung vàng, hoa trắng &amp; đỏ <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chốt backdrop "Về Chung Một Nhà", cổng hoa, 2 trụ hoa, màn LED, đèn chùm <i class="who p">Phát & Thảo</i></span></label>
@@ -757,7 +800,7 @@
       </div>
 
       <div class="check-col">
-        <h3>5 · Ảnh cưới & câu chuyện <span class="tag">Thực hiện tiếp</span><span class="colprog"></span></h3>
+        <h3>4 · Ảnh cưới & câu chuyện <span class="tag">Ưu tiên 4 · Thực hiện tiếp</span><span class="colprog"></span></h3>
         <div class="due">Hạn: 31/12/2026</div>
         <label class="check-item"><input type="checkbox"><span>Chụp ảnh cưới với <b>Uji Wedding</b> tại Huế — địa điểm do Phát &amp; Thảo và studio chốt <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chọn ảnh làm standee cổng, album, slideshow <i class="who p">Phát & Thảo</i></span></label>
@@ -768,7 +811,7 @@
       </div>
 
       <div class="check-col">
-        <h3>6 · Thiệp & khách mời <span class="tag">Sau khi có ảnh</span><span class="colprog"></span></h3>
+        <h3>5 · Thiệp & khách mời <span class="tag">Sau khi có ảnh</span><span class="colprog"></span></h3>
         <div class="due">In xong: 20/12 · Gửi: 05–20/01/2027</div>
         <label class="check-item"><input type="checkbox"><span>Chốt <b>danh sách khách chính thức</b> hai bên (tên, số người, SĐT, địa phương) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Thiết kế thiệp kiểu thư tay Regency, niêm sáp đỏ son "P❦T"; ghi rõ địa chỉ + bản đồ GOLDLAND PLAZA, giờ tiệc <i class="who p">Phát & Thảo</i></span></label>
@@ -779,7 +822,7 @@
       </div>
 
       <div class="check-col urgent">
-        <h3>7 · Chốt trước Tết <span class="tag">Hạn cứng</span><span class="colprog"></span></h3>
+        <h3>6 · Chốt trước Tết <span class="tag">Hạn cứng</span><span class="colprog"></span></h3>
         <div class="due">Hạn: 20/01/2027 — sau đó nhà cung cấp nghỉ Tết</div>
         <label class="check-item"><input type="checkbox"><span>Nhận <b>toàn bộ trang phục</b> đã may/thuê; thử lần cuối <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Nhận thiệp, bảng tên, menu, standee, khung ảnh, Đèn Hỷ — kiểm tra lỗi in <i class="who p">Phát & Thảo</i></span></label>
@@ -793,7 +836,7 @@
       </div>
 
       <div class="check-col">
-        <h3>8 · Tuần cuối <span class="tag">Tuần cuối</span><span class="colprog"></span></h3>
+        <h3>7 · Tuần cuối <span class="tag">Tuần cuối</span><span class="colprog"></span></h3>
         <div class="due">Thứ Năm 11/02 – Chủ Nhật 14/02/2027</div>
         <label class="check-item"><input type="checkbox"><span>Xác nhận <b>số bàn cuối</b> với GOLDLAND (+5–10% dự phòng) <i class="who t">Nhà trai</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Họp <b>tổng duyệt</b> với MC, coordinator, hai gia đình: kịch bản theo mốc giờ <i class="who c">Hai nhà</i></span></label>
@@ -806,7 +849,7 @@
       </div>
 
       <div class="check-col urgent">
-        <h3>9 · Ngày cưới 15/02 <span class="tag">D-Day</span><span class="colprog"></span></h3>
+        <h3>8 · Ngày cưới 15/02 <span class="tag">D-Day</span><span class="colprog"></span></h3>
         <div class="due">Mùng 10 tháng Giêng — xem <a href="#dayof">Lịch ngày cưới</a></div>
         <label class="check-item"><input type="checkbox"><span>05:30 Make-up, tóc; mặc áo dài; kiểm tra nhẫn, lễ vật, phong bì <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>07:00 Lễ xin dâu — mẹ chú rể sang nhà gái đúng giờ <i class="who t">Nhà trai</i></span></label>
@@ -818,7 +861,7 @@
       </div>
 
       <div class="check-col">
-        <h3>10 · Sau cưới <span class="tag">Hậu lễ</span><span class="colprog"></span></h3>
+        <h3>9 · Sau cưới <span class="tag">Hậu lễ</span><span class="colprog"></span></h3>
         <div class="due">16/02 – 15/03/2027</div>
         <label class="check-item"><input type="checkbox"><span><b>Lễ lại mặt</b>: cô dâu chú rể mang lễ về thăm nhà gái (2–4 ngày sau cưới) <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Thanh toán đợt cuối cho nhà cung cấp; nhận lại tiền cọc/đồ thuê <i class="who t">Nhà trai</i></span></label>
@@ -905,9 +948,61 @@
       <div class="mini"><h3>💌 Thư tay đọc trong lễ</h3><p>Hai bạn viết thư tay cho nhau, đọc trong lễ thành hôn hoặc trao nhau trước giờ cưới — khoảnh khắc lắng đọng nhất ngày trọng đại.</p></div>
       <div class="mini"><h3>🙏 Lời tri ân cha mẹ</h3><p>Dành một phút cúi đầu cảm ơn cha mẹ hai bên — rót trà/trao hoa. Người Việt coi hôn nhân là chữ hiếu; khoảnh khắc này luôn khiến mọi người rơi nước mắt.</p></div>
       <div class="mini"><h3>🎁 Quà cảm ơn khách</h3><p>Món quà nhỏ đậm chất Huế: mè xửng, trà sen, hạt sen sấy — kèm thiệp cảm ơn có tên hai bạn.</p></div>
-      <div class="mini"><h3>🏮 "Đèn Hỷ" — Lồng đèn ước nguyện</h3><p>Một chiếc lồng đèn Huế lớn (đỏ son – vàng, khung mạ vàng kiểu Regency) đặt ở lối vào. Khách viết lời chúc lên <b>thẻ giấy ánh kim</b> rồi treo quanh đèn. Sau cưới, đèn về treo trong tổ ấm và được <b>thắp sáng mỗi dịp 15/02</b> — ánh lửa (bổ Hỏa đúng Bát Tự) ấm nhà, cùng hàng trăm lời chúc còn nguyên nét chữ. Vừa là decor độc nhất, vừa là kỷ vật sống cả đời.</p></div>
+      <div class="mini"><h3>🏮 Đèn Hỷ — Lồng đèn ước nguyện</h3><p>Lồng đèn đỏ rượu vang, khung vàng và ánh sáng ấm. Khách viết lời chúc lên thẻ rồi treo quanh đèn; sau cưới, Phát &amp; Thảo mang đèn về nhà làm kỷ vật.</p><a class="lantern-jump" href="#den-hy-3d">Xem mô hình 3D ↓</a></div>
       <div class="mini"><h3>🌸 Lễ gia tiên chỉn chu</h3><p>Chăm chút bàn thờ gia tiên hai nhà: hoa tươi, mâm ngũ quả, nến đỏ — thể hiện lòng thành kính, cốt lõi của đám cưới Việt.</p></div>
       <div class="mini"><h3>🎤 Lời cảm ơn của chú rể</h3><p>Chú rể (anh/em của bạn) nói lời cảm ơn hai họ & khách mời — ngắn gọn, chân thành, từ trái tim.</p></div>
+    </div>
+
+    <div class="lantern-studio" id="den-hy-3d">
+      <div class="lantern-info">
+        <span class="ribbon">Mô hình ý tưởng 3D</span>
+        <h3>Đèn Hỷ — Lồng đèn ước nguyện</h3>
+        <p>Mô hình để hình dung hình dáng, màu sắc, ánh sáng và cách treo thẻ lời chúc. Kéo trực tiếp trên mô hình để xem các góc.</p>
+        <ul class="lantern-specs">
+          <li><b>Hình dáng:</b> lồng đèn bát giác đứng</li>
+          <li><b>Màu:</b> vải đỏ rượu vang, khung vàng</li>
+          <li><b>Ánh sáng:</b> LED vàng ấm, không dùng lửa thật</li>
+          <li><b>Thẻ lời chúc:</b> giấy trắng ngà, viền vàng</li>
+          <li><b>Kích thước gợi ý:</b> cao 70–90 cm, ngang 40–50 cm — đơn vị decor chốt theo vị trí đặt</li>
+        </ul>
+        <div class="lantern-controls" aria-label="Điều khiển mô hình">
+          <button type="button" id="lantern-spin" aria-pressed="true">⏸ Dừng xoay</button>
+          <button type="button" id="lantern-light" aria-pressed="true">💡 Tắt đèn</button>
+          <button type="button" id="lantern-minus" aria-label="Thu nhỏ">− Thu nhỏ</button>
+          <button type="button" id="lantern-plus" aria-label="Phóng to">＋ Phóng to</button>
+          <button type="button" id="lantern-reset">↺ Góc ban đầu</button>
+        </div>
+      </div>
+
+      <div class="lantern-viewer">
+        <div class="lantern-scene" id="lantern-scene" tabindex="0" role="img" aria-label="Mô hình 3D Đèn Hỷ. Kéo để xoay, cuộn để phóng to hoặc thu nhỏ.">
+          <div class="wish-cloud" id="wish-cloud"></div>
+          <div class="lantern-rig" id="lantern-rig">
+            <div class="lantern-cord"></div>
+            <div class="lantern-finial"></div>
+            <div class="lantern-cap top"></div>
+            <div class="lantern-glow"></div>
+            <div class="lantern-body">
+              <div class="lantern-panel" style="--a:0deg"><span>囍</span></div>
+              <div class="lantern-panel" style="--a:45deg"><span>❦</span></div>
+              <div class="lantern-panel" style="--a:90deg"><span>囍</span></div>
+              <div class="lantern-panel" style="--a:135deg"><span>❦</span></div>
+              <div class="lantern-panel" style="--a:180deg"><span>囍</span></div>
+              <div class="lantern-panel" style="--a:225deg"><span>❦</span></div>
+              <div class="lantern-panel" style="--a:270deg"><span>囍</span></div>
+              <div class="lantern-panel" style="--a:315deg"><span>❦</span></div>
+            </div>
+            <div class="lantern-cap bottom"></div>
+            <div class="lantern-tassel"></div>
+          </div>
+        </div>
+        <p class="scene-help">Kéo để xoay · Cuộn để phóng to/thu nhỏ · Bấm thẻ do bạn thêm để xoá</p>
+        <form class="wish-form" id="wish-form">
+          <input id="wish-input" maxlength="60" placeholder="Thử viết một lời chúc…" aria-label="Lời chúc">
+          <button type="submit">＋ Treo lời chúc</button>
+        </form>
+        <div class="wish-count" id="wish-count">3 lời chúc mẫu</div>
+      </div>
     </div>
   </div>
 </section>
@@ -995,7 +1090,7 @@
   tick(); setInterval(tick, 1000);
 
   /* ====== CHECKLIST: progress + localStorage persistence ====== */
-  const KEY = 'hue-wedding-checklist-v5';   // v5: checklist xếp lại theo mức ưu tiên
+  const KEY = 'hue-wedding-checklist-v6';   // v6: 9 nhóm theo mức ưu tiên
   const boxes = Array.from(document.querySelectorAll('#checkgrid input[type=checkbox]'));
   const saved = JSON.parse(localStorage.getItem(KEY) || '[]');
   boxes.forEach((b,i)=>{ if(saved[i]) b.checked = true; });
@@ -1097,10 +1192,63 @@
     render();
   })();
 
+  /* ====== ĐÈN HỶ 3D ====== */
+  (function(){
+    const scene=document.getElementById('lantern-scene');
+    const rig=document.getElementById('lantern-rig');
+    if(!scene||!rig)return;
+    const spinBtn=document.getElementById('lantern-spin');
+    const lightBtn=document.getElementById('lantern-light');
+    const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let rotX=-8,rotY=24,zoom=1,dragging=false,lastX=0,lastY=0,spinning=!reduced,visible=true,lastTime=0;
+    function draw(){rig.style.transform=`translateX(-50%) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(${zoom})`;}
+    function spinState(){spinBtn.setAttribute('aria-pressed',String(spinning));spinBtn.textContent=spinning?'⏸ Dừng xoay':'▶ Tự xoay';}
+    spinState();draw();
+    scene.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;scene.setPointerCapture?.(e.pointerId);});
+    scene.addEventListener('pointermove',e=>{if(!dragging)return;rotY+=(e.clientX-lastX)*.45;rotX=Math.max(-28,Math.min(22,rotX-(e.clientY-lastY)*.25));lastX=e.clientX;lastY=e.clientY;draw();});
+    const end=e=>{dragging=false;scene.releasePointerCapture?.(e.pointerId);};
+    scene.addEventListener('pointerup',end);scene.addEventListener('pointercancel',end);
+    scene.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.7,Math.min(1.3,zoom-e.deltaY*.001));draw();},{passive:false});
+    scene.addEventListener('keydown',e=>{
+      if(e.key==='ArrowLeft')rotY-=8;else if(e.key==='ArrowRight')rotY+=8;else if(e.key==='ArrowUp')rotX=Math.min(22,rotX+5);else if(e.key==='ArrowDown')rotX=Math.max(-28,rotX-5);else if(e.key==='+')zoom=Math.min(1.3,zoom+.1);else if(e.key==='-')zoom=Math.max(.7,zoom-.1);else return;e.preventDefault();draw();
+    });
+    spinBtn.addEventListener('click',()=>{spinning=!spinning;spinState();});
+    lightBtn.addEventListener('click',()=>{const off=rig.classList.toggle('is-off');lightBtn.setAttribute('aria-pressed',String(!off));lightBtn.textContent=off?'💡 Bật đèn':'💡 Tắt đèn';});
+    document.getElementById('lantern-minus').addEventListener('click',()=>{zoom=Math.max(.7,zoom-.1);draw();});
+    document.getElementById('lantern-plus').addEventListener('click',()=>{zoom=Math.min(1.3,zoom+.1);draw();});
+    document.getElementById('lantern-reset').addEventListener('click',()=>{rotX=-8;rotY=24;zoom=1;draw();});
+    if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>visible=entry.isIntersecting,{threshold:.05}).observe(scene);
+    function animate(t){if(spinning&&!dragging&&visible&&lastTime) {rotY+=(t-lastTime)*.012;draw();}lastTime=t;requestAnimationFrame(animate);}requestAnimationFrame(animate);
+
+    const WKEY='hue-wedding-wishes-v1';
+    const defaults=['Trăm năm hạnh phúc','Bình an','Luôn thương nhau'];
+    let wishes=JSON.parse(localStorage.getItem(WKEY)||'[]');
+    const cloud=document.getElementById('wish-cloud'),count=document.getElementById('wish-count');
+    const positions=[
+      [5,16,-7],[70,19,6],[4,67,5],[71,65,-5],[10,83,-3],[62,83,4],
+      [3,40,6],[73,42,-6],[18,7,3],[59,8,-4],[20,76,5],[57,73,-3]
+    ];
+    function renderWishes(){
+      cloud.replaceChildren();
+      [...defaults,...wishes].slice(0,15).forEach((text,i)=>{
+        const tag=document.createElement('button');tag.type='button';tag.className='wish-tag'+(i<defaults.length?' locked':'');tag.textContent=text;
+        const pos=positions[i%positions.length];tag.style.left=pos[0]+'%';tag.style.top=pos[1]+'%';tag.style.setProperty('--r',pos[2]+'deg');
+        if(i>=defaults.length){tag.title='Bấm để xoá';tag.addEventListener('click',()=>{wishes.splice(i-defaults.length,1);localStorage.setItem(WKEY,JSON.stringify(wishes));renderWishes();});}
+        cloud.appendChild(tag);
+      });
+      count.textContent=defaults.length+' lời chúc mẫu'+(wishes.length?' · '+wishes.length+' lời chúc của bạn':'');
+    }
+    document.getElementById('wish-form').addEventListener('submit',e=>{
+      e.preventDefault();const input=document.getElementById('wish-input'),text=input.value.trim();if(!text)return;
+      wishes.push(text);wishes=wishes.slice(-12);localStorage.setItem(WKEY,JSON.stringify(wishes));input.value='';renderWishes();
+    });
+    renderWishes();
+  })();
+
   /* ====== EDIT MODE: chỉnh sửa nội dung trực tiếp, tự lưu trên trình duyệt, xuất/nhập file ====== */
   (function(){
     const CKEY='hue-wedding-content-v1';
-    const ALL_KEYS=[CKEY,'hue-wedding-checklist-v5','hue-wedding-deadlines-v1','hue-wedding-budget-v1'];
+    const ALL_KEYS=[CKEY,'hue-wedding-checklist-v6','hue-wedding-deadlines-v1','hue-wedding-budget-v1','hue-wedding-wishes-v1'];
     const SEL='.names,.tagline,.hero-meta,.salutation,.letter,.signature,'
       +'section h2,section h3,section h4,section p,section li,td,th,'
       +'.dl-task,.dl-due,.due,.fp-zone,.spec b,.spec span,.spec small,.vstat b,.vstat span,.sw,.stage-el,.aisle,.venue-info .addr,.venue-map div';
