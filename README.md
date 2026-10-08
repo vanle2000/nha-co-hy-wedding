@@ -1,7 +1,7 @@
 # Nhà Có Hỷ — Wedding Planner for Phát & Thảo 💍
 
 Trang kế hoạch đám cưới truyền thống Việt Nam tại Huế, chủ đề **"Về Chung Một Nhà" — Hoàng Kim Huế × Regency Bridgerton**,
-thiết kế riêng cho Phát & Thảo: bạn học cấp ba, yêu nhau 6 năm, 3 năm yêu xa Đà Nẵng – Huế, và nay *về chung một nhà*
+thiết kế riêng cho Phát & Thảo: bạn học từ thời cấp ba, bên nhau 6 năm và nay *về chung một nhà*
 vào **Thứ Hai 15/02/2027 (mùng 10 tháng Giêng, năm Đinh Mùi)** — tiệc trưa tại GOLDLAND PLAZA, Huế, 700–800 khách.
 
 ## Cách mở trang
@@ -18,7 +18,7 @@ python3 -m http.server 8000
 
 ## Trang gồm những phần nào
 1. **Trang chủ + đồng hồ đếm ngược** đến ngày cưới (15/02/2027, 9:00 sáng)
-2. **Chuyện tình** — hành trình 6 năm, 3 năm yêu xa
+2. **Chuyện tình** — từ những năm học chung đến hành trình 6 năm bên nhau
 3. **Chuẩn bị 4 tháng rưỡi** — việc cần làm theo từng mốc, tính ngược từ ngày cưới
 4. **Nghi lễ truyền thống** — Lễ dạm ngõ · Lễ ăn hỏi · Lễ cưới (giải thích chi tiết)
 5. **Địa điểm** — GOLDLAND PLAZA (14–16–18–20 Lý Thường Kiệt, Thuận Hóa, Huế), 700–800 khách

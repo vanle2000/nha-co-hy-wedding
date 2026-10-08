@@ -161,6 +161,27 @@
   .tl-item h3{color:var(--royal);font-size:1.15rem;margin:4px 0 6px}
   .tl-item p{color:var(--muted);font-size:.94rem}
 
+  /* ====== DAY-OF TIMELINE — enlarged for clear reading ====== */
+  #dayof .sec-head h2{font-size:clamp(2.2rem,4.8vw,3.25rem)}
+  #dayof .sec-head .kicker{font-size:1.85rem}
+  #dayof .timeline{max-width:980px;padding-left:44px}
+  #dayof .timeline::before{left:12px;width:3px}
+  #dayof .tl-item{padding:0 0 42px 40px}
+  #dayof .tl-item::before{left:-40px;top:6px;width:20px;height:20px;border-width:4px;box-shadow:0 0 0 3px var(--gold)}
+  #dayof .tl-when{font-size:1rem;letter-spacing:2.2px}
+  #dayof .tl-item h3{font-size:1.5rem!important;margin:7px 0 9px}
+  #dayof .tl-item p{font-size:1.12rem!important;line-height:1.75}
+  #dayof .callout{font-size:1.08rem!important;line-height:1.7}
+  @media(max-width:600px){
+    #dayof .timeline{padding-left:34px}
+    #dayof .timeline::before{left:9px}
+    #dayof .tl-item{padding-left:28px;padding-bottom:34px}
+    #dayof .tl-item::before{left:-33px;width:18px;height:18px;border-width:3px}
+    #dayof .tl-when{font-size:.9rem}
+    #dayof .tl-item h3{font-size:1.35rem!important}
+    #dayof .tl-item p{font-size:1.06rem!important}
+  }
+
   /* ====== DEADLINE LIST (12 hạng mục) ====== */
   .dl-list{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
   .dl-row{display:grid;grid-template-columns:28px 36px 1fr auto;gap:12px;align-items:center;padding:13px 20px;border-bottom:1px dashed var(--line);cursor:pointer}
@@ -480,7 +501,7 @@
       <div class="venue-info">
         <h3>GOLDLAND PLAZA</h3>
         <div class="addr">14 – 16 – 18 – 20 Lý Thường Kiệt, P. Thuận Hóa, TP. Huế</div>
-        <p style="color:var(--muted);font-size:.94rem">Trung tâm tiệc cưới & hội nghị ngay trung tâm thành phố Huế — thuận tiện cho khách từ Đà Nẵng và các tỉnh về dự.</p>
+        <p style="color:var(--muted);font-size:.94rem">Trung tâm tiệc cưới &amp; hội nghị tại trung tâm thành phố Huế.</p>
         <div class="venue-stats">
           <div class="vstat"><b>700–800</b><span>Khách mời</span></div>
           <div class="vstat"><b>~70–80</b><span>Bàn (10 khách)</span></div>
@@ -527,7 +548,7 @@
       <div class="fp-zones">
         <div class="fp-zone"><b>🚪 Lối vào & Lễ tân</b>Bàn đón khách, sổ ký tên, hộp mừng, bảng chào mừng + ảnh cưới</div>
         <div class="fp-zone"><b>📸 Góc check-in</b>Nền đỏ rượu vang, hoa hồng trắng &amp; đỏ, khung vàng — đặt gần sảnh chờ</div>
-        <div class="fp-zone"><b>🍰 Bàn gallery</b>Bánh cưới, tháp ly, timeline "6 năm – 2 thành phố"</div>
+        <div class="fp-zone"><b>🍰 Bàn gallery</b>Bánh cưới, tháp ly, album “6 năm bên nhau”</div>
         <div class="fp-zone"><b>🍽️ Khu phục vụ</b>Lối ra của bếp/phục vụ, bố trí tránh cắt ngang lối đi chính</div>
       </div>
     </div>
@@ -555,7 +576,7 @@
     <p style="color:var(--muted);margin-bottom:18px">Hình minh họa mặt đứng sân khấu (stage elevation) — tỉ lệ gợi ý để trao đổi với đơn vị trang trí.</p>
     <div class="stage-elev">
       <div class="sky"></div>
-      <div class="screen">▣ Màn hình LED (P3 trong nhà)<br>chiếu tên · video phóng sự yêu xa · "15.02.2027"</div>
+      <div class="screen">▣ Màn hình LED (P3 trong nhà)<br>chiếu tên · video câu chuyện · "15.02.2027"</div>
       <div class="couple">— Vị trí cô dâu <span class="ar">&amp;</span> chú rể —</div>
       <div class="floor"></div>
       <div class="labels"><span>◀ Hoa đứng + đèn uplight</span><span>Lối tiến vào (aisle)</span><span>Hoa đứng + đèn uplight ▶</span></div>
@@ -607,24 +628,25 @@
     <!-- WARM DETAILS -->
     <h3 style="color:var(--royal);font-family:var(--serif);font-size:1.5rem;margin:34px 0 6px">5. Những điều ấm áp</h3>
     <div class="mini-grid">
-      <div class="mini"><h3>🎥 Video câu chuyện của Phát &amp; Thảo</h3><p><b>Thời lượng: 3–4 phút.</b></p><ul>
-        <li><b>0:00–0:15:</b> Phát &amp; Thảo · ngày 15/02/2027</li>
-        <li><b>0:15–0:45:</b> ảnh thời học sinh — chú thích do hai bạn xác nhận</li>
-        <li><b>0:45–1:30:</b> các cột mốc trong 6 năm bên nhau</li>
-        <li><b>1:30–2:15:</b> ba năm Đà Nẵng – Huế: bản đồ, vé xe/tàu, ảnh và tin nhắn được chọn</li>
-        <li><b>2:15–2:50:</b> ảnh hai gia đình &amp; ảnh pre-wedding của Uji Wedding</li>
-        <li><b>2:50–3:15:</b> lời cảm ơn cha mẹ, kết bằng ngày cưới</li>
-      </ul><p>Chỉ dùng ảnh, ngày tháng và câu chữ do Phát &amp; Thảo duyệt. Chiếu một lần trước nghi thức khai tiệc.</p></div>
+      <div class="mini"><h3>🎥 Video câu chuyện của Phát &amp; Thảo</h3><p><b>Thời lượng: khoảng 3 phút 30 giây.</b></p><ul>
+        <li><b>0:00–0:12 · Mở đầu:</b> Phát &amp; Thảo · 15/02/2027</li>
+        <li><b>0:12–0:50 · Những năm học chung:</b> ảnh thời học sinh và tên trường; không thêm lời kể chưa được xác nhận</li>
+        <li><b>0:50–1:30 · Khi tình bạn thành tình yêu:</b> ảnh đầu tiên của hai bạn và ngày bắt đầu mối quan hệ — Phát &amp; Thảo điền</li>
+        <li><b>1:30–2:15 · Sáu năm cùng trưởng thành:</b> chọn các khoảnh khắc thật như sinh nhật, chuyến đi, ngày tốt nghiệp hoặc những ngày bình thường</li>
+        <li><b>2:15–2:50 · Hai gia đình:</b> ảnh với cha mẹ, anh chị em và những người thân quan trọng</li>
+        <li><b>2:50–3:20 · Chương mới:</b> ảnh pre-wedding của Uji Wedding; mỗi người viết một câu dành cho người kia</li>
+        <li><b>3:20–3:30 · Kết:</b> “Phát &amp; Thảo · Về chung một nhà · 15/02/2027”</li>
+      </ul><p>Dùng nhạc nền nhẹ; giữ âm thanh lời nói thật nếu có. Tất cả ảnh, mốc thời gian và câu chữ phải được Phát &amp; Thảo duyệt trước khi dựng.</p></div>
 
       <div class="mini"><h3>📖 Adventure Book — file Canva</h3><p><b>Khổ vuông 30 × 30 cm · 10 trang · file Canva có thể chỉnh sửa.</b></p><ul>
         <li><b>Trang 1:</b> bìa “Phát &amp; Thảo — Our Adventure Book”</li>
         <li><b>Trang 2:</b> thời học sinh</li>
         <li><b>Trang 3–4:</b> timeline 6 năm — điền các cột mốc thật</li>
-        <li><b>Trang 5:</b> bản đồ Đà Nẵng ↔ Huế</li>
-        <li><b>Trang 6:</b> vé xe/tàu, thư hoặc tin nhắn được hai bạn chọn</li>
-        <li><b>Trang 7:</b> những chuyến đi &amp; kỷ niệm yêu thích</li>
+        <li><b>Trang 5:</b> “Những điều mình yêu ở nhau” — mỗi người viết ba điều</li>
+        <li><b>Trang 6:</b> sáu kỷ niệm do Phát &amp; Thảo tự chọn</li>
+        <li><b>Trang 7:</b> gia đình &amp; bạn bè đồng hành cùng hai bạn</li>
         <li><b>Trang 8:</b> ảnh pre-wedding — Uji Wedding</li>
-        <li><b>Trang 9:</b> gia đình &amp; lời chúc</li>
+        <li><b>Trang 9:</b> thư ngắn gửi cho nhau trước ngày cưới</li>
         <li><b>Trang 10:</b> “Chương tiếp theo — 15/02/2027”</li>
       </ul><p>In một cuốn bìa cứng đặt tại bàn gallery; giữ file Canva để hai bạn tiếp tục thêm trang sau đám cưới.</p></div>
 
@@ -725,10 +747,10 @@
       <div class="check-col">
         <h3>4 · Ảnh cưới & câu chuyện <span class="tag">Nội dung</span><span class="colprog"></span></h3>
         <div class="due">Hạn: 31/12/2026</div>
-        <label class="check-item"><input type="checkbox"><span>Chụp ảnh cưới với <b>Uji Wedding</b> tại Huế: Đại Nội, Trường Tiền, sông Hương, lăng tẩm (+1 buổi Đà Nẵng nếu muốn) <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Chụp ảnh cưới với <b>Uji Wedding</b> tại Huế — địa điểm do Phát &amp; Thảo và studio chốt <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Chọn ảnh làm standee cổng, album, slideshow <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Quay/ dựng <b>video phóng sự "3 năm Đà Nẵng – Huế"</b> chiếu đầu tiệc (3–4 phút) <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Gom ảnh cho góc <b>"6 năm – 2 thành phố"</b>: từ lớp 10 đến cầu hôn; in & đóng khung mạ vàng <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Dựng <b>video câu chuyện của Phát &amp; Thảo</b> theo storyboard, chiếu trước nghi thức khai tiệc <i class="who p">Phát & Thảo</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Gom ảnh cho <b>Adventure Book “6 năm bên nhau”</b>; chỉ dùng cột mốc và chú thích do hai bạn xác nhận <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Hai bạn viết <b>thư tay</b> cho nhau để đọc trong lễ <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Viết lời cảm ơn của chú rể & đại diện hai họ; kịch bản MC nháp <i class="who c">Hai nhà</i></span></label>
       </div>
@@ -739,8 +761,8 @@
         <label class="check-item"><input type="checkbox"><span>Chốt <b>danh sách khách chính thức</b> hai bên (tên, số người, SĐT, địa phương) <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Thiết kế thiệp kiểu thư tay Regency, niêm sáp đỏ son "P❦T"; ghi rõ địa chỉ + bản đồ GOLDLAND PLAZA, giờ tiệc <i class="who p">Phát & Thảo</i></span></label>
         <label class="check-item"><input type="checkbox"><span>In thiệp (~800 + 10% dư) <b>trước 20/12</b> — nhà in nghỉ Tết sớm <i class="who p">Phát & Thảo</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Gửi thiệp khách <b>đường xa trước</b> (Đà Nẵng, tỉnh khác), rồi khách Huế; hoàn tất trước 20/01 <i class="who c">Hai nhà</i></span></label>
-        <label class="check-item"><input type="checkbox"><span>Đặt phòng khách sạn gần GOLDLAND cho khách xa; thuê xe đưa đón Đà Nẵng – Huế <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Gửi thiệp cho khách <b>ở xa trước</b>, rồi khách tại Huế; hoàn tất trước 20/01 <i class="who c">Hai nhà</i></span></label>
+        <label class="check-item"><input type="checkbox"><span>Đặt phòng khách sạn gần GOLDLAND và phương tiện đưa đón cho khách ở xa nếu cần <i class="who c">Hai nhà</i></span></label>
         <label class="check-item"><input type="checkbox"><span>Theo dõi xác nhận tham dự → cập nhật số bàn với nhà hàng <i class="who c">Hai nhà</i></span></label>
       </div>
 
@@ -882,12 +904,10 @@
       <p>Sự chân thành nằm ở các chi tiết. Đây là những ý tưởng khiến khách mời xúc động và đôi uyên ương nhớ mãi.</p>
     </div>
     <div class="mini-grid">
-      <div class="mini"><h3>🗺️ Góc "6 năm – 2 thành phố"</h3><p>Một timeline ảnh từ thời cấp ba đến hiện tại, kèm bản đồ Đà Nẵng–Huế và một tấm vé tàu/xe kỷ niệm những lần về thăm nhau.</p></div>
       <div class="mini"><h3>💌 Thư tay đọc trong lễ</h3><p>Hai bạn viết thư tay cho nhau, đọc trong lễ thành hôn hoặc trao nhau trước giờ cưới — khoảnh khắc lắng đọng nhất ngày trọng đại.</p></div>
       <div class="mini"><h3>🙏 Lời tri ân cha mẹ</h3><p>Dành một phút cúi đầu cảm ơn cha mẹ hai bên — rót trà/trao hoa. Người Việt coi hôn nhân là chữ hiếu; khoảnh khắc này luôn khiến mọi người rơi nước mắt.</p></div>
       <div class="mini"><h3>🎁 Quà cảm ơn khách</h3><p>Món quà nhỏ đậm chất Huế: mè xửng, trà sen, hạt sen sấy — kèm thiệp cảm ơn có tên hai bạn.</p></div>
       <div class="mini"><h3>🏮 "Đèn Hỷ" — Lồng đèn ước nguyện</h3><p>Một chiếc lồng đèn Huế lớn (đỏ son – vàng, khung mạ vàng kiểu Regency) đặt ở lối vào. Khách viết lời chúc lên <b>thẻ giấy ánh kim</b> rồi treo quanh đèn. Sau cưới, đèn về treo trong tổ ấm và được <b>thắp sáng mỗi dịp 15/02</b> — ánh lửa (bổ Hỏa đúng Bát Tự) ấm nhà, cùng hàng trăm lời chúc còn nguyên nét chữ. Vừa là decor độc nhất, vừa là kỷ vật sống cả đời.</p></div>
-      <div class="mini"><h3>🎬 Video phóng sự yêu xa</h3><p>Clip ngắn kể chuyện 3 năm Đà Nẵng–Huế, chiếu đầu tiệc — khách sẽ hiểu vì sao ngày hôm nay đặc biệt đến thế.</p></div>
       <div class="mini"><h3>🌸 Lễ gia tiên chỉn chu</h3><p>Chăm chút bàn thờ gia tiên hai nhà: hoa tươi, mâm ngũ quả, nến đỏ — thể hiện lòng thành kính, cốt lõi của đám cưới Việt.</p></div>
       <div class="mini"><h3>🎤 Lời cảm ơn của chú rể</h3><p>Chú rể (anh/em của bạn) nói lời cảm ơn hai họ & khách mời — ngắn gọn, chân thành, từ trái tim.</p></div>
     </div>
