@@ -17,20 +17,16 @@ python3 -m http.server 8000
 ```
 
 ## Trang gồm những phần nào
-1. **Trang chủ + đồng hồ đếm ngược** đến ngày cưới (15/02/2027, 9:00 sáng)
-2. **Chuyện tình** — từ những năm học chung đến hành trình 6 năm bên nhau
-3. **Chuẩn bị 4 tháng rưỡi** — việc cần làm theo từng mốc, tính ngược từ ngày cưới
-4. **Nghi lễ truyền thống** — Lễ dạm ngõ · Lễ ăn hỏi · Lễ cưới (giải thích chi tiết)
-5. **Địa điểm** — GOLDLAND PLAZA (14–16–18–20 Lý Thường Kiệt, Thuận Hóa, Huế), 700–800 khách
-6. **Sơ đồ sảnh tiệc** — bố trí ~70–80 bàn, khu lễ tân, check-in, gallery
-7. **Trang trí & chủ đề không gian** — decor "Về Chung Một Nhà"
-8. **Lịch trình ngày cưới** — từng mốc giờ, nghi lễ sáng + tiệc trưa
-9. **Checklist tương tác** — tích hoàn thành, tự lưu trên trình duyệt
-10. **Ngân sách tham khảo** (VND) — đã quy mô theo 700–800 khách
-11. **Chủ đề & phong cách** — "Về Chung Một Nhà · Hoàng Kim Huế" (vàng hoàng kim – trắng ngà – champagne, hợp mệnh Kim)
-12. **Ý tưởng chạm đến trái tim** — những chi tiết ấm áp
-13. **Thời tiết** — khí hậu trung bình giữa tháng 2 ở Huế + link dự báo
-
+1. Trang chủ &amp; đồng hồ đếm ngược
+2. Chuyện của Phát &amp; Thảo
+3. 8 việc chính cần hoàn thành
+4. Nghi lễ ngày cưới
+5. Địa điểm GOLDLAND PLAZA
+6. Lịch trình ngày cưới
+7. Checklist chuẩn bị rút gọn
+8. Spreadsheet ngân sách
+9. Ý tưởng đã chọn &amp; mô hình Đèn Hỷ 3D
+10. Thời tiết tham khảo
 
 ## Phong cách Bridgerton
 Hai triều đình cùng một thập niên — London Regency (1813–1815) & Kinh thành Huế thời Gia Long (1802–1820). Trang web dùng
