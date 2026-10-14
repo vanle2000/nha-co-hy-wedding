@@ -469,6 +469,28 @@
   .venue-map a{display:inline-flex;padding:10px 14px;border:1px solid rgba(255,255,255,.3);border-radius:10px;color:#fff;text-decoration:none}
   .callout{border:0;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;background:var(--champagne-soft);box-shadow:none;padding:16px 18px;color:var(--ink)}
 
+  /* GOLDLAND pre-D-day checklist */
+  .venue-checklist{margin-top:30px;padding:clamp(22px,4vw,34px);border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--shadow-soft)}
+  .venue-check-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:22px}
+  .venue-check-head h3{font-size:clamp(1.4rem,2.6vw,1.9rem)!important;color:var(--royal-deep);font-weight:500;margin:0}
+  .venue-check-head p{color:var(--muted);font-size:.95rem!important;margin:5px 0 0}
+  .venue-check-total{flex:0 0 auto;text-align:right;color:var(--royal);font-family:var(--sans);font-size:.85rem;font-weight:700}
+  .venue-check-track{width:150px;height:7px;border-radius:999px;background:#e5ddd3;margin-top:7px;overflow:hidden}
+  #venue-check-bar{width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--royal),var(--gold));transition:width .25s ease}
+  .venue-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .venue-check-group{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fcfaf6}
+  .venue-check-group h4{display:flex;align-items:center;gap:8px;margin:0 0 3px;color:var(--royal-deep);font-family:var(--serif);font-size:1.05rem}
+  .venue-group-count{margin-left:auto;font-family:var(--sans);font-size:.7rem;color:var(--muted);font-weight:700}
+  .venue-check-due{margin-bottom:9px;color:var(--royal-soft);font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+  .venue-check-item{display:flex;gap:10px;align-items:flex-start;min-height:42px;padding:8px 0;border-bottom:1px solid rgba(52,16,22,.07);cursor:pointer}
+  .venue-check-item:last-child{border-bottom:0}
+  .venue-check-item input{flex:0 0 auto;width:18px;height:18px;margin-top:3px;accent-color:var(--royal)}
+  .venue-check-item span{font-size:.94rem;line-height:1.43;color:var(--ink)}
+  .venue-check-item input:checked+span{color:var(--muted);text-decoration:line-through}
+  .venue-check-actions{display:flex;justify-content:flex-end;margin-top:16px}
+  .venue-check-actions button{min-height:40px;padding:8px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--royal-deep);font-family:var(--sans);font-weight:700;cursor:pointer}
+  .venue-check-actions button:hover{background:var(--champagne-soft)}
+
   /* day timeline */
   #dayof .sec-head h2{font-size:clamp(2rem,4.2vw,3.15rem)}
   #dayof .sec-head .kicker{font-size:.75rem}
@@ -568,6 +590,10 @@
     .check-grid{grid-template-columns:1fr}
     .venue-card{grid-template-columns:1fr}
     .venue-map{min-height:240px}
+    .venue-check-grid{grid-template-columns:1fr}
+    .venue-check-head{align-items:flex-start;flex-direction:column}
+    .venue-check-total{text-align:left}
+    .venue-check-track{width:min(260px,70vw)}
     .lantern-scene{height:460px}
   }
   @media(max-width:600px){
@@ -618,6 +644,7 @@
     <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Mở menu" aria-controls="navlinks" aria-expanded="false"><span aria-hidden="true">☰</span></button>
     <div class="nav-links" id="navlinks">
       <a href="#timeline">Kế hoạch</a>
+      <a href="#venue">GOLDLAND</a>
       <a href="#dayof">Ngày cưới</a>
       <a href="#checklist">Checklist</a>
       <a href="#budget">Ngân sách</a>
@@ -718,9 +745,6 @@
           <div class="vstat"><b>~70–80</b><span>Bàn (10 khách)</span></div>
           <div class="vstat"><b>Trưa</b><span>Giờ tiệc</span></div>
         </div>
-        <div class="callout" style="margin-top:14px">
-          <b>Việc cần chốt với GOLDLAND PLAZA:</b> sức chứa sảnh cho 700–800 khách (có thể cần sảnh lớn nhất / gộp sảnh), số bàn & bàn dự phòng, thực đơn & giá/bàn, giờ set-up cho đơn vị trang trí, chỗ đậu xe, màn hình LED/âm thanh, và phương án hậu cần cho lượng khách lớn.
-        </div>
       </div>
       <div class="venue-map">
         <div class="pin">📍</div>
@@ -728,6 +752,63 @@
         <div style="opacity:.85;font-size:.9rem;margin-top:6px">Thuận Hóa · TP. Huế</div>
         <a href="https://www.google.com/maps/search/?api=1&query=GOLDLAND+PLAZA+Ly+Thuong+Kiet+Hue" target="_blank" rel="noopener">Mở trên Google Maps →</a>
       </div>
+    </div>
+
+    <div class="venue-checklist" id="goldland-checklist">
+      <div class="venue-check-head">
+        <div>
+          <h3>Checklist GOLDLAND trước ngày cưới</h3>
+          <p>Phát &amp; Thảo xác nhận trực tiếp với đại diện venue; vendor decor tự lập phương án kỹ thuật.</p>
+        </div>
+        <div class="venue-check-total">
+          <span id="venue-check-text" aria-live="polite">0 / 21 hoàn thành</span>
+          <div class="venue-check-track" id="venue-check-progress" role="progressbar" aria-label="Tiến độ checklist GOLDLAND" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="venue-check-bar"></div></div>
+        </div>
+      </div>
+
+      <div class="venue-check-grid" id="venue-check-grid">
+        <div class="venue-check-group">
+          <h4>1 · Hợp đồng &amp; phạm vi <span class="venue-group-count"></span></h4>
+          <div class="venue-check-due">Chốt ngay</div>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận đúng tên sảnh/tầng, sức chứa 700–800 khách, ngày 14/02/2027 và toàn bộ khung giờ sử dụng sảnh</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận các hạng mục venue cung cấp và các hạng mục phải thuê ngoài</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Chốt giá/bàn, VAT/phí dịch vụ, phí bàn phát sinh và phí quá giờ</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Kiểm tra lịch đặt cọc, thanh toán, huỷ/đổi ngày và hoàn cọc</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Lưu tên và số điện thoại người phụ trách GOLDLAND trong ngày cưới</span></label>
+        </div>
+
+        <div class="venue-check-group">
+          <h4>2 · Menu &amp; khách mời <span class="venue-group-count"></span></h4>
+          <div class="venue-check-due">Trước 20/01/2027</div>
+          <label class="venue-check-item"><input type="checkbox"><span>Thử món và xác nhận menu cuối bằng văn bản</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Chốt đồ uống, nước đá, thời điểm phục vụ và chi phí phát sinh</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Báo trước suất chay, dị ứng hoặc nhu cầu đặc biệt nếu có</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận hạn cuối báo số khách và số bàn chính thức</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Chốt chính sách bàn dự phòng: số bàn, thời điểm mở và cách tính phí</span></label>
+        </div>
+
+        <div class="venue-check-group">
+          <h4>3 · Vendor &amp; kỹ thuật <span class="venue-group-count"></span></h4>
+          <div class="venue-check-due">Xác nhận 10–12/02/2027</div>
+          <label class="venue-check-item"><input type="checkbox"><span>Kết nối đại diện GOLDLAND với vendor decor; vendor tự khảo sát và gửi phương án để venue duyệt</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận lối vận chuyển, thang máy, giờ giao đồ, set-up và tháo dỡ</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Nhận thông số/định dạng file LED và hẹn giờ test video, nhạc, micro; chuẩn bị một USB dự phòng</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận kỹ thuật viên trực ngày cưới và nguồn điện/thiết bị dự phòng</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Xin xác nhận trước nếu mang trà, macaron, bánh hoặc đồ ăn từ bên ngoài</span></label>
+        </div>
+
+        <div class="venue-check-group">
+          <h4>4 · 72 giờ cuối <span class="venue-group-count"></span></h4>
+          <div class="venue-check-due">11–13/02/2027</div>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận lại bằng văn bản: sảnh, thời gian, menu, số bàn và bàn dự phòng</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Gửi sơ đồ bàn, số bàn VIP/gia đình và vị trí bàn lễ tân/hộp mừng</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Xác nhận bãi xe, lối vào, thang máy, nhà vệ sinh và hỗ trợ khách lớn tuổi</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Chia sẻ timeline và danh sách vendor; chỉ định một đại diện gia đình làm đầu mối duy nhất với GOLDLAND</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Kiểm tra hoá đơn cuối, số tiền còn lại và cách duyệt chi phí phát sinh</span></label>
+          <label class="venue-check-item"><input type="checkbox"><span>Walk-through lần cuối tại sảnh ngày 13/02 với venue và coordinator</span></label>
+        </div>
+      </div>
+      <div class="venue-check-actions"><button type="button" id="venue-check-reset">↺ Đặt lại checklist GOLDLAND</button></div>
     </div>
   </div>
 </section>
@@ -1105,6 +1186,35 @@
     upd();
   })();
 
+  /* ====== GOLDLAND PRE-D-DAY CHECKLIST ====== */
+  (function(){
+    const VKEY='hue-wedding-goldland-v1';
+    const grid=document.getElementById('venue-check-grid');
+    if(!grid)return;
+    const boxes=Array.from(grid.querySelectorAll('input[type=checkbox]'));
+    let saved=[];
+    try{saved=JSON.parse(localStorage.getItem(VKEY)||'[]');if(!Array.isArray(saved))saved=[];}catch{saved=[];}
+    boxes.forEach((box,i)=>box.checked=Boolean(saved[i]));
+    function update(){
+      const done=boxes.filter(box=>box.checked).length;
+      const pct=boxes.length?Math.round(done/boxes.length*100):0;
+      document.getElementById('venue-check-text').textContent=done+' / '+boxes.length+' hoàn thành ('+pct+'%)';
+      document.getElementById('venue-check-bar').style.width=pct+'%';
+      document.getElementById('venue-check-progress').setAttribute('aria-valuenow',String(pct));
+      grid.querySelectorAll('.venue-check-group').forEach(group=>{
+        const groupBoxes=Array.from(group.querySelectorAll('input[type=checkbox]'));
+        const groupDone=groupBoxes.filter(box=>box.checked).length;
+        const count=group.querySelector('.venue-group-count');if(count)count.textContent=groupDone+'/'+groupBoxes.length;
+      });
+    }
+    boxes.forEach(box=>box.addEventListener('change',()=>{localStorage.setItem(VKEY,JSON.stringify(boxes.map(item=>item.checked)));update();}));
+    document.getElementById('venue-check-reset').addEventListener('click',()=>{
+      if(!confirm('Đặt lại toàn bộ checklist GOLDLAND?'))return;
+      boxes.forEach(box=>box.checked=false);localStorage.removeItem(VKEY);update();
+    });
+    update();
+  })();
+
   /* ====== NAVIGATION ====== */
   (function(){
     const nav=document.querySelector('nav'), links=document.getElementById('navlinks'), toggle=document.getElementById('nav-toggle');
@@ -1246,7 +1356,7 @@
   /* ====== EDIT MODE: chỉnh sửa nội dung trực tiếp, tự lưu trên trình duyệt, xuất/nhập file ====== */
   (function(){
     const CKEY='hue-wedding-content-v1';
-    const ALL_KEYS=[CKEY,'hue-wedding-checklist-v7','hue-wedding-deadlines-v2','hue-wedding-budget-v1','hue-wedding-wishes-v1'];
+    const ALL_KEYS=[CKEY,'hue-wedding-checklist-v7','hue-wedding-deadlines-v2','hue-wedding-budget-v1','hue-wedding-wishes-v1','hue-wedding-goldland-v1'];
     const SEL='.names,.hero-meta,'
       +'section h2,section h3,section h4,section p,section li,td,th,'
       +'.dl-task,.dl-due,.due,.vstat b,.vstat span,.venue-info .addr,.venue-map div';
