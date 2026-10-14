@@ -2,7 +2,7 @@
 
 Trang kế hoạch đám cưới truyền thống Việt Nam tại Huế, chủ đề **"Về Chung Một Nhà" — Hoàng Kim Huế × Regency Bridgerton**,
 thiết kế riêng cho Phát & Thảo: bạn học từ thời cấp ba, bên nhau 6 năm và nay *về chung một nhà*
-vào **Thứ Hai 15/02/2027 (mùng 10 tháng Giêng, năm Đinh Mùi)** — tiệc trưa tại GOLDLAND PLAZA, Huế, 700–800 khách.
+vào **Chủ Nhật 14/02/2027 (mùng 9 tháng Giêng, năm Đinh Mùi)** — tiệc trưa tại GOLDLAND PLAZA, Huế, 700–800 khách.
 
 ## Cách mở trang
 🌐 **Trang web đang chạy tại: https://vanle2000.github.io/nha-co-hy-wedding/**
@@ -36,8 +36,8 @@ decor gợi ý: đèn chùm pha lê, tứ tấu đàn dây, cổng hoa tử đ�
 ## Cần tùy chỉnh
 Mở `index.html` bằng trình soạn thảo và sửa khi cần:
 - **Tên:** đã đặt sẵn **Phát & Thảo** (chú rể & cô dâu).
-- **Ngày cưới:** đã đặt `const WEDDING_DATE = new Date('2027-02-15T09:00:00');`
-  (gần cuối file) — đồng hồ đếm ngược chạy đúng 9:00 sáng Thứ Hai 15/02/2027.
+- **Ngày cưới:** đã đặt `const WEDDING_DATE = new Date('2027-02-14T09:00:00');`
+  (gần cuối file) — đồng hồ đếm ngược chạy đúng 9:00 sáng Chủ Nhật 14/02/2027.
 - **Ngân sách & khách mời:** điền số liệu thật của gia đình.
 
 ## Lưu ý văn hóa
