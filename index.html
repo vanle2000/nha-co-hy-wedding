@@ -4,8 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Nhà Có Hỷ — Wedding Planner for Phát & Thảo</title>
-<meta name="description" content="Nhà Có Hỷ — Wedding Planner for Phát & Thảo. Đám cưới truyền thống Việt Nam tại Huế, phong vị Regency/Bridgerton — timeline, nghi lễ, phong thủy, checklist, ngân sách." />
+<meta name="description" content="Nhà Có Hỷ — Wedding Planner for Phát & Thảo. Kế hoạch đám cưới tại Huế: timeline, nghi lễ, checklist, ngân sách và ý tưởng." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
   :root{
@@ -54,9 +55,6 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
   .accent{color:var(--gold)}
 
-  /* ====== Decorative lotus/flourish ====== */
-  .flourish{display:block;margin:14px auto 0;width:180px;max-width:60%;opacity:.85}
-
   /* ====== NAV ====== */
   nav{
     position:sticky;top:0;z-index:50;
@@ -89,10 +87,8 @@
   }
   header.hero::before{top:-20px;left:-10px}
   header.hero::after{bottom:-50px;right:-10px}
-  .eyebrow{font-family:var(--serif);letter-spacing:5px;text-transform:uppercase;font-size:.72rem;color:var(--royal-soft);margin-bottom:16px}
   .names{font-family:var(--display);font-size:clamp(3.4rem,9vw,7rem);color:var(--royal);margin:10px 0 0;font-weight:400;letter-spacing:0;text-transform:none;line-height:1.1;white-space:nowrap}
   .amp{color:var(--gold);display:inline;margin:0 .1em;font-family:var(--display);font-size:.7em;letter-spacing:0;text-transform:none;font-weight:400;vertical-align:.08em}
-  .tagline{font-family:var(--script);color:var(--fire);font-size:clamp(1.5rem,3vw,2.1rem);margin:18px auto 0;max-width:720px;line-height:1.35;font-weight:400}
   .hero-meta{margin:30px auto 0;display:flex;flex-direction:column;gap:6px;align-items:center}
   .hero-meta .date{font-family:var(--serif);font-size:clamp(1.05rem,2vw,1.35rem);letter-spacing:3px;text-transform:uppercase;color:var(--royal)}
   .hero-meta .line{width:60px;height:1px;background:var(--gold);margin:6px 0}
@@ -130,27 +126,13 @@
   .sec-head p{color:var(--muted);max-width:640px;margin:14px auto 0}
   /* ===== THANG CHỮ THỐNG NHẤT — dễ đọc =====
      Nội dung trong thẻ: 1rem (≈17px với Cormorant). Nhãn nhỏ: .78rem. Không dùng cỡ lẻ. */
-  .story-card p,.tl-item p,.cer-body li,.mini p,.mini li,.check-item span,
-  .light-row p,.theme-list li,.venue-info p,.fp-zone,.spec small,.callout,.tet-warn,.letter,td,th{font-size:1rem!important;line-height:1.65}
-  .budget-note,.date-note,.progress-note,.legend,.vstat span,.spec span{font-size:.85rem!important}
-  .mini h3,.story-card h3,.tl-item h3,.check-col h3,.light-row h4{font-size:1.2rem!important}
+  .cer-body li,.mini p,.mini li,.check-item span,
+  .venue-info p,.callout,.tet-warn,td,th{font-size:1rem!important;line-height:1.65}
+  .date-note,.progress-note,.vstat span{font-size:.85rem!important}
+  .mini h3,.tl-item h3,.check-col h3{font-size:1.2rem!important}
   table{font-size:1rem}
   /* Nhãn chữ in hoa nhỏ -> Bodoni, tracking rộng kiểu Regency */
-  .btn,.cer-top .step,.vstat span,.spec span,.ribbon,.check-col h3 .tag,.legend,.aisle{font-family:var(--serif);letter-spacing:2px}
-
-  /* ====== STORY ====== */
-  .story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-  .story-card{
-    background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px;
-    box-shadow:var(--shadow);position:relative;overflow:hidden;
-  }
-  .story-card .ico{font-size:1.8rem;margin-bottom:10px;display:block}
-  .story-card h3{color:var(--royal);font-size:1.2rem;margin-bottom:8px}
-  .story-card p{color:var(--muted);font-size:.95rem}
-  .pullquote{
-    text-align:center;font-family:var(--serif);font-style:italic;
-    font-size:1.35rem;color:var(--royal);max-width:720px;margin:40px auto 0;line-height:1.5;
-  }
+  .btn,.ribbon,.check-col h3 .tag{font-family:var(--serif);letter-spacing:2px}
 
   /* ====== TIMELINE ====== */
   .timeline{position:relative;max-width:820px;margin:0 auto;padding-left:30px}
@@ -270,15 +252,6 @@
   tfoot td{font-weight:700;color:var(--royal);background:var(--champagne-soft)}
   .budget-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
 
-  /* ====== THEME SWATCHES ====== */
-  .theme-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
-  .swatches{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:220px}
-  .sw{flex:1;display:flex;align-items:flex-end;justify-content:center;padding:12px 6px;color:#fff;font-size:.7rem;letter-spacing:.5px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.4)}
-  .theme-list{list-style:none}
-  .theme-list li{padding:8px 0 8px 26px;position:relative;color:var(--muted)}
-  .theme-list li::before{content:"❖";position:absolute;left:0;color:var(--gold)}
-  .theme-list b{color:var(--royal)}
-
   /* ====== CARDS GENERIC (ideas / vendors / guest) ====== */
   .mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
   .mini{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
@@ -304,74 +277,10 @@
   .venue-map .pin{font-size:3rem;margin-bottom:10px}
   .venue-map a{color:var(--gold-light);text-decoration:underline;font-size:.9rem;margin-top:14px;display:inline-block}
 
-  /* ====== FLOORPLAN ====== */
-  .floorplan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
-  .stage-el{background:linear-gradient(135deg,var(--royal),var(--royal-soft));color:#fff;text-align:center;padding:16px;border-radius:12px;font-family:var(--serif);letter-spacing:1px;margin-bottom:8px}
-  .aisle{text-align:center;color:var(--gold);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;padding:6px 0}
-  .table-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:10px;margin:14px 0}
-  .tbl{aspect-ratio:1;background:var(--champagne-soft);border:1.5px dashed var(--royal-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--royal);font-weight:700}
-  .tbl.vip{background:var(--gold-light);border-color:var(--gold);border-style:solid}
-  .fp-zones{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:16px}
-  .fp-zone{flex:1;min-width:120px;background:#faf5ef;border-radius:10px;padding:12px;font-size:.82rem;color:var(--muted);text-align:center}
-  .fp-zone b{color:var(--royal);display:block;margin-bottom:3px}
-  .legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px;font-size:.8rem;color:var(--muted)}
-  .legend span{display:inline-flex;align-items:center;gap:6px}
-  .dot{width:14px;height:14px;border-radius:50%;display:inline-block}
-
-  /* ====== DESIGN STUDIO ====== */
-  .stage-elev{background:linear-gradient(180deg,#72182a,var(--deep-red));border-radius:16px;padding:26px 22px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-  .stage-elev .sky{position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(201,162,75,.25),transparent 55%)}
-  .stage-elev .screen{position:relative;background:rgba(0,0,0,.45);border:2px solid var(--gold);border-radius:8px;height:120px;margin:0 auto;max-width:62%;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.8rem;letter-spacing:1px;text-align:center}
-  .stage-elev .couple{position:relative;text-align:center;color:#fff;margin-top:14px;font-family:var(--serif)}
-  .stage-elev .couple .ar{color:var(--gold-light)}
-  .stage-elev .floor{position:relative;height:16px;margin-top:14px;border-radius:6px;background:linear-gradient(90deg,var(--royal-soft),var(--gold),var(--royal-soft));opacity:.6}
-  .stage-elev .labels{position:relative;display:flex;justify-content:space-between;color:var(--champagne-soft);font-size:.68rem;margin-top:8px;opacity:.8;flex-wrap:wrap;gap:4px}
-
-  .spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:22px}
-  .spec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;box-shadow:var(--shadow)}
-  .spec b{display:block;font-family:var(--serif);font-size:1.3rem;color:var(--royal)}
-  .spec span{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-  .spec small{display:block;font-size:.72rem;color:var(--gold);margin-top:4px}
-
-  .light-row{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px;margin-bottom:10px;box-shadow:var(--shadow)}
-  .light-row .lc{font-size:1.6rem;flex-shrink:0}
-  .light-row h4{color:var(--royal);font-size:1rem;margin-bottom:2px;font-family:var(--serif)}
-  .light-row p{color:var(--muted);font-size:.88rem}
-
-
-  /* ====== BRIDGERTON / REGENCY ORNAMENTS ====== */
-  .sec-head h2 em,.sec-head h2 i{font-style:italic;font-weight:400}
-  .regency-frame{
-    position:relative;border:1.5px solid var(--gold);outline:1px solid var(--gold);outline-offset:5px;
-    border-radius:4px;padding:30px 30px 26px;background:linear-gradient(180deg,#fffdf8,var(--champagne-soft));
-    box-shadow:var(--shadow);max-width:780px;margin:0 auto;
-  }
-  .regency-frame::before,.regency-frame::after{
-    content:"❦";position:absolute;color:var(--gold);font-size:1.4rem;background:var(--ivory);padding:0 8px;line-height:1;
-  }
-  .regency-frame::before{top:-14px;left:50%;transform:translateX(-50%)}
-  .regency-frame::after{bottom:-14px;left:50%;transform:translateX(-50%) rotate(180deg)}
-  .salutation{font-family:var(--script);font-size:2.6rem;color:var(--fire);line-height:1.1;margin-bottom:12px}
-  .letter{font-family:var(--sans);font-style:italic;font-size:1.22rem;color:var(--ink);line-height:1.8}
-  .letter em{color:var(--royal);font-style:normal;font-family:var(--serif);font-size:.95em;letter-spacing:.5px}
-  .signature{font-family:var(--script);font-size:2.1rem;color:var(--royal);text-align:right;margin-top:14px}
-  .wax-seal{
-    display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%,#d2574a,var(--fire) 60%,#7f2419);
-    color:var(--gold-light);font-family:var(--serif);font-weight:700;font-size:1.1rem;letter-spacing:1px;
-    box-shadow:inset 0 0 0 3px rgba(255,255,255,.12),0 6px 16px -6px rgba(127,36,25,.6);
-    margin-top:14px;
-  }
-  .divider{text-align:center;color:var(--gold);letter-spacing:10px;margin:28px 0 6px;font-size:1rem}
-  .divider::before,.divider::after{content:"────";letter-spacing:0;opacity:.5;margin:0 10px}
   .ribbon{display:inline-block;background:var(--deep-red);color:#fff;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:12px}
-  .fire-accent{border-left-color:var(--fire)!important}
-  .sw-row{display:flex;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);height:120px;margin-top:12px}
 
   /* ====== ĐÈN HỶ — INTERACTIVE CSS 3D ====== */
   .lantern-studio{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(390px,1.25fr);gap:28px;align-items:stretch;margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);overflow:hidden}
-  .lantern-jump{display:inline-block;margin-top:12px;color:var(--fire);font-family:var(--serif);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
-  .lantern-jump:hover{color:var(--deep-red)}
   .lantern-info{padding:10px 4px 10px 10px}
   .lantern-info h3{font-size:1.65rem!important;color:var(--deep-red);margin:7px 0 12px}
   .lantern-info p,.lantern-info li{font-size:1rem;line-height:1.65;color:var(--muted)}
@@ -444,35 +353,281 @@
     .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--ivory);flex-direction:column;padding:14px 22px;border-bottom:1px solid var(--line)}
     .nav-links.open{display:flex}
     .nav-toggle{display:block}
-    .theme-wrap{grid-template-columns:1fr}
     .venue-card{grid-template-columns:1fr}
     section{padding:54px 0}
+  }
+
+  /* ==========================================================
+     2026 MODERN ELEGANT UI — final component override layer
+     ========================================================== */
+  :root{
+    --royal:#651b2b;
+    --royal-deep:#341016;
+    --royal-soft:#914456;
+    --gold:#a87b32;
+    --gold-light:#dcc38c;
+    --champagne:#e7d7b8;
+    --champagne-soft:#f3ede3;
+    --ivory:#f8f5ef;
+    --fire:#a62f45;
+    --deep-red:#57101c;
+    --ink:#282421;
+    --muted:#6e6761;
+    --line:rgba(52,16,22,.11);
+    --page:#f6f3ee;
+    --surface:#fffdfa;
+    --surface-soft:#efe9e1;
+    --success:#42644b;
+    --focus:#8d3850;
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+    --shadow:0 18px 55px -38px rgba(52,16,22,.48);
+    --shadow-soft:0 8px 28px -22px rgba(52,16,22,.34);
+  }
+  html{scroll-padding-top:84px}
+  body{background:var(--page);color:var(--ink);font-size:1.06rem;line-height:1.65}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 8% 8%,rgba(168,123,50,.06),transparent 24rem),radial-gradient(circle at 92% 32%,rgba(101,27,43,.045),transparent 27rem)}
+  ::selection{background:rgba(101,27,43,.18);color:var(--royal-deep)}
+  .wrap{max-width:1180px;padding-inline:clamp(20px,4vw,48px)}
+  .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+  .skip-link{position:fixed;left:18px;top:12px;z-index:200;transform:translateY(-150%);background:var(--royal-deep);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;transition:transform .2s}
+  .skip-link:focus{transform:translateY(0)}
+  :where(a,button,input,[tabindex],[contenteditable="true"]):focus-visible{outline:3px solid rgba(141,56,80,.42);outline-offset:3px}
+  main>section{scroll-margin-top:82px;padding:clamp(72px,8vw,104px) 0;border:0;position:relative}
+  main>section:nth-of-type(even){background:rgba(255,253,250,.72);border-block:1px solid rgba(52,16,22,.055)}
+
+  /* navigation */
+  nav{background:rgba(248,245,239,.94);border-bottom:1px solid rgba(52,16,22,.09);box-shadow:0 4px 20px rgba(52,16,22,.035)}
+  nav .wrap{min-height:72px;padding-top:0;padding-bottom:0;gap:30px;position:relative}
+  .brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--royal-deep);font-size:1rem;font-weight:600;letter-spacing:.04em}
+  .brand span{color:var(--gold);font-size:.75rem}
+  .brand small{font-family:var(--sans);font-size:.86rem;font-weight:600;color:var(--muted);letter-spacing:.01em;border-left:1px solid var(--line);padding-left:11px}
+  .nav-links{margin-left:auto;gap:5px;align-items:center;flex-wrap:nowrap}
+  .nav-links a{font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.065em;color:var(--muted);padding:9px 12px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+  .nav-links a:hover{color:var(--royal);background:rgba(101,27,43,.06)}
+  .nav-links a.active{color:#fff;background:var(--royal)}
+  .nav-toggle{margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;align-items:center;justify-content:center;background:var(--surface);font-size:1.15rem}
+
+  /* hero */
+  header.hero{min-height:640px;display:grid;place-items:center;padding:clamp(90px,10vw,132px) 20px clamp(82px,9vw,112px);background:linear-gradient(145deg,#f8f5ef 0%,#fffdf9 52%,#eee4df 100%);isolation:isolate}
+  header.hero::before,header.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(1px);z-index:-1}
+  header.hero::before{width:420px;height:420px;top:-210px;left:-120px;background:radial-gradient(circle,rgba(168,123,50,.16),transparent 68%)}
+  header.hero::after{width:540px;height:540px;right:-240px;bottom:-260px;background:radial-gradient(circle,rgba(101,27,43,.12),transparent 68%)}
+  .hero .wrap{max-width:940px}
+  .names{font-size:clamp(4rem,10vw,7.6rem);color:var(--royal-deep);margin:0;white-space:normal;line-height:1;filter:drop-shadow(0 8px 18px rgba(52,16,22,.08))}
+  .amp{color:var(--gold);margin-inline:.06em}
+  .hero-meta{margin-top:25px;gap:8px}
+  .hero-meta .date{color:var(--royal);font-size:clamp(.95rem,1.7vw,1.18rem);letter-spacing:.24em;font-weight:600}
+  .hero-meta .line{width:42px;background:var(--gold);opacity:.75}
+  .hero-meta .det{font-size:clamp(.98rem,1.8vw,1.12rem);letter-spacing:.015em;max-width:720px}
+  .countdown{display:inline-grid;grid-template-columns:repeat(4,minmax(76px,1fr));gap:0;margin:32px auto 8px;padding:7px;border:1px solid var(--line);border-radius:18px;background:rgba(255,253,250,.82);box-shadow:var(--shadow-soft);backdrop-filter:blur(8px)}
+  .cd-box{min-width:82px;padding:10px 16px;background:transparent;border:0;border-right:1px solid var(--line);border-radius:0;box-shadow:none}
+  .cd-box:last-child{border-right:0}
+  .cd-num{font-size:1.7rem;color:var(--royal-deep);font-weight:600;line-height:1.05}
+  .cd-label{font-family:var(--sans);font-size:.68rem;letter-spacing:.11em;margin-top:5px;display:block}
+  .date-note{margin-top:8px;color:var(--muted)}
+  .btn{margin-top:24px;padding:12px 22px;background:var(--royal);border:1px solid var(--royal);border-radius:12px;box-shadow:0 10px 22px -16px rgba(52,16,22,.75);font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.09em;transition:background .2s,transform .2s,box-shadow .2s}
+  .btn:hover{background:var(--royal-deep);transform:translateY(-1px);box-shadow:0 14px 26px -17px rgba(52,16,22,.8)}
+
+  /* section hierarchy */
+  .sec-head{text-align:left;margin-bottom:clamp(28px,4vw,42px);max-width:800px}
+  .sec-head .kicker{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--royal-soft);margin-bottom:9px}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,3.15rem);font-weight:500;color:var(--royal-deep);line-height:1.16;letter-spacing:-.025em}
+  .sec-head p{font-size:1.06rem;max-width:700px;margin:12px 0 0;color:var(--muted)}
+  #story .sec-head{text-align:center;margin-inline:auto}
+  .story-edit{min-height:168px;max-width:900px;border:1px dashed rgba(101,27,43,.24);border-radius:var(--radius-lg);padding:30px;background:rgba(255,253,250,.8);box-shadow:none}
+  .story-edit:empty::before{font-size:1rem;color:#827a73}
+  .edit-hint{max-width:740px;margin:12px auto 0;font-size:.82rem!important;line-height:1.5!important;color:#827a73;text-align:center}
+
+  /* milestones */
+  .dl-list{max-width:960px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--shadow-soft)}
+  .dl-row{grid-template-columns:24px 36px minmax(0,1fr) auto;min-height:64px;padding:13px 20px;gap:12px;border-bottom:1px solid rgba(52,16,22,.075);transition:background .18s}
+  .dl-row:hover{background:rgba(101,27,43,.025)}
+  .dl-row input,.check-item input{accent-color:var(--royal);width:18px;height:18px}
+  .dl-no{color:var(--royal-soft);font-size:1rem}
+  .dl-task{font-size:1rem;line-height:1.45}
+  .dl-due{color:var(--royal);background:rgba(101,27,43,.065);padding:6px 9px;border-radius:8px;font-family:var(--sans);font-weight:700;font-size:.73rem;letter-spacing:.025em}
+  .progress-note{color:var(--muted);font-weight:600;text-align:right;max-width:960px;margin:14px auto 0}
+
+  /* ceremony + venue */
+  .cer-grid{max-width:900px!important;margin:0!important}
+  .cer-card{border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);background:var(--surface)}
+  .cer-top{padding:22px 26px;background:var(--royal-deep)}
+  .cer-top h3{font-size:1.4rem!important;font-weight:500}
+  .cer-body{padding:22px 26px}
+  .cer-body ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+  .cer-body li{border-bottom:1px dashed var(--line);padding:9px 0 9px 20px}
+  .venue-card{border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);background:var(--surface);grid-template-columns:1.15fr .85fr}
+  .venue-info{padding:clamp(26px,4vw,42px)}
+  .venue-info h3{font-size:1.7rem!important;color:var(--royal-deep)}
+  .venue-info .addr{color:var(--muted);font-size:1rem}
+  .venue-stats{gap:10px;margin:22px 0}
+  .vstat{background:var(--champagne-soft);border:1px solid rgba(168,123,50,.13);min-width:104px;padding:12px 14px}
+  .vstat b{font-size:1.2rem;color:var(--royal-deep)}
+  .venue-map{background:linear-gradient(145deg,var(--royal),var(--royal-deep));padding:38px}
+  .venue-map a{display:inline-flex;padding:10px 14px;border:1px solid rgba(255,255,255,.3);border-radius:10px;color:#fff;text-decoration:none}
+  .callout{border:0;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;background:var(--champagne-soft);box-shadow:none;padding:16px 18px;color:var(--ink)}
+
+  /* day timeline */
+  #dayof .sec-head h2{font-size:clamp(2rem,4.2vw,3.15rem)}
+  #dayof .sec-head .kicker{font-size:.75rem}
+  #dayof .timeline{max-width:930px;padding-left:38px;margin-left:0}
+  .timeline-phase{position:relative;margin:4px 0 24px -28px;padding:8px 11px;width:max-content;border:1px solid rgba(101,27,43,.14);border-radius:8px;background:var(--surface);color:var(--royal);font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;box-shadow:var(--shadow-soft)}
+  #dayof .timeline::before{left:10px;width:2px;background:var(--gold-light)}
+  #dayof .tl-item{padding:0 0 34px 32px}
+  #dayof .tl-item::before{left:-35px;top:5px;width:15px;height:15px;border:3px solid var(--page);box-shadow:0 0 0 2px var(--gold)}
+  #dayof .tl-when{display:inline-block;color:var(--royal);font-family:var(--sans);font-size:.78rem;letter-spacing:.06em;background:rgba(101,27,43,.065);border-radius:7px;padding:4px 8px}
+  #dayof .tl-item h3{font-size:1.35rem!important;margin:9px 0 4px;color:var(--royal-deep)}
+  #dayof .tl-item p{font-size:1.02rem!important;line-height:1.62;max-width:790px}
+  #dayof .callout{font-size:1rem!important;max-width:900px}
+
+  /* checklist */
+  .check-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .check-col{border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--radius-md);padding:22px;background:var(--surface);box-shadow:var(--shadow-soft)}
+  .check-col.urgent{border-top-color:var(--royal)}
+  .check-col h3{font-size:1.13rem!important;color:var(--royal-deep);margin-bottom:4px}
+  .check-col h3 .tag{font-family:var(--sans);font-size:.64rem;background:var(--champagne-soft);color:var(--royal);padding:4px 7px;letter-spacing:.035em}
+  .check-col .colprog{font-family:var(--sans);font-size:.72rem;color:var(--muted);letter-spacing:0}
+  .check-col .due{font-size:.72rem;letter-spacing:.06em;margin-bottom:11px;color:var(--royal-soft)}
+  .check-item{min-height:42px;padding:8px 0;border-bottom:1px solid rgba(52,16,22,.07);gap:11px}
+  .check-item span{font-size:.96rem!important;line-height:1.45!important}
+  .who{font-size:.58rem;padding:2px 6px}
+  .tet-warn{margin-bottom:24px;border:0;border-left:3px solid var(--royal);border-radius:0 12px 12px 0;background:rgba(101,27,43,.055);padding:15px 18px;color:var(--ink)}
+  #prog-bar-wrap{max-width:100%;height:9px;background:#e5ddd3;border-radius:999px;margin-top:8px}
+  #prog-bar{background:linear-gradient(90deg,var(--royal),var(--gold));border-radius:999px}
+  .check-tools{margin-top:18px}
+  .check-tools button,.budget-actions button{min-height:42px;background:var(--surface);border:1px solid var(--line);color:var(--royal-deep);font-family:var(--sans);font-weight:700;letter-spacing:.04em;text-transform:none;box-shadow:none}
+  .check-tools button:hover,.budget-actions button:hover{background:var(--champagne-soft);border-color:rgba(101,27,43,.18)}
+
+  /* budget */
+  .table-scroll{position:relative;border:1px solid var(--line);border-radius:var(--radius-md);box-shadow:var(--shadow-soft);background:var(--surface);scrollbar-color:var(--gold-light) transparent}
+  .table-scroll:focus-visible{outline:3px solid rgba(141,56,80,.35);outline-offset:3px}
+  .table-scroll table{min-width:940px;background:var(--surface)}
+  table caption{caption-side:top;text-align:left;padding:14px 16px;font-family:var(--serif);font-weight:600;color:var(--royal-deep);background:var(--surface);border-bottom:1px solid var(--line)}
+  thead{background:var(--royal-deep)}
+  thead th{position:sticky;top:0;z-index:2;color:#fff;font-family:var(--sans);font-size:.76rem;letter-spacing:.055em;text-transform:uppercase}
+  th,td{padding:11px 12px!important}
+  tbody tr{border-color:var(--line)}
+  tbody tr:nth-child(even){background:#faf7f3}
+  tbody td:first-child,thead th:first-child,tfoot th:first-child{position:sticky;left:0;z-index:1;background:inherit;box-shadow:8px 0 12px -13px rgba(0,0,0,.5)}
+  thead th:first-child{z-index:3;background:var(--royal-deep)}
+  tfoot th,tfoot td{background:var(--champagne-soft);color:var(--royal-deep);font-weight:700}
+  .budget-input{border:1px solid transparent;border-bottom-color:rgba(52,16,22,.17);border-radius:7px;background:transparent;padding:8px;font-size:.95rem}
+  .budget-input:hover{background:#fff;border-color:var(--line)}
+  .budget-input:focus{background:#fff;outline:2px solid rgba(141,56,80,.3)}
+  .budget-balance.over{color:#a5283e}
+  .budget-actions{justify-content:flex-start;margin-top:16px}
+
+  /* ideas */
+  #ideas .mini-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .mini{border:1px solid var(--line);border-radius:var(--radius-md);padding:22px;background:var(--surface);box-shadow:var(--shadow-soft)}
+  .mini h3{color:var(--royal-deep);font-size:1.16rem!important;margin-bottom:10px}
+  .mini p,.mini li{color:var(--muted);font-size:.96rem!important;line-height:1.5!important}
+  .mini li{padding-block:5px}
+  #ideas>.wrap>h3{margin:0 0 16px!important;font-size:1.25rem!important;color:var(--royal-deep)!important}
+
+  /* lantern */
+  .lantern-studio{grid-template-columns:minmax(260px,.78fr) minmax(420px,1.22fr);gap:22px;margin-top:28px;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;background:var(--surface);box-shadow:var(--shadow-soft)}
+  .lantern-info{padding:8px}
+  .lantern-info h3{font-size:1.55rem!important;color:var(--royal-deep)}
+  .lantern-view-mode{margin-top:16px;border-color:var(--line);background:var(--surface-soft)}
+  .lantern-view-mode button[aria-pressed="true"]{background:var(--royal-deep)}
+  .lantern-controls{gap:6px;margin-top:13px}
+  .lantern-controls button,.wish-form button{min-height:40px;background:var(--surface);border-color:var(--line);font-family:var(--sans);font-weight:700;letter-spacing:.02em}
+  .lantern-controls button[aria-pressed="true"]{background:var(--royal);border-color:var(--royal)}
+  .lantern-scene{height:480px;border-radius:14px;touch-action:pan-y;background:radial-gradient(circle at 50% 48%,#7a2434 0,#30080f 48%,#120407 100%)}
+  .scene-help{font-size:.78rem;color:var(--muted)}
+  .wish-form input{min-height:44px;border-radius:10px;background:var(--surface)}
+  .wish-form button{border-radius:10px;background:var(--royal);color:#fff;border-color:var(--royal)}
+  .wish-count{text-align:left;margin-top:7px;color:var(--muted)}
+
+  /* weather + footer + edit */
+  #weather .mini-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+  #weather .mini{padding:20px;text-align:left!important}
+  footer{background:var(--royal-deep);padding:56px 20px}
+  footer .names-foot{font-family:var(--display);font-size:3rem;font-weight:400}
+  .edit-bar{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));gap:7px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,253,250,.94);box-shadow:0 14px 38px -20px rgba(52,16,22,.55);backdrop-filter:blur(12px)}
+  .edit-bar button{min-height:40px;border-color:transparent;background:transparent;box-shadow:none;font-family:var(--sans);font-weight:700;letter-spacing:.035em;text-transform:none}
+  .edit-bar button.primary{background:var(--royal);border-color:var(--royal)}
+  .edit-bar .tools{gap:3px}
+
+  @media(max-width:1000px){
+    #ideas .mini-grid{grid-template-columns:1fr}
+    #weather .mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .lantern-studio{grid-template-columns:1fr}
+    .cer-body ul{grid-template-columns:1fr}
+  }
+  @media(max-width:820px){
+    nav .wrap{min-height:64px}
+    .nav-toggle{display:flex}
+    .nav-links{display:none;position:absolute;top:calc(100% + 8px);left:20px;right:20px;z-index:60;flex-direction:column;align-items:stretch;gap:3px;padding:10px;background:rgba(255,253,250,.98);border:1px solid var(--line);border-radius:14px;box-shadow:0 20px 48px -25px rgba(52,16,22,.55)}
+    .nav-links.open{display:flex}
+    .nav-links a{font-size:.8rem;padding:11px 13px;border-radius:9px;text-align:left}
+    header.hero{min-height:570px}
+    .check-grid{grid-template-columns:1fr}
+    .venue-card{grid-template-columns:1fr}
+    .venue-map{min-height:240px}
+    .lantern-scene{height:460px}
+  }
+  @media(max-width:600px){
+    .wrap{padding-inline:18px}
+    main>section{padding:64px 0}
+    .brand small{display:none}
+    .names{font-size:clamp(3.5rem,22vw,5.4rem)}
+    .hero-meta .date{font-size:.83rem;letter-spacing:.15em}
+    .hero-meta .det{font-size:.95rem}
+    .countdown{width:100%;max-width:390px;padding:5px}
+    .cd-box{min-width:0;padding:10px 6px}
+    .cd-num{font-size:1.45rem}
+    .date-note{display:none}
+    .sec-head h2{font-size:2rem}
+    .dl-row{grid-template-columns:22px 28px minmax(0,1fr);padding:13px 14px;min-height:72px}
+    .dl-due{grid-column:3;text-align:left;margin-top:0;width:max-content}
+    #dayof .timeline{padding-left:29px}
+    #dayof .tl-item{padding-left:24px}
+    #dayof .tl-item::before{left:-27px}
+    #dayof .tl-item p{font-size:.98rem!important}
+    .check-col{padding:18px}
+    .table-scroll{margin-inline:-2px}
+    .lantern-studio{padding:14px}
+    .lantern-scene{height:430px}
+    .lantern-controls{display:grid;grid-template-columns:repeat(2,1fr)}
+    .lantern-controls button{width:100%}
+    .wish-form{flex-direction:column}
+    .wish-form button{width:100%}
+    #weather .mini-grid{grid-template-columns:1fr}
+    .edit-bar{left:12px;right:12px;justify-content:flex-end;border-radius:16px}
+    body.editing .edit-bar{align-items:stretch;flex-direction:column}
+    body.editing .edit-bar .tools{display:grid;grid-template-columns:repeat(3,1fr);width:100%}
+    body.editing .edit-bar .tools button{font-size:.68rem;padding:7px 4px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
   }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Bỏ qua đến nội dung chính</a>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Điều hướng chính">
   <div class="wrap">
-    <div class="brand">Nhà Có Hỷ <span>❀</span> <span style="color:var(--muted);font-weight:400;font-size:.85rem">Phát &amp; Thảo</span></div>
-    <button class="nav-toggle" aria-label="menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <a class="brand" href="#top" aria-label="Nhà Có Hỷ — về đầu trang">Nhà Có Hỷ <span>✦</span> <small>Phát &amp; Thảo</small></a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Mở menu" aria-controls="navlinks" aria-expanded="false"><span aria-hidden="true">☰</span></button>
     <div class="nav-links" id="navlinks">
-      <a href="#story">Chuyện tình</a>
-      <a href="#timeline">Chuẩn bị</a>
-      <a href="#ceremonies">Nghi lễ</a>
-      <a href="#venue">Địa điểm</a>
-      <a href="#dayof">Lịch ngày cưới</a>
+      <a href="#timeline">Kế hoạch</a>
+      <a href="#dayof">Ngày cưới</a>
       <a href="#checklist">Checklist</a>
       <a href="#budget">Ngân sách</a>
       <a href="#ideas">Ý tưởng</a>
-      <a href="#weather">Thời tiết</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="top">
   <div class="wrap">
     <h1 class="names">Phát <span class="amp">&amp;</span> Thảo</h1>
     <div class="hero-meta">
@@ -488,11 +643,12 @@
       <div class="cd-box"><span class="cd-num" id="cd-secs">—</span><span class="cd-label">Giây</span></div>
     </div>
     <p class="date-note">⏱ Đồng hồ đếm ngược đến 9:00 sáng Thứ Hai, 15/02/2027 — ngày trọng đại.</p>
-    <a class="btn" href="#timeline">Bắt đầu lên kế hoạch →</a>
+    <a class="btn" href="#timeline">Xem kế hoạch</a>
 
   </div>
 </header>
 
+<main id="main-content">
 <!-- STORY -->
 <section id="story">
   <div class="wrap">
@@ -518,7 +674,7 @@
       <label class="dl-row"><input type="checkbox"><span class="dl-no">⑦</span><span class="dl-task"><b>Nội dung &amp; kỷ vật</b> — video, Adventure Book, Đèn Hỷ, bàn trà &amp; macaron</span><span class="dl-due">20/01/2027</span></label>
       <label class="dl-row"><input type="checkbox"><span class="dl-no">⑧</span><span class="dl-task"><b>Xác nhận cuối</b> — số bàn, lịch nhà cung cấp, timeline, phân công</span><span class="dl-due">10/02/2027</span></label>
     </div>
-    <p class="progress-note" style="margin-top:14px">Hoàn thành: <span id="dl-prog">0 / 8</span></p>
+    <p class="progress-note" style="margin-top:14px">Hoàn thành: <span id="dl-prog" aria-live="polite">0 / 8</span></p>
   </div>
 </section>
 
@@ -585,15 +741,18 @@
       <p>Khung giờ gợi ý: nghi lễ truyền thống buổi sáng tại gia, tiệc cưới buổi trưa tại GOLDLAND PLAZA. Điều chỉnh theo giờ hoàng đạo & khoảng cách di chuyển thực tế.</p>
     </div>
     <div class="timeline">
+      <div class="timeline-phase">Buổi sáng · Nghi lễ tại gia</div>
       <div class="tl-item"><div class="tl-when">05:30 – 06:30</div><h3>Chuẩn bị cô dâu & chú rể</h3><p>Trang điểm, làm tóc cô dâu; chú rể và nhà trai chuẩn bị tráp, xe hoa, trang phục áo dài.</p></div>
       <div class="tl-item"><div class="tl-when">07:00 – 07:30</div><h3>Lễ xin dâu</h3><p>Đại diện nhà trai (thường mẹ chú rể) sang nhà gái trao lễ, xin phép đón dâu đúng giờ đẹp.</p></div>
       <div class="tl-item"><div class="tl-when">08:00 – 09:00</div><h3>Lễ rước dâu & Lễ gia tiên</h3><p>Đoàn nhà trai đón cô dâu; cô dâu chú rể thắp hương bái lạy tổ tiên hai nhà. Đây là nghi lễ thiêng liêng nhất — nên chụp hình trọn vẹn.</p></div>
       <div class="tl-item"><div class="tl-when">09:00 – 10:30</div><h3>Lễ thành hôn tại gia & di chuyển</h3><p>Trao nhẫn, nhận lời chúc & nữ trang của cha mẹ. Chụp ảnh gia đình. Sau đó di chuyển ra GOLDLAND PLAZA.</p></div>
+      <div class="timeline-phase">Tại GOLDLAND PLAZA</div>
       <div class="tl-item"><div class="tl-when">10:30 – 11:00</div><h3>Set-up hoàn tất & kiểm tra sảnh</h3><p>Đơn vị trang trí hoàn thiện; kiểm tra âm thanh, màn hình LED, sơ đồ bàn, bàn lễ tân & hộp mừng. Lễ tân vào vị trí.</p></div>
       <div class="tl-item"><div class="tl-when">11:00 – 11:30</div><h3>Đón khách</h3><p>Khách tới, check-in, chụp ảnh góc check-in. Cô dâu chú rể & gia đình đón khách tại cửa. Nhạc nền nhẹ nhàng.</p></div>
       <div class="tl-item"><div class="tl-when">11:30 – 11:45</div><h3>Khai tiệc & nghi thức sân khấu</h3><p>MC mời hai họ lên sân khấu, cô dâu chú rể tiến vào, rót rượu/tháp ly, cắt bánh, phát biểu của đại diện gia đình & lời cảm ơn.</p></div>
       <div class="tl-item"><div class="tl-when">11:45 – 13:30</div><h3>Tiệc trưa</h3><p>Phục vụ món; cô dâu chú rể đi chào & cảm ơn từng bàn (ưu tiên bàn người lớn, khách đường xa). Chiếu video phóng sự, văn nghệ (nếu có).</p></div>
       <div class="tl-item"><div class="tl-when">13:30 – 14:00</div><h3>Tiễn khách & cảm ơn</h3><p>Tặng quà cảm ơn, chụp ảnh lưu niệm, tiễn khách. Gia đình kiểm kê hộp mừng & sổ ghi lễ.</p></div>
+      <div class="timeline-phase">Sau ngày cưới</div>
       <div class="tl-item"><div class="tl-when">Vài ngày sau</div><h3>Lễ lại mặt</h3><p>Cô dâu chú rể mang lễ về thăm nhà gái — khép lại trọn vẹn chuỗi nghi lễ cưới truyền thống.</p></div>
     </div>
     <div class="callout">
@@ -672,8 +831,8 @@
         <label class="check-item"><input type="checkbox"><span>Kiểm tra thời tiết và chuẩn bị túi khẩn cấp <i class="who p">Phát &amp; Thảo</i></span></label>
       </div>
     </div>
-    <div class="progress-note">Tiến độ: <span id="prog-text">0 / 0</span></div>
-    <div id="prog-bar-wrap"><div id="prog-bar"></div></div>
+    <div class="progress-note">Tiến độ: <span id="prog-text" aria-live="polite">0 / 0</span></div>
+    <div id="prog-bar-wrap" role="progressbar" aria-label="Tiến độ checklist" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="prog-bar"></div></div>
     <div class="check-tools"><button type="button" onclick="window.print()">🖨 In checklist</button><button type="button" id="reset-check">↺ Đặt lại tất cả</button></div>
   </div>
 </section>
@@ -685,11 +844,12 @@
       <h2>Spreadsheet ngân sách</h2>
       <p>Nhập số tiền bằng VND. Tổng dự toán, đã chi và còn lại được tính tự động; dữ liệu lưu trên trình duyệt này.</p>
     </div>
-    <div class="table-scroll">
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Spreadsheet ngân sách — cuộn ngang để xem đầy đủ">
       <table id="budget-table">
-        <thead><tr><th>Hạng mục</th><th class="num">Dự toán</th><th class="num">Đã cọc</th><th class="num">Đã trả thêm</th><th class="num">Còn lại</th><th>Ghi chú</th><th></th></tr></thead>
+        <caption>Ngân sách cưới Phát &amp; Thảo</caption>
+        <thead><tr><th scope="col">Hạng mục</th><th scope="col" class="num">Dự toán</th><th scope="col" class="num">Đã cọc</th><th scope="col" class="num">Đã trả thêm</th><th scope="col" class="num">Còn lại</th><th scope="col">Ghi chú</th><th scope="col"><span class="sr-only">Xóa</span></th></tr></thead>
         <tbody id="budget-body"></tbody>
-        <tfoot><tr><td><b>Tổng</b></td><td class="num" id="budget-est">0 ₫</td><td class="num" id="budget-deposit">0 ₫</td><td class="num" id="budget-paid">0 ₫</td><td class="num" id="budget-left">0 ₫</td><td colspan="2"></td></tr></tfoot>
+        <tfoot><tr><th scope="row">Tổng</th><td class="num" id="budget-est">0 ₫</td><td class="num" id="budget-deposit">0 ₫</td><td class="num" id="budget-paid">0 ₫</td><td class="num" id="budget-left" aria-live="polite">0 ₫</td><td colspan="2"></td></tr></tfoot>
       </table>
     </div>
     <div class="budget-actions">
@@ -807,7 +967,7 @@
           <input id="wish-input" maxlength="60" placeholder="Thử viết một lời chúc…" aria-label="Lời chúc">
           <button type="submit">＋ Treo lời chúc</button>
         </form>
-        <div class="wish-count" id="wish-count">3 lời chúc mẫu</div>
+        <div class="wish-count" id="wish-count" aria-live="polite">3 lời chúc mẫu</div>
       </div>
     </div>
   </div>
@@ -855,6 +1015,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="names-foot">Phát <span class="amp">&amp;</span> Thảo</div>
@@ -865,7 +1027,7 @@
 
 <!-- EDIT BAR -->
 <div class="edit-bar" id="editbar">
-  <span class="status" id="edit-status"></span>
+  <span class="status" id="edit-status" aria-live="polite"></span>
   <div class="tools">
     <button type="button" id="edit-export">⬇ Xuất</button>
     <button type="button" id="edit-import">⬆ Nhập</button>
@@ -904,8 +1066,11 @@
   function updateProgress(){
     const done = boxes.filter(b=>b.checked).length;
     const total = boxes.length;
-    document.getElementById('prog-text').textContent = done + ' / ' + total + ' việc (' + (total? Math.round(done/total*100):0) + '%)';
-    document.getElementById('prog-bar').style.width = (total? (done/total*100):0) + '%';
+    const pct = total ? Math.round(done/total*100) : 0;
+    document.getElementById('prog-text').textContent = done + ' / ' + total + ' việc (' + pct + '%)';
+    document.getElementById('prog-bar').style.width = pct + '%';
+    const progress = document.getElementById('prog-bar-wrap');
+    if(progress) progress.setAttribute('aria-valuenow', String(pct));
     // tiến độ từng nhóm
     document.querySelectorAll('#checkgrid .check-col').forEach(col=>{
       const cb = col.querySelectorAll('input[type=checkbox]');
@@ -940,8 +1105,21 @@
     upd();
   })();
 
-  // Close mobile menu on link click
-  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+  /* ====== NAVIGATION ====== */
+  (function(){
+    const nav=document.querySelector('nav'), links=document.getElementById('navlinks'), toggle=document.getElementById('nav-toggle');
+    if(!nav||!links||!toggle)return;
+    function closeMenu(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Mở menu');}
+    toggle.addEventListener('click',()=>{const open=!links.classList.contains('open');links.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Đóng menu':'Mở menu');});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+    document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu();});
+    if('IntersectionObserver'in window){
+      const byId=new Map([...links.querySelectorAll('a')].map(a=>[a.getAttribute('href').slice(1),a]));
+      const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;links.querySelectorAll('a').forEach(a=>a.classList.remove('active'));const active=byId.get(entry.target.id);if(active)active.classList.add('active');});},{rootMargin:'-20% 0px -65%',threshold:0});
+      byId.forEach((a,id)=>{const section=document.getElementById(id);if(section)observer.observe(section);});
+    }
+  })();
 
   /* ====== BUDGET SPREADSHEET ====== */
   (function(){
@@ -960,22 +1138,24 @@
       let est=0,dep=0,paid=0;
       body.querySelectorAll('tr').forEach((tr,i)=>{
         const r=rows[i]; est+=Number(r.estimate)||0; dep+=Number(r.deposit)||0; paid+=Number(r.paid)||0;
-        tr.querySelector('.budget-balance').textContent=money(Math.max(0,(Number(r.estimate)||0)-(Number(r.deposit)||0)-(Number(r.paid)||0)));
+        const balance=(Number(r.estimate)||0)-(Number(r.deposit)||0)-(Number(r.paid)||0);
+        const cell=tr.querySelector('.budget-balance');cell.textContent=money(balance);cell.classList.toggle('over',balance<0);
       });
       document.getElementById('budget-est').textContent=money(est);
       document.getElementById('budget-deposit').textContent=money(dep);
       document.getElementById('budget-paid').textContent=money(paid);
-      document.getElementById('budget-left').textContent=money(Math.max(0,est-dep-paid));
+      const remaining=est-dep-paid;
+      const left=document.getElementById('budget-left');left.textContent=money(remaining);left.classList.toggle('over',remaining<0);
     }
     function render(){
       body.innerHTML=rows.map((r,i)=>`<tr data-budget-row="${i}">
-        <td><input class="budget-input budget-name" data-field="name" value="${esc(r.name)}" aria-label="Hạng mục"></td>
-        <td><input class="budget-input" data-field="estimate" type="number" min="0" step="100000" value="${esc(r.estimate)}" placeholder="0" aria-label="Dự toán"></td>
-        <td><input class="budget-input" data-field="deposit" type="number" min="0" step="100000" value="${esc(r.deposit)}" placeholder="0" aria-label="Đã cọc"></td>
-        <td><input class="budget-input" data-field="paid" type="number" min="0" step="100000" value="${esc(r.paid)}" placeholder="0" aria-label="Đã trả thêm"></td>
+        <td><input class="budget-input budget-name" data-field="name" value="${esc(r.name)}" aria-label="Tên hạng mục ${i+1}"></td>
+        <td><input class="budget-input" data-field="estimate" type="number" min="0" step="100000" value="${esc(r.estimate)}" placeholder="0" aria-label="Dự toán cho ${esc(r.name)}"></td>
+        <td><input class="budget-input" data-field="deposit" type="number" min="0" step="100000" value="${esc(r.deposit)}" placeholder="0" aria-label="Đã cọc cho ${esc(r.name)}"></td>
+        <td><input class="budget-input" data-field="paid" type="number" min="0" step="100000" value="${esc(r.paid)}" placeholder="0" aria-label="Đã trả thêm cho ${esc(r.name)}"></td>
         <td class="budget-balance">0 ₫</td>
-        <td><input class="budget-input budget-note-input" data-field="note" value="${esc(r.note)}" placeholder="Ghi chú" aria-label="Ghi chú"></td>
-        <td><button class="budget-delete" type="button" data-delete="${i}" aria-label="Xóa hạng mục">×</button></td>
+        <td><input class="budget-input budget-note-input" data-field="note" value="${esc(r.note)}" placeholder="Ghi chú" aria-label="Ghi chú cho ${esc(r.name)}"></td>
+        <td><button class="budget-delete" type="button" data-delete="${i}" aria-label="Xóa ${esc(r.name)}">×</button></td>
       </tr>`).join('');
       totals();
     }
@@ -991,7 +1171,7 @@
     document.getElementById('budget-reset').addEventListener('click',()=>{if(!confirm('Đặt lại toàn bộ spreadsheet ngân sách?'))return;rows=defaults.map(r=>({...r}));save();render();});
     document.getElementById('budget-csv').addEventListener('click',()=>{
       const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
-      const csv=['Hạng mục,Dự toán,Đã cọc,Đã trả thêm,Còn lại,Ghi chú',...rows.map(r=>[r.name,r.estimate,r.deposit,r.paid,Math.max(0,(Number(r.estimate)||0)-(Number(r.deposit)||0)-(Number(r.paid)||0)),r.note].map(q).join(','))].join('\n');
+      const csv=['Hạng mục,Dự toán,Đã cọc,Đã trả thêm,Còn lại,Ghi chú',...rows.map(r=>[r.name,r.estimate,r.deposit,r.paid,(Number(r.estimate)||0)-(Number(r.deposit)||0)-(Number(r.paid)||0),r.note].map(q).join(','))].join('\n');
       const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a');
       a.href=URL.createObjectURL(blob);a.download='ngan-sach-dam-cuoi-phat-thao.csv';a.click();URL.revokeObjectURL(a.href);
     });
@@ -1067,10 +1247,10 @@
   (function(){
     const CKEY='hue-wedding-content-v1';
     const ALL_KEYS=[CKEY,'hue-wedding-checklist-v7','hue-wedding-deadlines-v2','hue-wedding-budget-v1','hue-wedding-wishes-v1'];
-    const SEL='.names,.tagline,.hero-meta,.salutation,.letter,.signature,'
+    const SEL='.names,.hero-meta,'
       +'section h2,section h3,section h4,section p,section li,td,th,'
-      +'.dl-task,.dl-due,.due,.fp-zone,.spec b,.spec span,.spec small,.vstat b,.vstat span,.sw,.stage-el,.aisle,.venue-info .addr,.venue-map div';
-    const SKIP='.edit-bar,.check-tools,.progress-note,nav,.legend';
+      +'.dl-task,.dl-due,.due,.vstat b,.vstat span,.venue-info .addr,.venue-map div';
+    const SKIP='.edit-bar,.check-tools,.progress-note,nav';
     const hash=s=>{let h=5381;for(let i=0;i<s.length;i++)h=((h<<5)+h+s.charCodeAt(i))|0;return (h>>>0).toString(36)};
 
     // Gán khoá ổn định cho từng khối chữ: section + hash(nội dung gốc) + số thứ tự trùng
